@@ -12,40 +12,58 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&amp;display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap">
     <title>Javi UnitDatabase</title>
   </head>
   <body>
-    <!-- Nav bar, is copied along all places-->
-    <div class="main_nav_container"> 
-      <div class="nav_container">
-        <div class="nav_item"><a class="image" href="/HTML/UEFMain/UEFMain.html"><img src="/Img/faflogo.png" alt=""></a></div>
-      </div>
-      <div class="nav_container">
-        <div class="nav_item"><a href="/Gallery/Gallery.html"> 
-            <div class="nav_text">By Faction</div></a></div>
-      </div>
-      <div class="nav_container">
-        <div class="nav_item">
-          <div class="nav_text">By Unit Type</div>
+    <!-- Inspiration places below-->
+    <!-- https://planetaryannihilation.com/-->
+    <!-- https://starcraft2.com/en-us/media-->
+    <!-- https://www.ageofempires.com/games/age-of-empires-iv-->
+    <!-- https://www.beyondallreason.info/armada-->
+    <!-- Nav bar, is copied along all places, supercontainer is used as a background for the nav bar-->
+    <div class="main_nav_supercontainer">
+      <div class="main_nav_container">
+        <div class="nav_container">
+          <div class="nav_item logo"><a class="image" href="/HTML/UEFMain/UEFMain.html"><img src="/Img/faflogo.png" alt=""></a></div>
         </div>
-      </div>
-      <div class="nav_container">
-        <div class="nav_item">
-          <div class="nav_text">By Tier</div>
+        <div class="nav_container">
+          <div class="nav_item nav_hover">News</div>
+        </div>
+        <div class="nav_container">
+          <div class="nav_item nav_hover">Updates</div>
+        </div>
+        <div class="nav_container">
+          <div class="nav_item nav_hover">Gameplay</div>
+        </div>
+        <div class="nav_container">
+          <div class="nav_item nav_hover">Community</div>
+        </div>
+        <div class="nav_container">
+          <div class="nav_item"></div>
+        </div>
+        <div class="nav_container">
+          <div class="nav_item nav_hover">Login</div>
+        </div>
+        <div class="nav_container">
+          <div class="nav_item nav_hover">Download</div>
         </div>
       </div>
     </div>
-    <div class="main_unit_container">
-      <div class="unit_container wtitle">
-        <div class="unit_item">
-          <div class="unit_title">UEF</div>
-          <div class="unit_subtitle">Mechs in multiple flavors</div>
+    <div class="global_main_container"> 
+      <div class="global_container"> 
+        <div class="global_item">
+          <div class="global_title">UEF</div>
+          <div class="global_subtitle">Mechs in multiple flavors</div>
         </div>
       </div>
+    </div>
+    <!-- Main Unit container, here goes everything below the navbar -->
+    <div class="main_unit_container">
       <!-- Unit filter selection boxes, these allow us to show all units or just t1 or t2, etc.-->
       <div class="unit_container wtitle">
         <div class="unit_item"> 
-          <div id="unit_box">
+          <div class="unit_box">
             <button class="btn active" onclick="filterSelection('all')">Show all</button>
             <button class="btn" onclick="filterSelection('t1')">T1</button>
             <button class="btn" onclick="filterSelection('t2')">T2</button>

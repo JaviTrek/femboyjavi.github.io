@@ -13,28 +13,37 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap")
         title Javi Unit Database
     body
+        //Navigation bar
+
         .main_nav_container 
-            .nav_container.hover
+            .nav_container
                 .nav_item
-                    .image.logo
+                    a(href="/HTML/UEFMain/UEFMain.html").image
                         img(src="/Img/faflogo.png", alt="")
             .nav_container
-                .nav_item
-                    a(href="/Gallery/Gallery.html") 
-                        .nav_text By Faction
+                .nav_item.nav_hover Home 
+            .nav_container
+                .nav_item.nav_hover News
+            .nav_container
+                .nav_item.nav_hover Gameplay
+            .nav_container
+                .nav_item.nav_hover Community
             .nav_container
                 .nav_item
-                    .nav_text By main Type
             .nav_container
-                .nav_item
-                    .nav_text By Tier
+                .nav_item.nav_hover Login
+            .nav_container
+                .nav_item.nav_hover Download
+
+        //Main containers
+
         .main_main_container
             .main_container.wtitle
                 .main_item
-                    .main_title UEF
-                    .main_subtitle Chunkiest boys in the galaxy
+                    .global_title UEF
+                    .global_subtitle Chunkiest boys in the galaxy
 
-            .main_container.hover
+            .main_container.main_hover 
                 .main_item
                     .main_image
                         a(href="/HTML/UEFMain/UEFUnits.html")
@@ -42,39 +51,39 @@ html(lang="en")
                     .main_text  Land
                     .main_subtext Mechs and tanks with a lot of health
 
-            .main_container.hover
+            .main_container.main_hover 
                 .main_item
                     .main_image
                         img(src="/img/uefair.png", alt="")
                     .main_text Air
                     .main_subtext Fighter jets and the only T3 transport
 
-            .main_container.hover
+            .main_container.main_hover 
                 .main_item
                     .main_image
                         img(src="/img/uefnavy.png", alt="")
                     .main_text Navy
                     .main_subtext Classic battleships and shield boats
 
-            .main_container.hover 
+            .main_container.main_hover  
                 .main_item
                     .main_image
                     .main_text Experimentals
                     .main_subtext Choose your flavor of artillery
 
-            .main_container.hover
+            .main_container.main_hover 
                 .main_item
                     .main_image
                     .main_text Structures
                     .main_subtext Strong shields and chunky buildings
 
-            .main_container.hover 
+            .main_container.main_hover  
                 .main_item
                     .main_image
                     .main_text Defenses
                     .main_subtext Only T3 Point Defense in the game
                     
-            .main_container.hover 
+            .main_container.main_hover  
                 .main_item
                     .main_image
                     .main_text Support Commanders

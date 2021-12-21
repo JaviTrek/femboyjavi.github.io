@@ -1,5 +1,6 @@
-So I'm currently using Pug as basic HTML, not using any of its special features (I just think it looks much cleaner to type .class than <div> class =
+Hello! This is my unit database, I'm a complete newb to github and coding as well so I'm using this unit database as my learning project.
 
-Using SASS as just CSS (no real reason, was told to learn SASS so I just started typing my css into it)
+Currently I'm taking anyone who is interested in helping me! The end goal is updating our unit database to look smooth and clean!
 
-And regular javascript is inside the HTML folder
+My main source of inspiration at the moment is Beyond All Reason's unit database https://www.beyondallreason.info/armada
+

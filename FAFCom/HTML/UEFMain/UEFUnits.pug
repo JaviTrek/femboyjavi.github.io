@@ -12,37 +12,52 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap")
+        
         title Javi UnitDatabase
     body
      
+        // Inspiration places below
+        // https://planetaryannihilation.com/
+        // https://starcraft2.com/en-us/media
+        // https://www.ageofempires.com/games/age-of-empires-iv
+        // https://www.beyondallreason.info/armada
+        
+        // Nav bar, is copied along all places, supercontainer is used as a background for the nav bar
+        .main_nav_supercontainer
+            .main_nav_container
+                .nav_container
+                    .nav_item.logo
+                        a(href="/HTML/UEFMain/UEFMain.html").image
+                            img(src="/Img/faflogo.png", alt="")
+                .nav_container
+                    .nav_item.nav_hover News
+                .nav_container
+                    .nav_item.nav_hover Updates
+                .nav_container
+                    .nav_item.nav_hover Gameplay
+                .nav_container
+                    .nav_item.nav_hover Community
+                .nav_container
+                    .nav_item
+                .nav_container
+                    .nav_item.nav_hover Login
+                .nav_container
+                    .nav_item.nav_hover Download
+        
 
-        // Nav bar, is copied along all places
-
-        .main_nav_container 
-            .nav_container
-                .nav_item
-                    a(href="/HTML/UEFMain/UEFMain.html").image
-                        img(src="/Img/faflogo.png", alt="")
-            .nav_container
-                .nav_item
-                    a(href="/Gallery/Gallery.html") 
-                        .nav_text By Faction
-            .nav_container
-                .nav_item
-                    .nav_text By Unit Type
-            .nav_container
-                .nav_item
-                    .nav_text By Tier
+        .global_main_container 
+            .global_container 
+                .global_item
+                    .global_title UEF
+                    .global_subtitle Mechs in multiple flavors
+        
+        // Main Unit container, here goes everything below the navbar 
         .main_unit_container
-            .unit_container.wtitle
-                .unit_item
-                    .unit_title UEF
-                    .unit_subtitle Mechs in multiple flavors
-
             // Unit filter selection boxes, these allow us to show all units or just t1 or t2, etc.
             .unit_container.wtitle
                 .unit_item 
-                    #unit_box
+                    .unit_box
                         button.btn.active(onclick="filterSelection('all')") Show all
                         button.btn(onclick="filterSelection('t1')") T1
                         button.btn(onclick="filterSelection('t2')") T2

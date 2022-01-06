@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <!--Rowey is the best-->
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,35 +22,40 @@
     <!-- https://starcraft2.com/en-us/media-->
     <!-- https://www.ageofempires.com/games/age-of-empires-iv-->
     <!-- https://www.beyondallreason.info/armada-->
-    <!-- Nav bar, is copied along all places, supercontainer is used as a background for the nav bar-->
-    <div class="main_nav_supercontainer">
-      <div class="main_nav_container">
-        <div class="nav_container">
-          <div class="nav_item logo"><a class="image" href="/HTML/UEFMain/UEFMain.html"><img src="/Img/faflogo.png" alt=""></a></div>
-        </div>
-        <div class="nav_container">
-          <div class="nav_item nav_hover">News</div>
-        </div>
-        <div class="nav_container">
-          <div class="nav_item nav_hover">Updates</div>
-        </div>
-        <div class="nav_container">
-          <div class="nav_item nav_hover">Gameplay</div>
-        </div>
-        <div class="nav_container">
-          <div class="nav_item nav_hover">Community</div>
-        </div>
-        <div class="nav_container">
-          <div class="nav_item"></div>
-        </div>
-        <div class="nav_container">
-          <div class="nav_item nav_hover">Login</div>
-        </div>
-        <div class="nav_container">
-          <div class="nav_item nav_hover">Download</div>
-        </div>
+    <!-- Nav bar, is copied along all places-->
+    <div class="main_greynav_container">
+      <div class="greynav_container">
+        <div class="greynav_item"><a class="greynav_image" href="/HTML/UEFMain/UEFMain.html"><img src="/Img/faflogo.png" alt=""></a></div>
+      </div>
+      <div class="greynav_container">
+        <div class="greynav_item greynav_hover">Forums</div>
+      </div>
+      <div class="greynav_container">
+        <div class="greynav_item greynav_hover">Support FAF</div>
+      </div>
+      <div class="greynav_container">
+        <div class="greynav_item greynav_hover">Official Discord</div>
       </div>
     </div>
+    <div class="main_nav_container">
+      <div class="nav_container">
+        <div class="nav_list nav_item">
+          <ul>
+            <li><a href="/HTML/UEFMain/Home.html">GAME</a></li>
+            <li><a href="">NEWS</a></li>
+            <li><a href="">COMMUNITY</a></li>
+            <li><a href="">COMPETITIVE</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="nav_container nav_end">
+        <div class="nav_item nav_hover">LOGIN</div>
+      </div>
+      <div class="nav_container nav_end nav_download">
+        <div class="nav_item nav_hover">DOWNLOAD</div>
+      </div>
+    </div>
+    <!-- Just the UEF title-->
     <div class="global_main_container"> 
       <div class="global_container"> 
         <div class="global_item">
@@ -73,7 +79,7 @@
       <!--Below are the unit containers, this is where you will see the unit boxes such as engi, t1 tank, etc. However, it is very copy pastey as you can see. There probably is a better way to run this...-->
       <div class="unit_container unit_hover unit_filter t1">
         <div class="unit_item">
-          <div class="unit_image"><a href="/HTML/UEFMain/UEFMain.html"><img src="/img/uefland/uefengy.png" alt=""></a></div>
+          <div class="unit_image"><img src="/img/uefland/uefengy.png" alt=""></div>
           <div class="unit_text">Engineer</div>
           <div class="unit_subtext">UEF-Flavor</div>
           <div class="tier">T1</div>
@@ -184,7 +190,7 @@
           <div class="tier">T2</div>
         </div>
       </div>
-      <!-- JS document has to be placed below HTML or it gets bugged (can't get certain classes or buttons if they arent loaded yet cant we lol?)         -->
+      <!-- Javascript document has to be placed below HTML or it gets bugged (can't get certain classes or buttons if they arent loaded yet cant we lol?)         -->
       <script src="/HTML/UEFMain/app.js"></script>
     </div>
   </body>

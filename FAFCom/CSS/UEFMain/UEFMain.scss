@@ -4,11 +4,12 @@ html {
   
   body {
     text-align: center;
-    position: relative;
-    background-image: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.349), rgba(0, 0, 0, 0.8)),url("/Img/bg1.jpg");
     background-attachment: fixed;
+    background-color: black;
     background-position: center center;
     margin-bottom: 30px;
+    padding: auto;
+    padding-top: 0px;
     font-family:"Electrolize", "acumin-pro-extra-condensed", "hot-salsa";
 
 
@@ -17,14 +18,22 @@ html {
 
   a:link {
     text-decoration: none;
+    color: rgb(194, 194, 194);
+    transition: 0.5s;
   }
   a:visited {
     text-decoration: none;
+    color: rgb(194, 194, 194);
 
+  }
+
+  a:hover {
+    color: white;
   }
 
 // Below I will keep the classes that I consider global
 // Meaning, they will be reused over the website multiple times
+
 
 .global_title {
   font-family:'russo one' ;
@@ -45,9 +54,6 @@ html {
   grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
   grid-template-rows: minmax(200px, 1fr) repeat(auto-fit, minmax(100px, 1.1fr));
   grid-gap: 0.5vw;
-  padding-top: 10px;
-  padding-left: 140px;
-  padding-right: 140px;
   background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgba(0, 0, 0, 0));
 }
 
@@ -66,41 +72,109 @@ html {
   margin-top: 20px;
   overflow: hidden;
 }
+// Grey Navbar (on top of navbar)
+
+.main_greynav_container {
+  display:grid;
+  grid-template-columns: auto repeat(3, max-content);
+  grid-template-rows: minmax(10px, 35px);
+  gap: 30px;
+  color: rgb(117, 117, 117);
+  font-size:14px;
+  background-color: rgb(10, 10, 10);
+  justify-items: start;
+  padding-left: 10px;
+  padding-right: 10px;
+  
+  
+  
+}
+
+.greynav_item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: 1s;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  
+}
+
+.greynav_item .greynav_image {
+  width: 55%;
+  height: 100%;
+  position: relative;
+  top: 10px;
+}
+
+.greynav_item .greynav_image img {
+  width: 100%;
+  height: 100%;
+
+  
+}
+
+.greynav_hover:hover{
+  color: white;
+}
+
+.greynav_item  a{
+  color: rgb(255, 255, 255); 
+  
+  
+}
+
+
+@media (max-width: 460px) {
+  .main_greynav_container {
+    grid-template-columns:repeat(auto-fit,minmax(150px, 1fr));
+  }
+  .greynav_container {
+    justify-self: center;
+  }
+}
+@media (max-width: 1220px) {
+
+  .main_greynav_container img {
+    display: none;
+  }
+}
 
   //Nav Bar of course
 
-  .main_nav_supercontainer { // The purpose of the super container is to have a background
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    background-color: black;
-
-  }
+  
   .main_nav_container {
     display:grid;
-    grid-template-columns: minmax(10px, 60px) repeat(auto-fit,minmax(60px, 1fr));
-    grid-template-rows: minmax(10px, 60px);
-    color: white;
-    font-size:20px;
-    letter-spacing: 0.8px;
-    font-weight: bolder;
-    background-image: linear-gradient( rgb(0, 0, 0), rgba(27, 27, 27, 0.534), rgb(0, 0, 0));
-    border:2px solid rgb(131, 131, 131);
-    margin: 20px;
-    margin-left: 80px;
-    margin-right: 80px;
-    
+    grid-template-columns: minmax(50px, auto) max-content max-content;
+    gap: 20px;
+    color: rgb(175, 175, 175);
+    font-size:26px;
+    background-color: rgb(17, 17, 17);
+    justify-items: center;
+    padding: 0px;
+    padding-top: 0px;
     
   }
-  
+
   .nav_item {
     width: 100%;
     height: 100%;
-    position: relative;
-    transition: 1s;
+    transition: 0.5s;
     display: grid;
-    place-items: center; 
-    
+    place-items: center;
+  }
+  
+  .nav_item  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    padding-left: 250px;
+  }
+
+  .nav_item li {
+    display: inline-block;
+    padding: 20px;
   }
   
   .nav_item .image {
@@ -115,18 +189,164 @@ html {
     object-fit:cover;
   }
 
-  .nav_hover:hover{
-    background-color: rgb(71, 71, 71);
-  }
-
-  .nav_item  a{
-    color: rgb(255, 255, 255); 
+  .nav_item:hover{
+    color: white;
+    cursor: pointer;
     
   }
 
+  .nav_download {
+    background-color: rgb(80, 80, 80);
+    border: 1px solid rgb(255, 255, 255);
+    color: white;
+    padding: 10px;
+    transition: 0.5s;
+    letter-spacing: 0.4px;
+
+  }
+
+  .nav_download:hover {
+    background-color: rgb(41, 41, 41);
+  }
+  .nav_end {
+    justify-self: end;
+  }
+  @media (max-width: 460px) {
+    .main_nav_container {
+      grid-template-columns:repeat(auto-fit,minmax(150px, 1fr));
+    }
+
+    .nav_end {
+      justify-self: center;
+    }
+
+    .nav_download {
+      padding: 10px;
+  
+    }
+  }
+
+  @media (max-width: 820px) {
+    .nav_item ul {
+      padding: 0px;
+
+    }
+  }
+
+
+
+ 
+  //Homepage specific CSS Styling can be found below
+
+
+  #main_home_container {
+    display:grid;
+    grid-template-columns: repeat( auto-fit, minmax(150px, 1fr) );
+    grid-template-rows: repeat( auto-fit, minmax(150px, 1fr) );
+    grid-gap: 40px;
+    background-image: url("/Img/home.png");
+    background-size: cover;
+    padding: 200px;
+    padding-top: 250px;
+    padding-bottom: 250px;
+    justify-content: center;
+    justify-items: center;
+    transition: 0.5s;
+  }
+
+
+
+  .home_item .home_image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+    opacity: 70%;
+    align-self: center;
+    
+  }
+
+  .home_image {
+    transition: 0.5s;
+  }
+
+  .home_item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    place-items: center;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .home_item .home_image img:hover {
+    opacity: 100%;
+  }
 
   
+  @media (max-width: 800px) {
+    #main_home_container {
+      grid-template-columns: repeat( auto-fit, minmax(50px, 1fr) );
+      grid-template-rows: repeat( auto-fit, minmax(50px, 1fr) );
+      padding: 50px;
 
+    }
+  }
+
+  //Still in the Home/Mainpage but now styling focused on the text heavy parts
+
+  .main_hometext_container {
+    display:grid;
+    grid-template-columns: auto minmax(200px, 500px);
+    grid-template-rows: auto;
+    background-color: rgb(12, 12, 12);
+    background-size: cover;  
+    background-position:center center; 
+    padding: 15px;
+    justify-content: center;
+    justify-items: center;
+  }
+  
+
+  .hometext_item .hometext_image img {
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    overflow: hidden;
+    opacity: 70%;
+    transition: 0.5s;
+    align-self: center;
+  }
+
+  .hometext_item {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: grid;
+    color: white;
+  }
+  .hometext_title {
+    font-family: "Orbitron" ;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-size: 34px;
+    padding: 10px;
+  } 
+
+  .hometext_subtitle {
+    font-family: "electrolize" ;
+    font-weight: 100;
+    letter-spacing: 0px;
+    font-size: 18px;
+    padding: 10px;
+    line-height: 2;
+  } 
+
+  .home_opacity {
+    opacity: 0%;
+    transition: 0.5s;
+  }
 
 
 
@@ -144,8 +364,6 @@ html {
     grid-template-columns:repeat(auto-fit, minmax(240px, 1fr));
     grid-template-rows: minmax(200px, 1fr) repeat(auto-fit, minmax(100px, 1.1fr));
     grid-gap: 0.5vw;
-    padding-left: 140px;
-    padding-right: 140px;
   
   
   }
@@ -215,13 +433,14 @@ html {
 
     .main_unit_container {
       display:grid;
-      grid-template-columns: repeat( auto-fit, minmax(170px, 1fr) );
-      grid-template-rows: repeat( auto-fit, minmax(170px, 1fr) );
+      grid-template-columns: repeat( auto-fit, minmax(180px, 1fr) );
+      grid-template-rows: repeat( auto-fit, minmax(180px, 1fr) );
       grid-gap: 0.5vw;
-      padding-left: 140px;
-      padding-right: 140px;
       grid-auto-flow: row;
+      padding: 40px;
+      padding-top: 0px;
     }
+
 
     
     .unit_item .unit_image img {

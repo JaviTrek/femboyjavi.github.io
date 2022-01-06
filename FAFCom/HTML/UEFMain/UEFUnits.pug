@@ -1,6 +1,7 @@
 doctype html
 html(lang="en")
     head
+        //Rowey is the best
         meta(charset="UTF-8")
         meta(http-equiv="X-UA-Compatible", content="IE=edge")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
@@ -23,29 +24,39 @@ html(lang="en")
         // https://www.ageofempires.com/games/age-of-empires-iv
         // https://www.beyondallreason.info/armada
         
-        // Nav bar, is copied along all places, supercontainer is used as a background for the nav bar
-        .main_nav_supercontainer
-            .main_nav_container
-                .nav_container
-                    .nav_item.logo
-                        a(href="/HTML/UEFMain/UEFMain.html").image
-                            img(src="/Img/faflogo.png", alt="")
-                .nav_container
-                    .nav_item.nav_hover News
-                .nav_container
-                    .nav_item.nav_hover Updates
-                .nav_container
-                    .nav_item.nav_hover Gameplay
-                .nav_container
-                    .nav_item.nav_hover Community
-                .nav_container
-                    .nav_item
-                .nav_container
-                    .nav_item.nav_hover Login
-                .nav_container
-                    .nav_item.nav_hover Download
-        
+        // Nav bar, is copied along all places
+        .main_greynav_container
+            .greynav_container
+                .greynav_item
+                    a(href="/HTML/UEFMain/UEFMain.html").greynav_image
+                        img(src="/Img/faflogo.png", alt="")
+            .greynav_container
+                .greynav_item.greynav_hover Forums
+            .greynav_container
+                .greynav_item.greynav_hover Support FAF
+            .greynav_container
+                 .greynav_item.greynav_hover Official Discord
 
+
+        .main_nav_container
+            .nav_container
+                .nav_list.nav_item
+                    ul
+                        li
+                            a(href="/HTML/UEFMain/Home.html") GAME
+                        li
+                            a(href="") NEWS
+                        li
+                            a(href="") COMMUNITY
+                        li
+                            a(href="") COMPETITIVE
+            .nav_container.nav_end
+                .nav_item.nav_hover LOGIN
+            .nav_container.nav_end.nav_download
+                .nav_item.nav_hover DOWNLOAD
+        
+        
+        // Just the UEF title
         .global_main_container 
             .global_container 
                 .global_item
@@ -70,8 +81,7 @@ html(lang="en")
             .unit_container.unit_hover.unit_filter.t1
                 .unit_item
                     .unit_image
-                        a(href="/HTML/UEFMain/UEFMain.html")
-                            img(src="/img/uefland/uefengy.png", alt="")
+                        img(src="/img/uefland/uefengy.png", alt="")
                     .unit_text Engineer
                     .unit_subtext UEF-Flavor
                     .tier T1
@@ -187,5 +197,5 @@ html(lang="en")
                     .tier T2
 
 
-            // JS document has to be placed below HTML or it gets bugged (can't get certain classes or buttons if they arent loaded yet cant we lol?)         
+            // Javascript document has to be placed below HTML or it gets bugged (can't get certain classes or buttons if they arent loaded yet cant we lol?)         
             script(src="/HTML/UEFMain/app.js")

@@ -1,0 +1,92 @@
+doctype html
+html(lang="en")
+    head
+        //Rowey is the best
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="/CSS/UEFMain/UEFMain.css")
+        link(rel="stylesheet" href="https://use.typekit.net/lty2ukf.css")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@200&display=swap")
+        link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap")
+        
+        title Javi UnitDatabase
+    body
+        // Inspiration places below
+        // https://planetaryannihilation.com/
+        // https://starcraft2.com/en-us/media
+        // https://www.ageofempires.com/games/age-of-empires-iv
+        // https://www.beyondallreason.info/armada
+        
+        // Nav bar, is copied along all places
+        .main_greynav_container
+            .greynav_container
+                .greynav_item
+                    a(href="/HTML/UEFMain/UEFMain.html").greynav_image
+                        img(src="/Img/faflogo.png", alt="")
+            .greynav_container
+                .greynav_item.greynav_hover Forums
+            .greynav_container
+                .greynav_item.greynav_hover Support FAF
+            .greynav_container
+                 .greynav_item.greynav_hover Official Discord
+
+
+        .main_nav_container
+            .nav_container
+                .nav_list.nav_item
+                    ul
+                        li
+                            a(href="/HTML/UEFMain/Home.html") GAME
+                        li
+                            a(href="") NEWS
+                        li
+                            a(href="") COMMUNITY
+                        li
+                            a(href="") COMPETITIVE
+            .nav_container.nav_end 
+                .nav_item LOGIN
+            .nav_container.nav_end.nav_download
+                .nav_item DOWNLOAD
+
+        //Initial CZAR background with faction logos    
+        #main_home_container.home_mainbackground
+            .home_container 
+                .home_item
+                    .home_image
+                        img(src="/img/factionuef.png", alt="")
+            .home_container 
+                .home_item
+                    .home_image
+                        img(src="/img/factioncybran.png", alt="")
+            .home_container 
+                .home_item
+                    .home_image
+                        img(src="/img/factionaeon.png", alt="")
+            .home_container 
+                .home_item
+                    .home_image
+                        img(src="/img/factionseraphim.png", alt="")
+
+        //Text Grids below the main one
+        .main_hometext_container
+            .hometext_container 
+                .hometext_item
+                    .hometext_title THE PROJECT
+                        .hometext_subtitle Forged Alliance Forever is a community-driven project designed to facilitate online play for Supreme Commander: Forged Alliance. Complete with chat, matchmaking, replay vaults, tournaments and ever evolving balance. IF you want to experience Forged Alliance in its true glory together with thousands of other players of all skill levels, FAF is the place to be.
+            .hometext_container 
+                .hometext_item
+                    .hometext_image
+                        img(src="/img/theproject.jpg", alt="").dark_vignette
+
+
+    
+
+
+    // Javascript document has to be placed below HTML or it gets bugged (can't get certain classes or buttons if they arent loaded yet cant we lol?)         
+    script(src="/HTML/UEFMain/app.js")

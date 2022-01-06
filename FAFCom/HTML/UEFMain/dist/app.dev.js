@@ -1,6 +1,68 @@
 "use strict";
 
+var background = document.getElementById("main_home_container");
+var factionlogo = document.getElementsByClassName("home_image");
+var alllogo = document.querySelectorAll("home_image");
+
+var _loop = function _loop(_i) {
+  factionlogo[_i].addEventListener("mouseenter", function () {
+    //changebackground(i)
+    console.log(_i);
+
+    for (i2 = 0; i2 < factionlogo.length; i2++) {
+      factionlogo[i2].classList.add("home_opacity");
+    }
+
+    this.classList.remove("home_opacity");
+
+    if (_i == 0) {
+      background.style.backgroundImage = 'url("/Img/uefbg.jpg")';
+    } else if (_i == 1) {
+      background.style.backgroundImage = 'url("/Img/cybranbg.jpg")';
+    } else if (_i == 2) {
+      background.style.backgroundImage = 'url("/Img/aeonbg.jpg")';
+    } else if (_i == 3) {
+      background.style.backgroundImage = 'url("/Img/seraphimbg.jpg")';
+    }
+  });
+
+  factionlogo[_i].addEventListener("mouseleave", function () {
+    revertbackground();
+  });
+};
+
+for (var _i = 0; _i < factionlogo.length; _i++) {
+  _loop(_i);
+}
+/*function changebackground(logo) {
+  for (i = 0; i < logo; i++) {
+    console.log(i);
+    factionlogo[i].classList.add("home_opacity");
+     
+  }
+  if(logo == 0) {
+    background.style.backgroundImage = 'url("/Img/uefbg.png")';
+  } else if(logo == 1) {
+    background.style.backgroundImage = 'url("/Img/cybranbg.png")';
+  } else if(logo == 2) {
+    background.style.backgroundImage = 'url("/Img/aeonbg.png")';
+  } else if(logo == 3) {  
+    background.style.backgroundImage = 'url("/Img/seraphimbg.png")';
+  }
+}; */
+
+
+function revertbackground() {
+  background.style.backgroundImage = 'url("/Img/home.png")';
+
+  for (i = 0; i < factionlogo.length; i++) {
+    factionlogo[i].classList.remove("home_opacity");
+  }
+}
+
+; //Unit Database JS below
 //Copied from W3, seems a bit bad considering they use var? Definitely can cleanup their mess
+
 filterSelection("all");
 
 function filterSelection(c) {
@@ -51,7 +113,8 @@ for (i = 0; i < btn.length; i++) {
     act[0].classList.remove("active");
     this.classList.add("active");
   });
-} // Pop up when clicking images
+} // Pop up when clicking images (Currently not working on it, but this was how I was going
+// to make the unit statistics appear)
 
 
 var unit = document.getElementsByClassName("unit_image");

@@ -13,28 +13,42 @@ html(lang="en")
         link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap")
         title Javi Unit Database
     body
-        //Navigation bar
-
-        .main_nav_container 
-            .nav_container
-                .nav_item
-                    a(href="/HTML/UEFMain/UEFMain.html").image
+        // Inspiration places below
+        // https://planetaryannihilation.com/
+        // https://starcraft2.com/en-us/media
+        // https://www.ageofempires.com/games/age-of-empires-iv
+        // https://www.beyondallreason.info/armada
+        
+        // Nav bar, is copied along all places
+        .main_greynav_container
+            .greynav_container
+                .greynav_item
+                    a(href="/HTML/UEFMain/UEFMain.html").greynav_image
                         img(src="/Img/faflogo.png", alt="")
-            .nav_container
-                .nav_item.nav_hover Home 
-            .nav_container
-                .nav_item.nav_hover News
-            .nav_container
-                .nav_item.nav_hover Gameplay
-            .nav_container
-                .nav_item.nav_hover Community
-            .nav_container
-                .nav_item
-            .nav_container
-                .nav_item.nav_hover Login
-            .nav_container
-                .nav_item.nav_hover Download
+            .greynav_container
+                .greynav_item.greynav_hover Forums
+            .greynav_container
+                .greynav_item.greynav_hover Support FAF
+            .greynav_container
+                 .greynav_item.greynav_hover Official Discord
 
+
+        .main_nav_container
+            .nav_container
+                .nav_list.nav_item
+                    ul
+                        li
+                            a(href="/HTML/UEFMain/Home.html") GAME
+                        li
+                            a(href="") NEWS
+                        li
+                            a(href="") COMMUNITY
+                        li
+                            a(href="") COMPETITIVE
+            .nav_container.nav_end
+                .nav_item.nav_hover LOGIN
+            .nav_container.nav_end.nav_download
+                .nav_item.nav_hover DOWNLOAD
         //Main containers
 
         .main_main_container

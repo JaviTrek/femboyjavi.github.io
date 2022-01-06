@@ -1,4 +1,4 @@
 <?php
-header("Location: /FAFCom/HTML/UEFMain/Home.html");
+header("Location: /HTML/UEFMain/Home.html");
 exit();
 ?>

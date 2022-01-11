@@ -1,9 +1,3 @@
-
-
-
-
-
-
 let background = document.getElementById("main_home_container");
 let factionlogo = document.getElementsByClassName("home_image");
 let alllogo = document.querySelectorAll("home_image");
@@ -18,13 +12,13 @@ for (let i = 0; i < factionlogo.length; i++) {
     }
     this.classList.remove("home_opacity");
     if(i == 0) {
-      background.style.backgroundImage = 'url("/Img/uefbg.jpg")';
+      background.style.backgroundImage = 'url("/img/uefbg.jpg")';
     } else if(i == 1) {
-      background.style.backgroundImage = 'url("/Img/cybranbg.jpg")';
+      background.style.backgroundImage = 'url("/img/cybranbg.jpg")';
     } else if(i == 2) {
-      background.style.backgroundImage = 'url("/Img/aeonbg.jpg")';
+      background.style.backgroundImage = 'url("/img/aeonbg.jpg")';
     } else if(i == 3) {  
-      background.style.backgroundImage = 'url("/Img/seraphimbg.jpg")';
+      background.style.backgroundImage = 'url("/img/seraphimbg.jpg")';
     }
   });
   factionlogo[i].addEventListener("mouseleave", function() {
@@ -39,18 +33,18 @@ for (let i = 0; i < factionlogo.length; i++) {
      
   }
   if(logo == 0) {
-    background.style.backgroundImage = 'url("/Img/uefbg.png")';
+    background.style.backgroundImage = 'url("/img/uefbg.png")';
   } else if(logo == 1) {
-    background.style.backgroundImage = 'url("/Img/cybranbg.png")';
+    background.style.backgroundImage = 'url("/img/cybranbg.png")';
   } else if(logo == 2) {
-    background.style.backgroundImage = 'url("/Img/aeonbg.png")';
+    background.style.backgroundImage = 'url("/img/aeonbg.png")';
   } else if(logo == 3) {  
-    background.style.backgroundImage = 'url("/Img/seraphimbg.png")';
+    background.style.backgroundImage = 'url("/img/seraphimbg.png")';
   }
 }; */
 
 function revertbackground() {
-  background.style.backgroundImage = 'url("/Img/home.png")';
+  background.style.backgroundImage = 'url("/img/home.png")';
   for (i = 0; i < factionlogo.length; i++) {
     factionlogo[i].classList.remove("home_opacity")
   }
@@ -125,5 +119,5 @@ for (i = 0; i <= unit.length; i++) {
 
 function myFunction() {
   console.log(unit);
-  location.replace("/HTML/UEFMain/UEFMain.html");
+  location.replace("/html/main/UEF.html");
 }

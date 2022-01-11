@@ -16,6 +16,7 @@ body {
 a:link {
   text-decoration: none;
   color: #c2c2c2;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -29,7 +30,7 @@ a:hover {
 }
 
 .global_title {
-  font-family: "russo one";
+  font-family: 'russo one';
   color: #6553ff;
   font-size: 100px;
   letter-spacing: 3px;
@@ -44,16 +45,21 @@ a:hover {
 }
 
 .global_main_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-template-rows: minmax(200px, 1fr) repeat(auto-fit, minmax(100px, 1.1fr));
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  -ms-grid-rows: minmax(200px, 1fr) (minmax(100px, 1.1fr))[auto-fit];
+      grid-template-rows: minmax(200px, 1fr) repeat(auto-fit, minmax(100px, 1.1fr));
   grid-gap: 0.5vw;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(black), to(rgba(0, 0, 0, 0)));
   background-image: linear-gradient(to bottom, black, rgba(0, 0, 0, 0));
 }
 
 .global_item {
   width: 100%;
   height: 100%;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -61,15 +67,20 @@ a:hover {
 .global_item .global_image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 20px;
   overflow: hidden;
 }
 
 .main_greynav_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto repeat(3, max-content);
-  grid-template-rows: minmax(10px, 35px);
+  -ms-grid-columns: auto (max-content)[3];
+      grid-template-columns: auto repeat(3, -webkit-max-content);
+      grid-template-columns: auto repeat(3, max-content);
+  -ms-grid-rows: minmax(10px, 35px);
+      grid-template-rows: minmax(10px, 35px);
   gap: 30px;
   color: #757575;
   font-size: 14px;
@@ -83,7 +94,9 @@ a:hover {
   width: 100%;
   height: 100%;
   position: relative;
+  -webkit-transition: 1s;
   transition: 1s;
+  display: -ms-grid;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -111,21 +124,27 @@ a:hover {
 
 @media (max-width: 460px) {
   .main_greynav_container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-
   .greynav_container {
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
 }
+
 @media (max-width: 1220px) {
   .main_greynav_container img {
     display: none;
   }
 }
+
 .main_nav_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: minmax(50px, auto) max-content max-content;
+  -ms-grid-columns: minmax(50px, auto) max-content max-content;
+      grid-template-columns: minmax(50px, auto) -webkit-max-content -webkit-max-content;
+      grid-template-columns: minmax(50px, auto) max-content max-content;
   gap: 20px;
   color: #afafaf;
   font-size: 26px;
@@ -138,7 +157,9 @@ a:hover {
 .nav_item {
   width: 100%;
   height: 100%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -164,7 +185,8 @@ a:hover {
 .nav_item .image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .nav_item:hover {
@@ -177,6 +199,7 @@ a:hover {
   border: 1px solid white;
   color: white;
   padding: 10px;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   letter-spacing: 0.4px;
 }
@@ -186,52 +209,65 @@ a:hover {
 }
 
 .nav_end {
-  justify-self: end;
+  -ms-grid-column-align: end;
+      justify-self: end;
 }
 
 @media (max-width: 460px) {
   .main_nav_container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
-
   .nav_end {
-    justify-self: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
-
   .nav_download {
     padding: 10px;
   }
 }
+
 @media (max-width: 820px) {
   .nav_item ul {
     padding: 0px;
   }
 }
+
 #main_home_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  -ms-grid-columns: (minmax(150px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  -ms-grid-rows: (minmax(150px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 40px;
-  background-image: url("/Img/home.png");
+  background-image: url("../img/home.png");
   background-size: cover;
   padding: 200px;
   padding-top: 250px;
   padding-bottom: 250px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .home_item .home_image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
   opacity: 70%;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .home_image {
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
@@ -239,9 +275,12 @@ a:hover {
   width: 100%;
   height: 100%;
   position: relative;
+  display: -ms-grid;
   display: grid;
   place-items: center;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   justify-items: center;
 }
 
@@ -251,37 +290,50 @@ a:hover {
 
 @media (max-width: 800px) {
   #main_home_container {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    -ms-grid-columns: (minmax(50px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    -ms-grid-rows: (minmax(50px, 1fr))[auto-fit];
+        grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     padding: 50px;
   }
 }
+
 .main_hometext_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: auto minmax(200px, 500px);
-  grid-template-rows: auto;
+  -ms-grid-columns: auto minmax(200px, 500px);
+      grid-template-columns: auto minmax(200px, 500px);
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
   background-color: #0c0c0c;
   background-size: cover;
   background-position: center center;
   padding: 15px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   justify-items: center;
 }
 
 .hometext_item .hometext_image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
   opacity: 70%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .hometext_item {
   width: 100%;
   height: 100%;
   position: relative;
+  display: -ms-grid;
   display: grid;
   color: white;
 }
@@ -305,19 +357,24 @@ a:hover {
 
 .home_opacity {
   opacity: 0%;
+  -webkit-transition: 0.5s;
   transition: 0.5s;
 }
 
 .main_main_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  grid-template-rows: minmax(200px, 1fr) repeat(auto-fit, minmax(100px, 1.1fr));
+  -ms-grid-columns: (minmax(240px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  -ms-grid-rows: minmax(200px, 1fr) (minmax(100px, 1.1fr))[auto-fit];
+      grid-template-rows: minmax(200px, 1fr) repeat(auto-fit, minmax(100px, 1.1fr));
   grid-gap: 0.5vw;
 }
 
 .main_item {
   width: 100%;
   height: 100%;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -325,7 +382,8 @@ a:hover {
 .main_item .main_image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-top: 20px;
   overflow: hidden;
 }
@@ -335,24 +393,27 @@ a:hover {
 }
 
 .main_hover {
+  -webkit-transition: 0.4s;
   transition: 0.4s;
   background-color: rgba(0, 0, 0, 0.514);
 }
 
 .main_hover:hover {
-  filter: brightness(160%);
-  transform: scale(1.1);
+  -webkit-filter: brightness(160%);
+          filter: brightness(160%);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
   background-color: #0c0c0c;
 }
 
 .main_text {
-  font-family: "Russo One";
+  font-family: 'Russo One';
   color: white;
   font-size: 25px;
 }
 
 .main_subtext {
-  font-family: "Roboto";
+  font-family: 'Roboto';
   color: #b9b9b9;
   font-size: 20px;
   font-weight: lighter;
@@ -361,13 +422,16 @@ a:hover {
 }
 
 .wtitle {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
 }
 
 .main_unit_container {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  -ms-grid-rows: (minmax(180px, 1fr))[auto-fit];
+      grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
   grid-gap: 0.5vw;
   grid-auto-flow: row;
   padding: 40px;
@@ -377,7 +441,8 @@ a:hover {
 .unit_item .unit_image img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
   color: #569999;
 }
@@ -386,6 +451,7 @@ a:hover {
   width: 100%;
   height: 100%;
   position: relative;
+  display: -ms-grid;
   display: grid;
   place-items: center;
 }
@@ -395,6 +461,7 @@ a:hover {
 }
 
 .show {
+  display: -ms-grid;
   display: grid;
 }
 
@@ -407,23 +474,26 @@ a:hover {
   margin: 20px;
   border: 4.5px solid white;
   border-radius: 10px;
-  font-family: "electrolize";
+  font-family: 'electrolize';
   font-weight: bolder;
   letter-spacing: 0.8px;
   cursor: pointer;
+  -webkit-transition: 0.4s;
   transition: 0.4s;
 }
 
 .btn:hover {
   background-color: #5675ff;
   border: 6px solid #290075;
-  transform: scale(1.25);
+  -webkit-transform: scale(1.25);
+          transform: scale(1.25);
 }
 
 .btn.active {
   background-color: #5065c2;
   border: 6px solid #1f0058;
-  transform: scale(1.35);
+  -webkit-transform: scale(1.35);
+          transform: scale(1.35);
 }
 
 .icon {
@@ -442,25 +512,28 @@ a:hover {
   color: rgba(204, 204, 204, 0.705);
   top: 10px;
   left: 10px;
-  font-family: "IBM Plex Sans Arabic";
+  font-family: 'IBM Plex Sans Arabic';
   font-weight: 1000;
 }
 
 .unit_hover:hover {
-  filter: brightness(160%);
-  transform: scale(1.15);
+  -webkit-filter: brightness(160%);
+          filter: brightness(160%);
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
   background-color: #202d58;
   border: 3px solid #2560ad;
   overflow: hidden;
 }
 
 .unit_hover {
+  -webkit-transition: 0.25s;
   transition: 0.25s;
   background-color: rgba(33, 30, 78, 0.505);
 }
 
 .unit_text {
-  font-family: "Russo One";
+  font-family: 'Russo One';
   color: white;
   font-size: 18px;
   -webkit-text-stroke: 0.3px black;
@@ -470,7 +543,7 @@ a:hover {
 }
 
 .unit_tier_text {
-  font-family: "Russo One";
+  font-family: 'Russo One';
   color: white;
   font-size: 80px;
   letter-spacing: 20px;
@@ -478,15 +551,18 @@ a:hover {
 }
 
 .unit_subtext {
-  font-family: "roboto";
+  font-family: 'roboto';
   color: #b9b9b9;
   font-size: 14px;
   font-weight: lighter;
   position: absolute;
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   bottom: 15px;
 }
 
 .wtitle {
-  grid-column: 1/-1;
+  grid-column: 1 / -1;
 }
+/*# sourceMappingURL=UEFMain.css.map */

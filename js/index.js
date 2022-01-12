@@ -26,25 +26,9 @@ for (let i = 0; i < factionlogo.length; i++) {
   });
 }
 
-/*function changebackground(logo) {
-  for (i = 0; i < logo; i++) {
-    console.log(i);
-    factionlogo[i].classList.add("home_opacity");
-     
-  }
-  if(logo == 0) {
-    background.style.backgroundImage = 'url("/img/uefbg.png")';
-  } else if(logo == 1) {
-    background.style.backgroundImage = 'url("/img/cybranbg.png")';
-  } else if(logo == 2) {
-    background.style.backgroundImage = 'url("/img/aeonbg.png")';
-  } else if(logo == 3) {  
-    background.style.backgroundImage = 'url("/img/seraphimbg.png")';
-  }
-}; */
 
 function revertbackground() {
-  background.style.backgroundImage = 'url("/img/home.png")';
+  background.style.backgroundImage = 'url("/img/home.jpg")';
   for (i = 0; i < factionlogo.length; i++) {
     factionlogo[i].classList.remove("home_opacity")
   }

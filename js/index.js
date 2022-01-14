@@ -4,7 +4,7 @@ let alllogo = document.querySelectorAll("home_image");
 
 
 for (let i = 0; i < factionlogo.length; i++) {
-  factionlogo[i].addEventListener("mouseenter", function() {
+  factionlogo[i].addEventListener("mouseover", function() {
     //changebackground(i)
     console.log(i);
     for(i2 = 0; i2 < factionlogo.length; i2++) {
@@ -34,7 +34,9 @@ function revertbackground() {
   }
   };
 
-//Unit Database JS below
+
+/*
+  //Unit Database JS below
 
 //Copied from W3, seems a bit bad considering they use var? Definitely can cleanup their mess
 
@@ -105,3 +107,5 @@ function myFunction() {
   console.log(unit);
   location.replace("/html/main/UEF.html");
 }
+
+*/

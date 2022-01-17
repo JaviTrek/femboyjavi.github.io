@@ -27,17 +27,48 @@ a:visited {
 a:hover {
   color: white;
 }
-/*splat css starts here */
 
-.splat {
-  /* background: url(../img/splat.png) no-repeat center; */
+.fullwidth {
+  grid-column: 1/-1;
+}
+/*splat css starts here */
+.splat_main_container {
+  display: grid;
+  grid-template-columns: auto;
+  position: relative;
+  padding: 10px 0px;
+  justify-items: center;
+}
+.splat_rotate {
   position: absolute;
-  top: 70px;
   transform: rotate(0.5turn);
   width: 100%;
   z-index: 0;
-  
-  
+  object-fit: cover;
+}
+
+.splat {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+  object-fit: cover;
+  bottom: 0px;
+  overflow: hidden;
+}
+
+.splat_container {
+  position: relative;
+  width: 100%;
+  grid-column: 1/-1; 
+}
+
+.splat_item {
+  font-size: 40px;
+  color: white;
+  position: absolute;
+  width: 100%;
+  top: 8vw;
+
 }
 
 
@@ -118,6 +149,7 @@ a:hover {
   padding: 0px 0px 10px 0px;
 }
 
+
 .nav_item {
   width: 100%;
   height: 100%;
@@ -195,51 +227,57 @@ a:hover {
 
 #main_home_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 40px;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
   background-image: url("../img/home.jpg");
+  background-position: center;
   background-size: cover;
-  padding: 200px;
-  padding-top: 250px;
-  padding-bottom: 250px;
+  padding: 300px 300px;
   justify-content: center;
   justify-items: center;
-  transition: 0.5s;
-}
-
-.home_item .home_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  overflow: hidden;
-  opacity: 70%;
-  align-self: center;
-}
-
-.home_image {
-  transition: 0.5s;
+  color: white;
+  font-size: 50px;
+  font-weight: 500;
+  letter-spacing: 1PX;
 }
 
 .home_item {
   width: 100%;
   height: 100%;
   position: relative;
-  display: grid;
   place-items: center;
   align-items: center;
   justify-items: center;
+  text-transform: uppercase;
 }
 
-.home_item .home_image img:hover {
-  opacity: 100%;
+.home_subtitle {
+  font-size: 25px;
+  font-family: "russo one";
+  padding: 20PX;
 }
-
 @media (max-width: 800px) {
   #main_home_container {
-    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-    padding: 50px;
+    padding: 100px 0px;
+    font-size: 20px;
+    gap: 0px;
+  }
+  .home_subtitle {
+    font-size: 12px;
+    padding: 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  #main_home_container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 100px 0px;
+    font-size: 20px;
+    gap: 0px;
+  }
+  .home_subtitle {
+    font-size: 12px;
+    padding: 20px;
   }
 }
 
@@ -251,7 +289,7 @@ a:hover {
   background-color: #111111;
   background-size: cover;
   background-position: center center;
-  padding: 200px;
+  padding: 10px 200px;
   padding-top: 0px;
   justify-content: center;
 
@@ -265,13 +303,8 @@ a:hover {
   opacity: 100%;
 }
 
-.hometext_image {
-  padding: 0px;
-}
 
 .hometext_item {
-  /*width: 100%;
-  height: 100%; */
   position: relative;
   overflow: hidden;
   object-fit: contain;
@@ -282,20 +315,23 @@ a:hover {
 }
 
 
-.hometext_maintitle {
-  font-family: "Russo One";
-  font-weight: bold;
-  letter-spacing: 3px;
-  font-size: 40px;
-  padding: 30px 30px 20px 30px;
-}
 .hometext_title {
   font-family: "Orbitron";
   font-weight: bold;
   letter-spacing: 3px;
-  font-size: 30px;
-  color: #d6d6d6;
+  font-size: 40px;
+  padding: 30px 10vw 0px 10vw;
+  
 }
+
+.hometext_outtitle {
+  font-family: "Orbitron";
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 40px;
+  padding: 60px 10vw 0px 10vw;
+}
+
 
 .hometext_subtitle {
   font-family: "electrolize";
@@ -306,10 +342,7 @@ a:hover {
   line-height: 2;
 }
 
-.home_opacity {
-  opacity: 0%;
-  transition: 0.5s;
-}
+
 
 @media (max-width: 1500px) {
   #main_hometext_container {
@@ -324,18 +357,122 @@ a:hover {
   #main_hometext_container {
     grid-template-columns: auto;
     grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-    padding: 0px;
+    padding: 10px;
   }
-  .hometext_maintitle {
+  .hometext_title {
     font-size: 20px;
-    padding: 20px;
+    padding: 0px;
   }
   .hometext_subtitle {
     font-size: 14px;
-    padding: 0px;
+    padding: 0px 0px;
+  }
+
+  .hometext_outtitle {
+    padding: 10px;
+    font-size: 20px;
   }
   .hometext_item .hometext_image img  {
     width: 90%;
+  }
+}
+
+
+/* faction stuff starts here */
+
+#main_faction_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(150px, 1fr));
+  grid-gap: 40px;
+  background-image: url("../img/faction.jpg");
+  background-size: cover;
+  padding: 200px;
+  padding-top: 250px;
+  padding-bottom: 250px;
+  justify-content: center;
+  justify-items: center;
+  transition: 0.5s;
+}
+
+.faction_item .faction_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  opacity: 70%;
+  align-self: center;
+}
+
+.faction_image {
+  transition: 0.5s;
+}
+
+.faction_item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: grid;
+  place-items: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.faction_item .faction_image img:hover {
+  opacity: 100%;
+}
+
+.faction_opacity {
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+@media (max-width: 800px) {
+  #main_faction_container {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    padding: 50px;
+  }
+}
+
+/* 4 Image squad */
+
+#main_gallery_container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit);
+  background-color: #111111;
+  justify-content: center;
+  padding:0px 300px;
+  gap: 10px;
+
+}
+
+.gallery_item .gallery_image img {
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 20px;
+
+}
+
+
+.gallery_item {
+  position: relative;
+  overflow: hidden;
+  object-fit: contain;
+  display: grid;
+  color: white;
+  justify-self: end;
+}
+
+@media (max-width: 1000px) {
+  #main_gallery_container {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    padding: 0px;
+    gap: 10px;
   }
 }
 

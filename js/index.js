@@ -1,6 +1,6 @@
-let background = document.getElementById("main_home_container");
-let factionlogo = document.getElementsByClassName("home_image");
-let alllogo = document.querySelectorAll("home_image");
+let background = document.getElementById("main_faction_container");
+let factionlogo = document.getElementsByClassName("faction_image");
+let alllogo = document.querySelectorAll("faction_image");
 
 
 for (let i = 0; i < factionlogo.length; i++) {
@@ -8,9 +8,9 @@ for (let i = 0; i < factionlogo.length; i++) {
     //changebackground(i)
     console.log(i);
     for(i2 = 0; i2 < factionlogo.length; i2++) {
-      factionlogo[i2].classList.add("home_opacity");
+      factionlogo[i2].classList.add("faction_opacity");
     }
-    this.classList.remove("home_opacity");
+    this.classList.remove("faction_opacity");
     if(i == 0) {
       background.style.backgroundImage = 'url("/img/uefbg.jpg")';
     } else if(i == 1) {
@@ -28,9 +28,9 @@ for (let i = 0; i < factionlogo.length; i++) {
 
 
 function revertbackground() {
-  background.style.backgroundImage = 'url("/img/home.jpg")';
+  background.style.backgroundImage = 'url("/img/faction.jpg")';
   for (i = 0; i < factionlogo.length; i++) {
-    factionlogo[i].classList.remove("home_opacity")
+    factionlogo[i].classList.remove("faction_opacity")
   }
   };
 

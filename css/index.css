@@ -225,7 +225,7 @@ a:hover {
 
 /* main page stuff  starts here */
 
-#main_home_container {
+#main_banner_container {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
@@ -241,7 +241,7 @@ a:hover {
   letter-spacing: 1PX;
 }
 
-.home_item {
+.banner_item {
   width: 100%;
   height: 100%;
   position: relative;
@@ -251,60 +251,52 @@ a:hover {
   text-transform: uppercase;
 }
 
-.home_subtitle {
+.banner_subtitle {
   font-size: 25px;
   font-family: "russo one";
   padding: 20PX;
 }
 @media (max-width: 800px) {
-  #main_home_container {
+  #main_banner_container {
     padding: 100px 0px;
     font-size: 20px;
     gap: 0px;
   }
-  .home_subtitle {
+  .banner_subtitle {
     font-size: 12px;
     padding: 20px;
   }
 }
 
 @media (max-width: 400px) {
-  #main_home_container {
+  #main_banner_container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 100px 0px;
     font-size: 20px;
     gap: 0px;
   }
-  .home_subtitle {
+  .banner_subtitle {
     font-size: 12px;
     padding: 20px;
   }
 }
 
 /* Stuff below the main page */
-#main_hometext_container {
+#main_text_container {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
   background-color: #111111;
   background-size: cover;
   background-position: center center;
-  padding: 10px 200px;
-  padding-top: 0px;
+  padding: 10px 150px;
+
   justify-content: center;
 
 }
 
-.hometext_item .hometext_image img {
-  width: 50%; 
-  height: 100%;
-  object-fit: contain;
-  overflow: hidden;
-  opacity: 100%;
-}
 
-
-.hometext_item {
+.text_item {
   position: relative;
   overflow: hidden;
   object-fit: contain;
@@ -315,25 +307,17 @@ a:hover {
 }
 
 
-.hometext_title {
+.text_title {
   font-family: "Orbitron";
   font-weight: bold;
   letter-spacing: 3px;
   font-size: 40px;
-  padding: 30px 10vw 0px 10vw;
+  padding: 10px 10vw 10px 10vw;
   
 }
 
-.hometext_outtitle {
-  font-family: "Orbitron";
-  font-weight: bold;
-  letter-spacing: 3px;
-  font-size: 40px;
-  padding: 60px 10vw 0px 10vw;
-}
 
-
-.hometext_subtitle {
+.text_subtitle {
   font-family: "electrolize";
   font-weight: 100;
   letter-spacing: 0px;
@@ -345,41 +329,99 @@ a:hover {
 
 
 @media (max-width: 1500px) {
-  #main_hometext_container {
-    padding: 10px 100px;
+  #main_text_container {
+    padding: 0px 100px;
   }
-  .hometext_item .hometext_image img  {
-    width: 80%;
+  .text_title {
+    padding: 0px 0vw;
+    font-size: 33px;
+  }
+  .text_subtitle {
+    font-size: 20px;
   }
 }
 
 @media (max-width: 800px) {
-  #main_hometext_container {
+  #main_text_container {
     grid-template-columns: auto;
     grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     padding: 10px;
   }
-  .hometext_title {
-    font-size: 20px;
+  .text_title {
+    font-size: 22px;
     padding: 0px;
   }
-  .hometext_subtitle {
-    font-size: 14px;
+  .text_subtitle {
+    font-size: 15px;
     padding: 0px 0px;
   }
+}
 
-  .hometext_outtitle {
-    padding: 10px;
-    font-size: 20px;
-  }
-  .hometext_item .hometext_image img  {
-    width: 90%;
+/* 4 Image squad */
+
+#main_gallery_container {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-rows: repeat(auto-fit);
+  background-color: #111111;
+  justify-content: center;
+  padding:0px 20vw 100px 20vw;
+  gap: 10px;
+}
+
+
+.gallery_column {
+  grid-column: span 2;
+
+}
+
+.gallery_item .gallery_image img {
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 20px;
+
+}
+
+
+.gallery_item {
+  position: relative;
+  overflow: hidden;
+  object-fit: contain;
+  display: grid;
+  color: white;
+  justify-self: end;
+}
+
+@media (max-width: 1300px) {
+  #main_gallery_container {
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+
+    padding: 0px 10vw 30px 10vw;
+    gap: 5px;
   }
 }
+
+@media (max-width: 800) {
+  #main_gallery_container {
+    grid-template-columns: repeat(2, auto-fit, minmax(200px, 1fr));
+  }
+}
+@media (max-width: 420px) {
+  #main_gallery_container {
+    grid-template-columns: repeat(auto-fit, minmax(30vw, 1fr));
+    gap: 3px;
+    padding: 0px 10px 30px 10px;
+  }
+}
+
+/*# sourceMappingURL=UEFMain.css.map */
 
 
 /* faction stuff starts here */
 
+/*
 #main_faction_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -432,48 +474,5 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
     padding: 50px;
-  }
-}
-
-/* 4 Image squad */
-
-#main_gallery_container {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
-  grid-template-rows: repeat(auto-fit);
-  background-color: #111111;
-  justify-content: center;
-  padding:0px 300px;
-  gap: 10px;
-
-}
-
-.gallery_item .gallery_image img {
-  width: 100%; 
-  height: 100%;
-  object-fit: contain;
-  overflow: hidden;
-  border-radius: 20px;
-
-}
-
-
-.gallery_item {
-  position: relative;
-  overflow: hidden;
-  object-fit: contain;
-  display: grid;
-  color: white;
-  justify-self: end;
-}
-
-@media (max-width: 1000px) {
-  #main_gallery_container {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
-    padding: 0px;
-    gap: 10px;
-  }
-}
-
-/*# sourceMappingURL=UEFMain.css.map */
+  } 
+  */

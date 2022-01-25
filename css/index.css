@@ -11,6 +11,7 @@ body {
   padding: auto;
   padding-top: 0px;
   font-family: "Electrolize", "acumin-pro-extra-condensed", "hot-salsa";
+  color: white;
 }
 
 a:link {
@@ -36,7 +37,7 @@ a:hover {
   display: grid;
   grid-template-columns: auto;
   position: relative;
-  padding: 10px 0px;
+  padding: 5px 0px 5px 0px;
   justify-items: center;
 }
 .splat_rotate {
@@ -75,19 +76,19 @@ a:hover {
 /* Grey navbar starts here */
 .main_greynav_container {
   display: grid;
-  grid-template-columns: auto repeat(3, max-content);
+  grid-template-columns: repeat(10,max-content);
   grid-template-rows: minmax(10px, 35px);
-  gap: 30px;
   color: #757575;
   font-size: 14px;
   background-color: #0a0a0a;
-  justify-items: start;
-  padding-left: 10px;
-  padding-right: 10px;
-  z-index: 20;
+  padding: 0px 10px 0px 10px;
   position: relative;
+  justify-content: end;
+  place-items: center;
 }
-
+.greynav_container {
+  padding: 0px 10px;
+}
 .greynav_item {
   width: 100%;
   height: 100%;
@@ -96,19 +97,10 @@ a:hover {
   display: grid;
   place-items: center;
   cursor: pointer;
+  justify-self: end;
+
 }
 
-.greynav_item .greynav_image {
-  width: 55%;
-  height: 100%;
-  position: relative;
-  top: 10px;
-}
-
-.greynav_item .greynav_image img {
-  width: 100%;
-  height: 100%;
-}
 
 .greynav_hover:hover {
   color: white;
@@ -117,8 +109,19 @@ a:hover {
 .greynav_item a {
   color: white;
 }
+.fab {
+padding: 0px;
+font-size: 30px;
+height: 10px;
+width: 100%;
+text-align: center;
+text-decoration: none;
+color: white;
+justify-self: end;
+}
 
-@media (max-width: 460px) {
+
+@media (max-width: 760px) {
   .main_greynav_container {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
@@ -139,48 +142,49 @@ a:hover {
 .main_nav_container {
   display: grid;
   position: relative;
-  grid-template-columns: minmax(50px, auto) max-content max-content;
+  grid-template-columns: max-content minmax(50px, auto) max-content max-content;
+  grid-template-rows: auto;
   gap: 20px;
   color: #afafaf;
   font-size: 26px;
   background-color: #111111;
   justify-items: center;
-  z-index: 2;
-  padding: 0px 0px 10px 0px;
+  padding: 10px 10px 0px 10px;
 }
-
+.nav_container {
+  align-self: center;
+  align-content: center;
+}
 
 .nav_item {
   width: 100%;
   height: 100%;
   transition: 0.5s;
-  display: grid;
-  place-items: center;
+
 }
 
 .nav_item ul {
   list-style-type: none;
-  margin: 0;
-  padding: 0;
-  padding-left: 250px;
+  margin: 0px;
+  padding: 0px;
 }
 
 .nav_item li {
   display: inline-block;
-  padding: 20px;
+  padding: 0px 20px
 }
 
-.nav_item .nav_image {
-  width: 100%;
+
+.nav_image img{
+  width: 80px;
   height: 100%;
+  object-fit: contain;
   overflow: hidden;
+  padding: 0px 0px 0px 20px;
+  justify-self: center;
+  place-self: center;
 }
 
-.nav_item .nav_image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
 
 .nav_item:hover {
   color: white;
@@ -202,6 +206,8 @@ a:hover {
 
 .nav_end {
   justify-self: end;
+  font-weight: 900;
+  letter-spacing: 1px;
 }
 
 @media (max-width: 460px) {
@@ -221,6 +227,10 @@ a:hover {
   .nav_item ul {
     padding: 0px;
   }
+  .main_nav_container {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    font-size: 20px;
+  }
 }
 
 /* main page stuff  starts here */
@@ -228,56 +238,67 @@ a:hover {
 #main_banner_container {
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
-  background-image: url("../img/home.jpg");
+  background-image: url("../img/home1.jpg"); 
   background-position: center;
   background-size: cover;
-  padding: 300px 300px;
-  justify-content: center;
-  justify-items: center;
-  color: white;
-  font-size: 50px;
-  font-weight: 500;
-  letter-spacing: 1PX;
+  padding: 300px 0px;
+  font-size: 35px;
+  letter-spacing: 1.2PX;
+  text-shadow: 0 2px 4px rgb(0 0 0 / 80%), 0 8px 16px rgb(0 0 0 / 60%);
 }
-
 .banner_item {
   width: 100%;
   height: 100%;
   position: relative;
-  place-items: center;
-  align-items: center;
-  justify-items: center;
   text-transform: uppercase;
+  display: grid;
+}
+
+.banner_title {
+  font-size: 50px;
+  font-family: "orbitron";
+  font-weight: bolder;
+  letter-spacing: 6px;
+  padding: 20px 0px;
 }
 
 .banner_subtitle {
   font-size: 25px;
-  font-family: "russo one";
-  padding: 20PX;
+  font-family: "electrolize";
+  font-weight: 600;
+  padding: 20PX 0px;
 }
 @media (max-width: 800px) {
   #main_banner_container {
-    padding: 100px 0px;
-    font-size: 20px;
+    padding: 100px 10px;
     gap: 0px;
+    font-size: 10px;
   }
   .banner_subtitle {
     font-size: 12px;
-    padding: 20px;
+    padding: 5px;
   }
+
+  .banner_title {
+    font-size: 20px;
+    padding: 5px;
+  }
+
 }
 
 @media (max-width: 400px) {
   #main_banner_container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 100px 0px;
-    font-size: 20px;
     gap: 0px;
+  }
+  .banner_title {
+    font-size: 18px;
+
   }
   .banner_subtitle {
     font-size: 12px;
-    padding: 20px;
+
   }
 }
 
@@ -303,7 +324,6 @@ a:hover {
   display: grid;
   color: white;
   justify-self: end;
-  grid-template-columns: 1 / -1;
 }
 
 
@@ -361,7 +381,7 @@ a:hover {
 
 #main_gallery_container {
   display: grid;
-  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  grid-template-columns: repeat(12, minmax(100px, 1fr));
   grid-template-rows: repeat(auto-fit);
   background-color: #111111;
   justify-content: center;
@@ -369,10 +389,23 @@ a:hover {
   gap: 10px;
 }
 
-
-.gallery_column {
+.gallery_2 {
   grid-column: span 2;
+}
 
+.gallery_6 {
+  grid-column: span 6;
+}
+.gallery_8 {
+  grid-column: span 8;
+}
+.gallery_10 {
+  grid-column: span 10;
+}
+
+.gallery_12 {
+  grid-column: span 12;
+  padding: 0px 5vw;
 }
 
 .gallery_item .gallery_image img {

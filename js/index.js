@@ -1,23 +1,23 @@
 let background = document.getElementById("main_faction_container");
 let factionlogo = document.getElementsByClassName("faction_image");
-let alllogo = document.querySelectorAll("faction_image");
+// let alllogo = document.querySelectorAll("faction_image");
 
 
 for (let i = 0; i < factionlogo.length; i++) {
   factionlogo[i].addEventListener("mouseover", function() {
     //changebackground(i)
     console.log(i);
-    for(i2 = 0; i2 < factionlogo.length; i2++) {
+    for(let i2 = 0; i2 < factionlogo.length; i2++) {
       factionlogo[i2].classList.add("faction_opacity");
     }
     this.classList.remove("faction_opacity");
-    if(i == 0) {
+    if(i === 0) {
       background.style.backgroundImage = 'url("/img/uefbg.jpg")';
-    } else if(i == 1) {
+    } else if(i === 1) {
       background.style.backgroundImage = 'url("/img/cybranbg.jpg")';
-    } else if(i == 2) {
+    } else if(i === 2) {
       background.style.backgroundImage = 'url("/img/aeonbg.jpg")';
-    } else if(i == 3) {  
+    } else if(i === 3) {
       background.style.backgroundImage = 'url("/img/seraphimbg.jpg")';
     }
   });
@@ -29,10 +29,10 @@ for (let i = 0; i < factionlogo.length; i++) {
 
 function revertbackground() {
   background.style.backgroundImage = 'url("/img/faction.jpg")';
-  for (i = 0; i < factionlogo.length; i++) {
+  for (let i = 0; i < factionlogo.length; i++) {
     factionlogo[i].classList.remove("faction_opacity")
   }
-  };
+  }
 
 
 /*

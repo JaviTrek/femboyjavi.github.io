@@ -9,8 +9,13 @@ body {
   background-attachment: fixed;
   background-color: #111111;
   background-position: center center;
-  margin-bottom: 30px;
-  padding: 0;
+
+  margin: 0px 0px 10px 0px;
+  padding: auto;
+  padding-top: 0px;
+  font-family: "Electrolize", "acumin-pro-extra-condensed", "hot-salsa";
+  color: white;
+
 }
 
 a:link {
@@ -21,16 +26,18 @@ a:link {
 
 a:visited {
   text-decoration: none;
-  color: #c2c2c2;
+  color: inherit;
 }
 
 a:hover {
   color: white;
 }
 
-.fullwidth {
-  grid-column: 1/-1;
+ul {
+  padding: 0px;
+  margin: 0px;
 }
+
 /*splat css starts here */
 .splat_main_container {
   display: grid;
@@ -50,7 +57,6 @@ a:hover {
 .splat {
   position: absolute;
   width: 100%;
-  z-index: 2;
   object-fit: cover;
   bottom: 0;
   overflow: hidden;
@@ -62,13 +68,7 @@ a:hover {
   grid-column: 1/-1; 
 }
 
-.splat_item {
-  font-size: 40px;
-  color: white;
-  position: absolute;
-  width: 100%;
-  top: 8vw;
-}
+
 
 /* Grey navbar starts here */
 .main_greynav_container {
@@ -199,19 +199,6 @@ a:hover {
   justify-self: end;
 }
 
-@media (max-width: 460px) {
-  .main_nav_container {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    font-size: 20px;
-  }
-  .nav_end {
-    justify-self: center;
-  }
-  .nav_download {
-    padding: 10px;
-  }
-  
-}
 
 @media (max-width: 820px) {
   .nav_item ul {
@@ -222,6 +209,86 @@ a:hover {
   }
 }
 
+@media (max-width: 900px) {
+  .main_nav_container {
+    display: none;
+  }
+  .main_greynav_container {
+    display: none;
+  }
+
+}
+
+/* Mobile navbar here */
+ .sticky {
+  position: sticky;
+  display: none;
+  top: 0;
+  z-index: 10;
+  background-color: #111111;
+  border: 1px solid white;
+ }
+
+.main_blacknav_container {
+  display: grid;
+  grid-template-columns:1fr;
+  grid-template-rows: auto;
+  justify-items: left;
+  font-family: "Orbitron";
+  text-align: left;
+}
+
+#blacknav_bars {
+  padding: 10px;
+  background-color: rgb(37, 37, 37);
+  border: 1px solid gray;
+  justify-self: right;
+  
+}
+
+.blacknav_mobile {
+display: none;
+}
+.blacknav_item {
+  margin: 10px;
+  padding: 15px 10px 0px 0px;
+
+
+}
+
+.blacknav_item ul {
+  list-style-type: none;
+  margin: 0px;
+  padding-top: 10px;
+  
+}
+
+.blacknav_ul {
+  display: none;
+}
+
+.blacknav_ul li {
+  padding: 15px 10px 15px 10px;
+  color: #dbdbdb;
+
+}
+
+.blacknav_active {
+  display: block;
+  
+}
+
+.blacknav_social li{
+  display: inline-block;
+  padding: 10px;
+}
+
+@media (max-width:900px) {
+.sticky {
+  display: block;
+  }
+
+}
 /* main page stuff  starts here */
 
 #main_banner_container {
@@ -255,28 +322,40 @@ a:hover {
   font-family: "russo one",sans-serif;
   padding: 20PX;
 }
+
 @media (max-width: 800px) {
   #main_banner_container {
-    padding: 100px 0;
-    font-size: 20px;
-    gap: 0;
+
+    padding: 150px 10px;
+    gap: 0px;
+    font-size: 10px;
+
   }
   .banner_subtitle {
     font-size: 12px;
     padding: 20px;
   }
-}
+
+  .banner_title {
+    font-size: 20px;
+    padding: 5px;
+  }
+
+
 
 @media (max-width: 400px) {
   #main_banner_container {
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 100px 0;
-    font-size: 20px;
-    gap: 0;
+
+    padding: 130px 0px;
+    gap: 0px;
+  }
+  .banner_title {
+    font-size: 18px;
   }
   .banner_subtitle {
     font-size: 12px;
-    padding: 20px;
+
   }
 }
 

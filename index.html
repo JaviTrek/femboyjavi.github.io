@@ -22,16 +22,16 @@
 <!-- https://www.beyondallreason.info/armada-->
 <!-- Nav bar, is copied along all places-->
 <div class="main_greynav_container">
-  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://discord.gg/mXahVSKGVb" target="_blank"> Forums</a></div>
-  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://discord.gg/mXahVSKGVb" target="_blank"> Support FAF</a></div>
-  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://discord.gg/mXahVSKGVb" target="_blank"> Official Wiki</a></div>
+  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://forum.faforever.com/" target="_blank"> Forums</a></div>
+  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://www.patreon.com/faf" target="_blank"> Support FAF</a></div>
+  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://wiki.faforever.com/en/home" target="_blank"> Official Wiki</a></div>
   <div class="greynav_container"><a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
       <div class="fab fa-discord fa-lg"></div></a></div>
-  <div class="greynav_container"><a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
+  <div class="greynav_container"><a href="https://www.youtube.com/c/ForgedAllianceForever" target="_blank"> 
       <div class="fab fa-youtube fa-lg"></div></a></div>
-  <div class="greynav_container"><a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
+  <div class="greynav_container"><a href="https://www.twitch.tv/faflive" target="_blank"> 
       <div class="fab fa-twitch fa-lg"></div></a></div>
-  <div class="greynav_container"><a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
+  <div class="greynav_container"><a href="https://github.com/FAForever" target="_blank"> 
       <div class="fab fa-github fa-lg"></div></a></div>
 </div>
 <div class="main_nav_container">
@@ -41,30 +41,56 @@
     </div>
   </div>
   <div class="nav_container">
-    <div class="nav_item">
-      <ul>
-        <li><a href="index.html">GAME</a></li>
-        <li><a href="">NEWS</a></li>
-        <li><a href="">COMMUNITY</a></li>
-        <li><a href="">COMPETITIVE</a></li>
-      </ul>
-    </div>
+    <ul class="nav_item">
+      <li class="nav_list">GAME
+        <ul class="nav_absolute">
+          <li><a href="" target="_blank">SC:FA vs FAF</a></li>
+          <li><a href="" target="_blank">Tutorials/Guides</a></li>
+          <li><a href="" target="_blank">Player Statistics</a></li>
+          <li><a href="" target="_blank">Unit Database</a></li>
+        </ul>
+      </li>
+      <li class="nav_list">NEWS
+        <ul class="nav_absolute"></ul>
+      </li>
+      <li class="nav_list">COMMUNITY
+        <ul class="nav_absolute">
+          <li><a href="" target="_blank">Streamers and Casters</a></li>
+          <li><a href="" target="_blank">Contributors and Developers</a></li>
+          <li><a href="" target="_blank">Volunteer Positions</a></li>
+        </ul>
+      </li>
+      <li class="nav_list">COMPETITIVE
+        <ul class="nav_absolute">
+          <li><a href="" target="_blank">Tournaments</a></li>
+          <li><a href="" target="_blank">Trainers</a></li>
+          <li><a href="" target="_blank">League</a></li>
+          <li><a href="" target="_blank">Leaderboards</a></li>
+        </ul>
+      </li>
+    </ul>
   </div>
   <div class="nav_container nav_end">
     <div class="nav_item">LOGIN</div>
   </div>
   <div class="nav_container nav_end nav_download">
-    <div class="nav_item">DOWNLOAD</div>
+    <div class="nav_item"><a href="https://www.faforever.com/client">DOWNLOAD</a></div>
   </div>
 </div>
-<div class="sticky">
+<div id="blacknav_bg_sticky">
+  <div id="blacknav_bg"> </div>
+</div>
+<div class="blacknav_sticky"> 
   <div class="main_blacknav_container">
     <div id="blacknav_bars"> 
-      <div class="fas fa-bars"></div>
+      <div class="blacknav_bar1"></div>
+      <div class="blacknav_bar2"></div>
+      <div class="blacknav_bar3"></div>
     </div>
     <div class="blacknav_mobile">
-      <div class="blacknav_container"> 
-        <div class="blacknav_item">LOGIN</div>
+      <div class="blacknav_container">
+        <!-- This login class is done just to takeout padding from Login-->
+        <div class="blacknav_item blacknav_login">LOGIN</div>
       </div>
       <div class="blacknav_container"> 
         <div class="blacknav_item">GAME
@@ -80,7 +106,7 @@
         <div class="blacknav_item">COMMUNITY
           <ul class="blacknav_ul">
             <li class="blacknav_list"><a href=""> News</a></li>
-            <li class="blacknav_list"><a href=""> Forums</a></li>
+            <li class="blacknav_list"><a href="" target="_blank"> Forums</a></li>
             <li class="blacknav_list"> <a href=""> Streamers and Casters</a></li>
             <li class="blacknav_list"> <a href=""> Contributors and Developers</a></li>
           </ul>
@@ -107,18 +133,14 @@
       <div class="blacknav_container"> 
         <div class="blacknav_social">
           <ul>
-            <li> 
-              <div class="fab fa-discord fa-lg"></div>
-            </li>
-            <li> 
-              <div class="fab fa-twitch fa-lg"></div>
-            </li>
-            <li>
-              <div class="fab fa-youtube fa-lg"></div>
-            </li>
-            <li>
-              <div class="fab fa-github fa-lg"></div>
-            </li>
+            <li> <a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
+                <div class="fab fa-discord fa-lg"></div></a></li>
+            <li> <a href="https://www.twitch.tv/faflive" target="_blank"> 
+                <div class="fab fa-twitch fa-lg"></div></a></li>
+            <li><a href="https://www.youtube.com/c/ForgedAllianceForever" target="_blank">  
+                <div class="fab fa-youtube fa-lg"></div></a></li>
+            <li><a href="https://github.com/FAForever" target="_blank"> 
+                <div class="fab fa-github fa-lg"></div></a></li>
           </ul>
         </div>
       </div>
@@ -154,7 +176,7 @@
 <div id="main_text_container">
   <div class="text_container">
     <div class="text_item">
-      <div class="text_title">JOIN THOUSANDS OF PLAYERS IN SUPREME COMMANDER'S MASSIVE
+      <div class="text_title">JOIN THOUSANDS OF PLAYERS IN SUPREME COMMANDER'S MASSIVE DESTRUCTION
         <div class="text_subtitle">Forged Alliance Forever (FAF) is a community-driven project that continues the development of SupCom:FA. Completing it with matchmaking, visual and balance updates, advanced AIs, new gamemodes, mods, UI customization, 16 player matches and competitive queues plus tournaments. Join one of the biggest RTS communities and deliver absolute warfare in 1v1 duels, duos or massive teamgames!</div>
       </div>
     </div>

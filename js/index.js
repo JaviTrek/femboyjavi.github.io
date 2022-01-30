@@ -2,6 +2,24 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
   console.log("Lock and loaded!")
 
+
+//JS for the navbar menus to open on hover and close when leaving
+let navlist = document.getElementsByClassName("nav_list")
+let navabsolute = document.getElementsByClassName("nav_absolute")
+
+for (let i = 0; i < navlist.length; i++) {
+  navlist[i].addEventListener("mouseover", function(){ 
+    navabsolute[i].classList.add("blacknav_active");
+  }) 
+
+  navlist[i].addEventListener("mouseout", function(){ 
+    for (x = 0; x < navabsolute.length; x++) {
+      navabsolute[x].classList.remove("blacknav_active");  
+    };    
+  })};
+
+
+//JS for mobile navbar, when clicking on stuff like GAME and it opens the menu
 let blackitem = document.getElementsByClassName("blacknav_item");
 let blackul = document.getElementsByClassName("blacknav_ul");
 
@@ -14,41 +32,36 @@ for (let i = 0; i < blackitem.length; i++) {
 function listopen(x) {
   for (let i = 0; i < blackul.length; i++) {
     if (x == i) {
-      blackitem[x+1].classList.toggle("blacknav_active_title");
       blackul[x].classList.toggle("blacknav_active");
-      console.log("I'm If");
 
     } else {
       blackul[i].classList.remove("blacknav_active");
-      blackitem[i+1].classList.remove("blacknav_active_title");
-      console.log("I'm else");
+
     }
   
   }
 }
 });
 
+//JS for the 3 white bars in the mobile nav bar that open said nav bar
 let blackmobile = document.getElementsByClassName("blacknav_mobile")
 let blackbars = document.getElementById("blacknav_bars")
+let blackbg = document.getElementById("blacknav_bg")
+
 
   blackbars.addEventListener("click", function(){ 
-    menu()
+    blackmobile[0].classList.toggle("blacknav_mobile_active");
+    blackbars.classList.toggle("blacknav_change");
+    blackbg.classList.toggle("blacknav_bg_active");
+    
     }) ;
 
 
-function menu() {
-  console.log("pp");
-  blackmobile[0].classList.toggle("blacknav_active");
-  console.log("poopoo");
-  
-};
 
 
 
 
-// LETS USE TOGGLE + ADD EVENT LISTENER
 
-// LETS USE TOGGLE + ADD EVENT LISTENER
 
 
 

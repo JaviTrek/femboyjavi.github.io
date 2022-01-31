@@ -22,9 +22,10 @@ for (let i = 0; i < navlist.length; i++) {
 //JS for mobile navbar, when clicking on stuff like GAME and it opens the menu
 let blackitem = document.getElementsByClassName("blacknav_item");
 let blackul = document.getElementsByClassName("blacknav_ul");
+let blackcaret = document.getElementsByClassName("blacknav_caret")
 
 for (let i = 0; i < blackitem.length; i++) {
-  blackitem[i+1].addEventListener("click", function(){ 
+  blackitem[i].addEventListener("click", function(){ 
     listopen(i)
     
   })  
@@ -33,9 +34,11 @@ function listopen(x) {
   for (let i = 0; i < blackul.length; i++) {
     if (x == i) {
       blackul[x].classList.toggle("blacknav_active");
+      blackitem[x].classList.toggle("blacknav_caret");
 
     } else {
       blackul[i].classList.remove("blacknav_active");
+      blackitem[i].classList.remove("blacknav_caret");
 
     }
   
@@ -47,6 +50,7 @@ function listopen(x) {
 let blackmobile = document.getElementsByClassName("blacknav_mobile")
 let blackbars = document.getElementById("blacknav_bars")
 let blackbg = document.getElementById("blacknav_bg")
+
 
 
   blackbars.addEventListener("click", function(){ 

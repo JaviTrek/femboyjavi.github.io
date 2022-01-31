@@ -20,7 +20,7 @@
 <!-- https://starcraft2.com/en-us/media-->
 <!-- https://www.ageofempires.com/games/age-of-empires-iv-->
 <!-- https://www.beyondallreason.info/armada-->
-<!-- Nav bar, is copied along all places-->
+<!-- Grey navbar, its the thinner and smaller navbar at the top of the page-->
 <div class="main_greynav_container">
   <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://forum.faforever.com/" target="_blank"> Forums</a></div>
   <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://www.patreon.com/faf" target="_blank"> Support FAF</a></div>
@@ -34,6 +34,7 @@
   <div class="greynav_container"><a href="https://github.com/FAForever" target="_blank"> 
       <div class="fab fa-github fa-lg"></div></a></div>
 </div>
+<!-- The "second" nav bar, its more of a main nav bar-->
 <div class="main_nav_container">
   <div class="nav_container"> 
     <div class="nav_item"> 
@@ -42,7 +43,11 @@
   </div>
   <div class="nav_container">
     <ul class="nav_item">
+      <li class="nav_list">FAF NEWS
+        <ul class="nav_absolute"></ul>
+      </li>
       <li class="nav_list">GAME
+        <div class="fas fa-caret-down"></div>
         <ul class="nav_absolute">
           <li><a href="" target="_blank">SC:FA vs FAF</a></li>
           <li><a href="" target="_blank">Tutorials/Guides</a></li>
@@ -50,10 +55,8 @@
           <li><a href="" target="_blank">Unit Database</a></li>
         </ul>
       </li>
-      <li class="nav_list">NEWS
-        <ul class="nav_absolute"></ul>
-      </li>
       <li class="nav_list">COMMUNITY
+        <div class="fas fa-caret-down"></div>
         <ul class="nav_absolute">
           <li><a href="" target="_blank">Streamers and Casters</a></li>
           <li><a href="" target="_blank">Contributors and Developers</a></li>
@@ -61,6 +64,7 @@
         </ul>
       </li>
       <li class="nav_list">COMPETITIVE
+        <div class="fas fa-caret-down"></div>
         <ul class="nav_absolute">
           <li><a href="" target="_blank">Tournaments</a></li>
           <li><a href="" target="_blank">Trainers</a></li>
@@ -77,6 +81,7 @@
     <div class="nav_item"><a href="https://www.faforever.com/client">DOWNLOAD</a></div>
   </div>
 </div>
+<!--the blacknav is the mobile navbar, it has two stickies, one of them is the sticky for the mobile menu (so it stays with the user) and the second one is the black backgroud (so when the user opens the mobile menu, everything else darkens.)-->
 <div id="blacknav_bg_sticky">
   <div id="blacknav_bg"> </div>
 </div>
@@ -90,10 +95,11 @@
     <div class="blacknav_mobile">
       <div class="blacknav_container">
         <!-- This login class is done just to takeout padding from Login-->
-        <div class="blacknav_item blacknav_login">LOGIN</div>
+        <div class="blacknav_login">LOGIN</div>
       </div>
       <div class="blacknav_container"> 
         <div class="blacknav_item">GAME
+          <div class="fas fa-caret-down"></div>
           <ul class="blacknav_ul">
             <li class="blacknav_list"><a href=""> Tutorials/Guides</a></li>
             <li class="blacknav_list"> <a href=""> SC:FA vs FAF </a></li>
@@ -104,6 +110,7 @@
       </div>
       <div class="blacknav_container"> 
         <div class="blacknav_item">COMMUNITY
+          <div class="fas fa-caret-down"></div>
           <ul class="blacknav_ul">
             <li class="blacknav_list"><a href=""> News</a></li>
             <li class="blacknav_list"><a href="" target="_blank"> Forums</a></li>
@@ -114,6 +121,7 @@
       </div>
       <div class="blacknav_container"> 
         <div class="blacknav_item">COMPETITIVE
+          <div class="fas fa-caret-down"></div>
           <ul class="blacknav_ul">
             <li class="blacknav_list"><a href=""> Tournaments</a></li>
             <li class="blacknav_list"> <a href=""> Trainers</a></li>
@@ -124,6 +132,7 @@
       </div>
       <div class="blacknav_container"> 
         <div class="blacknav_item">CONTRIBUTE
+          <div class="fas fa-caret-down"></div>
           <ul class="blacknav_ul"> 
             <li class="blacknav_list"><a href="">Donations</a></li>
             <li class="blacknav_list"><a href=""> Volunteer Positions</a></li>
@@ -147,7 +156,7 @@
     </div>
   </div>
 </div>
-<!-- A splat is those bars between the nav bar and other images (those shattered particles)-->
+<!-- A splat is those bars between tthe banners (those shattered particles)-->
 <div class="splat_main_container">
   <div class="splat_container">
     <div class="splat_rotate"><img src="../img/splat.png" alt=""></div>
@@ -172,85 +181,79 @@
     <div class="splat"><img src="../img/splat.png" alt=""></div>
   </div>
 </div>
-<!-- Text Grids below the main one-->
-<div id="main_text_container">
-  <div class="text_container">
-    <div class="text_item">
-      <div class="text_title">JOIN THOUSANDS OF PLAYERS IN SUPREME COMMANDER'S MASSIVE DESTRUCTION
-        <div class="text_subtitle">Forged Alliance Forever (FAF) is a community-driven project that continues the development of SupCom:FA. Completing it with matchmaking, visual and balance updates, advanced AIs, new gamemodes, mods, UI customization, 16 player matches and competitive queues plus tournaments. Join one of the biggest RTS communities and deliver absolute warfare in 1v1 duels, duos or massive teamgames!</div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="main_gallery_container">
-  <div class="gallery_12">
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/theproject.jpg" alt=""></div>
-    </div>
-  </div>
-</div>
-<div id="main_text_container">
-  <div class="text_container">
-    <div class="text_item">
-      <div class="text_title">FOUR FLAVORS OF ABSOLUTE DESTRUCTION
-        <div class="text_subtitle">Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground. </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="main_gallery_container">
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/UEF.jpg" alt=""></div>
-    </div>
-  </div>
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/cybran.jpg" alt=""></div>
-    </div>
-  </div>
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/aeon.jpg" alt=""></div>
-    </div>
-  </div>
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/seraphim.jpg" alt=""></div>
-    </div>
-  </div>
-</div>
-<div id="main_text_container">
-  <div class="text_container">
-    <div class="text_item">
-      <div class="text_title">CHOOSE YOUR OWN BATTLEFIELD
-        <div class="text_subtitle">Play RTS like you want to play it. Competitive duels where every decision matters, teamgames that don't need hundred of clicks a minutes, chaotic FFA battles where anarchy is king or survival against waves and waves of enemies. FAF has a fit for every RTS player.</div>
-      </div>
-    </div>
-  </div>
-</div>
-<div id="main_gallery_container">
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/one.jpg" alt=""></div>
-    </div>
-  </div>
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/teamgame.jpg" alt=""></div>
-    </div>
-  </div>
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/anarchy.jpg" alt=""></div>
-    </div>
-  </div>
-  <div class="gallery_6"> 
-    <div class="gallery_item">
-      <div class="gallery_image"><img src="../img/survival.jpg" alt=""></div>
-    </div>
-  </div><i class="fab fa_discord"></i>
-</div>
+<!-- Text Grids below the main one
+#main_text_container
+  .text_container
+    .text_item
+      .text_title
+        | JOIN THOUSANDS OF PLAYERS IN SUPREME COMMANDER'S MASSIVE DESTRUCTION
+        .text_subtitle
+          | Forged Alliance Forever (FAF) is a community-driven project that continues the development of SupCom:FA. Completing it with matchmaking, visual and balance updates, advanced AIs, new gamemodes, mods, UI customization, 16 player matches and competitive queues plus tournaments. Join one of the biggest RTS communities and deliver absolute warfare in 1v1 duels, duos or massive teamgames!
+#main_gallery_container
+  .gallery_12
+    .gallery_item
+      .gallery_image
+        img(src='../img/theproject.jpg' alt='')
+
+#main_text_container
+  .text_container
+    .text_item
+      .text_title
+        | FOUR FLAVORS OF ABSOLUTE DESTRUCTION
+        .text_subtitle
+          | Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground. 
+
+#main_gallery_container
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/UEF.jpg' alt='')
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/cybran.jpg' alt='')
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/aeon.jpg' alt='')
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/seraphim.jpg' alt='')
+
+#main_text_container
+  .text_container
+    .text_item
+      .text_title
+        | CHOOSE YOUR OWN BATTLEFIELD
+        .text_subtitle
+          | Play RTS like you want to play it. Competitive duels where every decision matters, teamgames that don't need hundred of clicks a minutes, chaotic FFA battles where anarchy is king or survival against waves and waves of enemies. FAF has a fit for every RTS player.
+#main_gallery_container
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/one.jpg' alt='')
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/teamgame.jpg' alt='')
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/anarchy.jpg' alt='')
+  .gallery_6 
+    .gallery_item
+      .gallery_image
+        img(src='../img/survival.jpg' alt='')
+  i.fab.fa_discord
+
+
+
+
+
+
+
+-->
 <!-- To do
 - Splats (kinda like border thingies between the elements so its not a flat transition between navbar to main image for example)
 - ul dropdown

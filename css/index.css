@@ -1,40 +1,52 @@
-html {
-  font-family: "Electrolize", "acumin-pro-extra-condensed", "hot-salsa";
+/* ============= CSS Variable Defined =============== */
+:root {
+  /* Colors */
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+  --color-light-gray: #c2c2c2; 
+  --color-dark-gray: #292929;
+  --color-gray: #757575;
+
+  /* Fonts */
+  --main-font-family: "Electrolize", "acumin-pro-extra-condensed", "hot-salsa";
 }
 
+/*=====================================================*/
+
+/*=============== Main HTML ===============*/
+
+html {
+  font-family: var(--main-font-family);
+}
 body {
   text-align: center;
   background-attachment: fixed;
-  background-color: #111111;
+  background-color: var(--color-black);
   background-position: center center;
   margin: 0px 0px 10px 0px;
   padding: auto;
   padding-top: 0px;
-  font-family: "Electrolize", "acumin-pro-extra-condensed", "hot-salsa";
-  color: white;
+  font-family: var(--main-font-family);
+  color: var(--color-white);
 }
-
 a:link {
   text-decoration: none;
-  color: #c2c2c2;
+  color: var(--color-light-gray);
   transition: 0.5s;
 }
-
 a:visited {
   text-decoration: none;
   color: inherit;
 }
-
 a:hover {
-  color: white;
+  color: var(--color-white);
 }
-
 ul {
   padding: 0px;
   margin: 0px;
 }
 
-/*splat css starts here */
+/*===== Splat Starts =====*/
 .splat_main_container {
   display: grid;
   grid-template-columns: auto;
@@ -49,7 +61,6 @@ ul {
   z-index: 0;
   object-fit: cover;
 }
-
 .splat {
   position: absolute;
   width: 100%;
@@ -57,23 +68,22 @@ ul {
   bottom: 0px;
   overflow: hidden;
 }
-
 .splat_container {
   position: relative;
   width: 100%;
   grid-column: 1/-1; 
 }
 
+/*=============== Nav Bar =============== */
 
-
-/* Grey navbar starts here */
+/*===== Grey navbar =====*/
 .main_greynav_container {
   display: grid;
   grid-template-columns: repeat(10,max-content);
   grid-template-rows: minmax(10px, 35px);
-  color: #757575;
+  color:var(--color-gray);
   font-size: 14px;
-  background-color: #0a0a0a;
+  background-color: var(--color-black);
   padding: 0px 10px 0px 10px;
   position: relative;
   justify-content: end;
@@ -93,14 +103,11 @@ ul {
   justify-self: end;
 
 }
-
-
 .greynav_hover:hover {
-  color: white;
+  color: var(--color-white);
 }
-
 .greynav_item a {
-  color: white;
+  color: var(--color-white);
 }
 .fab {
 padding: 0px;
@@ -109,34 +116,18 @@ height: 10px;
 width: 100%;
 text-align: center;
 text-decoration: none;
-color: white;
+color: var(--color-white);
 justify-self: end;
 }
 
-
-@media (max-width: 760px) {
-  .main_greynav_container {
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
-  .greynav_container {
-  justify-self: center;
-  }
-  .fab {
-    padding: 10px 0px;
-  }
-}
-
-
-
-
-/* regular navbar starts here */
+/*===== Regular navbar =====*/
 .main_nav_container {
   display: grid;
   grid-template-columns: max-content minmax(50px, auto) max-content max-content;
   grid-template-rows: auto;
-  color: #afafaf;
+  color: var(--secondary-text);
   font-size: 26px;
-  background-color: #111111;
+  background-color: var(--color-black);
   justify-items: center;
   padding: 10px 10px 0px 10px;
 }
@@ -144,7 +135,6 @@ justify-self: end;
   align-self: center;
   align-content: center;
 }
-
 .nav_item {
   width: 100%;
   height: 100%;
@@ -155,13 +145,10 @@ justify-self: end;
   padding: 0px;
 
 }
-
 .nav_item li {
   display: inline-block;
   padding: 0px 20px
 }
-
-
 .nav_image img{
   width: 80px;
   height: 100%;
@@ -171,31 +158,26 @@ justify-self: end;
   justify-self: center;
   place-self: center;
 }
-
-
 .nav_download {
-  background-color: #505050;
-  border: 1px solid white;
-  color: white;
+  background-color: var(--color-gray);
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
   padding: 10px;
   transition: 0.5s;
   letter-spacing: 0.4px;
   margin-left: 20px;
 }
-
 .nav_download:hover {
-  background-color: #292929;
+  background-color: var(--color-dark-gray);
 }
-
 .nav_end {
   justify-self: end;
   font-weight: 900;
   letter-spacing: 1px;
 }
-
 .nav_absolute {
   position: absolute;
-  background-color: #0a0a0a;
+  background-color: var(--color-black);
   z-index: 10;
   text-align: left;
   display: none;
@@ -205,25 +187,21 @@ justify-self: end;
 .nav_absolute li {
   padding: 20px;
   display: block;
-  background-color: #111111;
+  background-color: var(--color-black);
 }
-
 .nav_absolute li:hover {
-  background-color: #464646;
+  background-color: var(--color-gray);
 }
-
 .nav_absolute li:hover{
-  color: white;
+  color: var(--color-white);
 
 }
-
 .nav_list:hover {
-  color: white;
+  color: var(--color-white);
   transition: 0.5s;
 }
-
 .nav_list li {
-  color: #afafaf;
+  color: var(--color-light-gray);
 }
 .fa-caret-down {
   transition: 0.5s;
@@ -231,31 +209,17 @@ justify-self: end;
 .nav_list:hover .fa-caret-down {
   transform: rotate(-0.25turn);
   transition: 0.5s;
-  color: white;
+  color: var(--color-white);
 }
 
-
-
-
-@media (max-width: 1100px) {
-  .main_nav_container {
-    display: none;
-  }
-  .main_greynav_container {
-    display: none;
-  }
-}
-
-
-
-/* Mobile navbar here */
+/* Mobile navbar */
 .blacknav_sticky {
   position: sticky;
   display: none;
   top: 0;
   z-index: 10;
-  background-color: #111111;
-  border: 1px solid white;
+  background-color: var(--color-black);
+  border: 1px solid var(--color-white);
  }
 
 .main_blacknav_container {
@@ -270,8 +234,8 @@ justify-self: end;
 
 #blacknav_bars {
   padding: 10px;
-  background-color: rgb(37, 37, 37);
-  border: 1px solid gray;
+  background-color: var(--color-dark-gray);
+  border: 1px solid var(--color-gray);
   justify-self: right;
 
 }
@@ -279,7 +243,7 @@ justify-self: end;
 .blacknav_bar1, .blacknav_bar2, .blacknav_bar3 {
   width: 35px;
   height: 5px;
-  background-color: rgb(255, 255, 255);
+  background-color:var(--color-white);
   margin: 6px 0;
   transition: 0.4s;
 }
@@ -303,7 +267,7 @@ height: 0;
   opacity: 100;
   height: 100%;
   transition: 1s;
-  }
+}
 
 #blacknav_bg_sticky {
   position: sticky;
@@ -315,7 +279,7 @@ height: 0;
 }
 
 .blacknav_bg_active {
-  background-color: black;
+  background-color:var(--color-black);
   width: 100vw;
   height: 100vh;
   opacity: 90%;
@@ -344,7 +308,7 @@ height: 0;
 
 .blacknav_ul li {
   padding: 15px 10px 15px 10px;
-  color: #dbdbdb;
+  color:var(--color-light-gray);
 }
 
 .blacknav_active {
@@ -360,16 +324,11 @@ height: 0;
 .blacknav_caret .fa-caret-down {
   transform: rotate(-0.25turn);
   transition: 0.5s;
-  color: white;
+  color:var(--color-white);
 }
 
-@media (max-width:1100px) {
-.blacknav_sticky {
-  display: block;
-  }
-
-}
-/* main page stuff  starts here */
+/* ============= Main Content ===================*/
+/* Main Page */
 
 #main_banner_container {
   display: grid;
@@ -406,61 +365,27 @@ height: 0;
   padding: 20PX 0px;
 }
 
-@media (max-width: 800px) {
-  #main_banner_container {
-    padding: 150px 10px;
-    gap: 0px;
-    font-size: 10px;
-  }
-  .banner_subtitle {
-    font-size: 12px;
-    padding: 5px;
-  }
-  .banner_title {
-    font-size: 20px;
-    padding: 5px;
-  }
-}
-
-
-@media (max-width: 400px) {
-  #main_banner_container {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    padding: 130px 0px;
-    gap: 0px;
-  }
-  .banner_title {
-    font-size: 18px;
-  }
-  .banner_subtitle {
-    font-size: 12px;
-  }
-}
-
-/* Stuff below the main page */
+/* Below Main page */
 #main_text_container {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: auto;
-  background-color: #111111;
+  background-color:var(--color-black);
   background-size: cover;
   background-position: center center;
   padding: 10px 150px;
-
   justify-content: center;
 
 }
-
 
 .text_item {
   position: relative;
   overflow: hidden;
   object-fit: contain;
   display: grid;
-  color: white;
+  color:var(--color-white);
   justify-self: end;
 }
-
 
 .text_title {
   font-family: "Orbitron";
@@ -471,7 +396,6 @@ height: 0;
   
 }
 
-
 .text_subtitle {
   font-family: "electrolize";
   font-weight: 100;
@@ -481,35 +405,13 @@ height: 0;
   line-height: 2;
 }
 
+/* Footer */
 
-
-@media (max-width: 1500px) {
-  #main_text_container {
-    padding: 0px 100px;
-  }
-  .text_title {
-    padding: 0px 0vw;
-    font-size: 33px;
-  }
-  .text_subtitle {
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 800px) {
-  #main_text_container {
-    grid-template-columns: auto;
-    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
-    padding: 10px;
-  }
-  .text_title {
-    font-size: 22px;
-    padding: 0px;
-  }
-  .text_subtitle {
-    font-size: 15px;
-    padding: 0px 0px;
-  }
+#main_footer {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  background-color:var(--color-gray);
 }
 
 /* 4 Image squad */
@@ -518,7 +420,7 @@ height: 0;
   display: grid;
   grid-template-columns: repeat(12, minmax(100px, 1fr));
   grid-template-rows: repeat(auto-fit, 1fr);
-  background-color: #111111;
+  background-color:var(--color-black);
   justify-content: center;
   padding:0px 20vw 100px 20vw;
   gap: 10px;
@@ -552,14 +454,27 @@ height: 0;
 
 }
 
-
 .gallery_item {
   position: relative;
   overflow: hidden;
   object-fit: contain;
   display: grid;
-  color: white;
+  color:var(--color-white);
   justify-self: end;
+}
+
+/* Media Changes */
+
+@media (max-width: 760px) {
+  .main_greynav_container {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+  .greynav_container {
+  justify-self: center;
+  }
+  .fab {
+    padding: 10px 0px;
+  }
 }
 
 @media (max-width: 1350px) {
@@ -575,6 +490,7 @@ height: 0;
     grid-template-columns: repeat(12, 7vw);
   }
 }
+
 @media (max-width: 420px) {
   #main_gallery_container {
     grid-template-columns: repeat(12,minmax(100px 5vw));
@@ -582,6 +498,103 @@ height: 0;
     padding: 0px 10px 30px 10px;
   }
 }
+
+@media (max-width: 800px) {
+  #main_banner_container {
+    padding: 150px 10px;
+    gap: 0px;
+    font-size: 10px;
+  }
+  .banner_subtitle {
+    font-size: 12px;
+    padding: 5px;
+  }
+  .banner_title {
+    font-size: 20px;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 400px) {
+  #main_banner_container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 130px 0px;
+    gap: 0px;
+  }
+  .banner_title {
+    font-size: 18px;
+  }
+  .banner_subtitle {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 800px) {
+  #main_text_container {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(auto-fit, minmax(50px, 1fr));
+    padding: 10px;
+  }
+  .text_title {
+    font-size: 22px;
+    padding: 0px;
+  }
+  .text_subtitle {
+    font-size: 15px;
+    padding: 0px 0px;
+  }
+}
+
+@media (max-width: 1500px) {
+  #main_text_container {
+    padding: 0px 100px;
+  }
+  .text_title {
+    padding: 0px 0vw;
+    font-size: 33px;
+  }
+  .text_subtitle {
+    font-size: 20px;
+  }
+}
+
+@media (max-width:1100px) {
+  .blacknav_sticky {
+    display: block;
+    }
+}
+
+@media (max-width: 1100px) {
+  .main_nav_container {
+    display: none;
+  }
+  .main_greynav_container {
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=UEFMain.css.map */
 

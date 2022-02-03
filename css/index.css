@@ -8,8 +8,7 @@ body {
   background-color: #111111;
   background-position: center center;
   margin: 0px 0px 10px 0px;
-  padding: auto;
-  padding-top: 0px;
+
   font-family: "Electrolize", "acumin-pro-extra-condensed", "hot-salsa";
   color: white;
 }
@@ -206,6 +205,7 @@ justify-self: end;
   padding: 20px;
   display: block;
   background-color: #111111;
+  transition: 0.25s;
 }
 
 .nav_absolute li:hover {
@@ -219,14 +219,14 @@ justify-self: end;
 
 .nav_list:hover {
   color: white;
-  transition: 0.5s;
+  transition: 0.25s;
 }
 
 .nav_list li {
   color: #afafaf;
 }
 .fa-caret-down {
-  transition: 0.5s;
+  transition: 0.35s;
 }
 .nav_list:hover .fa-caret-down {
   transform: rotate(-0.25turn);
@@ -237,7 +237,7 @@ justify-self: end;
 
 
 
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .main_nav_container {
     display: none;
   }
@@ -363,7 +363,7 @@ height: 0;
   color: white;
 }
 
-@media (max-width:1100px) {
+@media (max-width:1200px) {
 .blacknav_sticky {
   display: block;
   }
@@ -437,6 +437,116 @@ height: 0;
   }
 }
 
+/* Scroll container */
+
+#scroll_scroller {
+
+  position: relative;
+  background-color: #0a0a0a;
+}
+
+.main_scroll_container {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: repeat(1, auto-fit, minmax(100px, 1fr));
+  grid-template-rows: auto;
+  background-image: url("../img/blackbg.jpg");
+  background-size: cover;
+  background-position: center center;
+  padding: 100px 100px 100px 10px;
+  justify-content: end;
+}
+
+.scroll_container {
+  justify-content: end;
+  place-self: end;
+
+}
+.scroll_item {
+  overflow: hidden;
+  object-fit: contain;
+  display: grid;
+  justify-self: end;
+  
+}
+
+.scroll_text {
+  
+  font-size: 20px;
+  padding: 20px 20px 20px 50vw;
+}
+
+.scroll_image {
+  width: 60%;
+  place-self: left;
+  justify-self: end;
+}
+
+.scroll_item .scroll_image img {
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+
+
+.scroll_sticky {
+  position: relative;
+  padding: 100px;
+  font-family: "russo one";
+  font-size: 60px;
+  text-align: justify;
+  text-justify: inter-word;
+
+}
+
+.scroll_absolute {
+  position: absolute;
+  left: 100px;
+  
+}
+
+.scroll_absolute2 {
+  position: absolute;
+  top: 170px;
+  left: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* Stuff below the main page */
 #main_text_container {
   display: grid;
@@ -446,9 +556,7 @@ height: 0;
   background-size: cover;
   background-position: center center;
   padding: 10px 150px;
-
   justify-content: center;
-
 }
 
 

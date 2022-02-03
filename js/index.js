@@ -1,35 +1,32 @@
-
 document.addEventListener("DOMContentLoaded", function(event) { 
-  console.log("Lock and loaded!")
-
+  console.log("Lock and loaded!");
 
 //JS for the navbar menus to open on hover and close when leaving
-let navlist = document.getElementsByClassName("nav_list")
-let navabsolute = document.getElementsByClassName("nav_absolute")
+let navlist = document.getElementsByClassName("nav_list");
+let navabsolute = document.getElementsByClassName("nav_absolute");
 
 for (let i = 0; i < navlist.length; i++) {
   navlist[i].addEventListener("mouseover", function(){ 
     navabsolute[i].classList.add("blacknav_active");
-  }) 
+  }); 
 
   navlist[i].addEventListener("mouseout", function(){ 
     for (x = 0; x < navabsolute.length; x++) {
       navabsolute[x].classList.remove("blacknav_active");  
-    };    
-  })};
-
+    }    
+  });
+}
 
 //JS for mobile navbar, when clicking on stuff like GAME and it opens the menu
 let blackitem = document.getElementsByClassName("blacknav_item");
 let blackul = document.getElementsByClassName("blacknav_ul");
-let blackcaret = document.getElementsByClassName("blacknav_caret")
+let blackcaret = document.getElementsByClassName("blacknav_caret");
 
 for (let i = 0; i < blackitem.length; i++) {
   blackitem[i].addEventListener("click", function(){ 
-    listopen(i)
-    
-  })  
-};
+    listopen(i);
+  });  
+}
 function listopen(x) {
   for (let i = 0; i < blackul.length; i++) {
     if (x == i) {
@@ -47,20 +44,15 @@ function listopen(x) {
 });
 
 //JS for the 3 white bars in the mobile nav bar that open said nav bar
-let blackmobile = document.getElementsByClassName("blacknav_mobile")
-let blackbars = document.getElementById("blacknav_bars")
-let blackbg = document.getElementById("blacknav_bg")
-
-
-
+let blackmobile = document.getElementsByClassName("blacknav_mobile");
+let blackbars = document.getElementById("blacknav_bars");
+let blackbg = document.getElementById("blacknav_bg");
   blackbars.addEventListener("click", function(){ 
     blackmobile[0].classList.toggle("blacknav_mobile_active");
     blackbars.classList.toggle("blacknav_change");
     blackbg.classList.toggle("blacknav_bg_active");
     
     }) ;
-
-
 
 
 

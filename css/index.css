@@ -11,8 +11,6 @@
   --main-font-family: "Electrolize", "Orbitron", "Russo One";
 }
 
-/*=====================================================*/
-
 /*=============== Main HTML ===============*/
 
 html {
@@ -343,7 +341,7 @@ height: 0;
 
 /* ============= Main Content ===================*/
 /* Main Page */
-=======
+
 @media (max-width:1200px) {
 .blacknav_sticky {
   display: block;
@@ -497,38 +495,6 @@ height: 0;
   top: 170px;
   left: 100px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Stuff below the main page */
 
@@ -737,29 +703,6 @@ height: 0;
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*# sourceMappingURL=UEFMain.css.map */
 

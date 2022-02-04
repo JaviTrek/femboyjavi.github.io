@@ -13,8 +13,6 @@
   
 }
 
-/*=====================================================*/
-
 /*=============== Main HTML ===============*/
 
 html {
@@ -79,8 +77,8 @@ ul {
 
 /*=============== Nav Bar =============== */
 
-/*===== Grey navbar =====*/
-.main_greynav_container {
+/*===== Top Navbar =====*/
+.main_topnav_container {
   display: grid;
   grid-template-columns: repeat(10,max-content);
   grid-template-rows: minmax(10px, 35px);
@@ -92,10 +90,10 @@ ul {
   justify-content: end;
   place-items: center;
 }
-.greynav_container {
+.topnav_container {
   padding: 0px 10px;
 }
-.greynav_item {
+.topnav_item {
   width: 100%;
   height: 100%;
   position: relative;
@@ -106,11 +104,12 @@ ul {
   justify-self: end;
 
 }
-.greynav_hover:hover {
+.topnav_hover:hover {
   color: var(--color-white);
 }
-.greynav_item a {
-  color: var(--color-white-gray);
+.topnav_item a {
+  color: var(--color-white);
+
 }
 .fab {
 padding: 0px;
@@ -232,13 +231,13 @@ transition: 0.5s;
   .main_nav_container {
     display: none;
   }
-  .main_greynav_container {
+  .main_topnav_container {
     display: none;
   }
 }
 
 /* Mobile navbar */
-.blacknav_sticky {
+.mobilenav_sticky {
   position: sticky;
   display: none;
   top: 0;
@@ -247,7 +246,7 @@ transition: 0.5s;
   border: 1px solid var(--color-white);
  }
 
-.main_blacknav_container {
+.main_mobilenav_container {
   display: grid;
   grid-template-columns:1fr;
   grid-template-rows: auto;
@@ -257,7 +256,7 @@ transition: 0.5s;
   font-size: 25px;
 }
 
-#blacknav_bars {
+#mobilenav_bars {
   padding: 10px;
   background-color: var(--color-dark-gray);
   border: 1px solid var(--color-gray);
@@ -265,7 +264,7 @@ transition: 0.5s;
 
 }
 
-.blacknav_bar1, .blacknav_bar2, .blacknav_bar3 {
+.mobilenav_bar1, .mobilenav_bar2, .mobilenav_bar3 {
   width: 35px;
   height: 5px;
   background-color:var(--color-white);
@@ -273,37 +272,37 @@ transition: 0.5s;
   transition: 0.4s;
 }
 
-.blacknav_change .blacknav_bar1 {
+.mobilenav_change .mobilenav_bar1 {
   transform: rotate(-45deg) translate(-9px, 6px) ;
 }
-.blacknav_change .blacknav_bar2 {
+.mobilenav_change .mobilenav_bar2 {
   opacity: 0;
 }
-.blacknav_change .blacknav_bar3 {
+.mobilenav_change .mobilenav_bar3 {
   transform: rotate(45deg) translate(-8px, -8px) ;
 }
 
-.blacknav_mobile {
+.mobilenav_mobile {
 opacity: 0;
 height: 0;
 }
 
-.blacknav_mobile_active {
+.mobilenav_mobile_active {
   opacity: 100;
   height: 100%;
   transition: 1s;
 }
 
-#blacknav_bg_sticky {
+#mobilenav_bg_sticky {
   position: sticky;
   top: 0;
   z-index: 9;
 }
-#blacknav_bg {
+#mobilenav_bg {
   position: absolute;
 }
 
-.blacknav_bg_active {
+.mobilenav_bg_active {
   background-color:var(--color-black);
   width: 100vw;
   height: 100vh;
@@ -311,42 +310,42 @@ height: 0;
   transition: 0.5s;
 }
 
-.blacknav_item {
+.mobilenav_item {
   margin: 10px;
   padding: 25px 10px 0px 0px;
 }
 
-.blacknav_login {
+.mobilenav_login {
   margin: 10px;
   padding: 25px 10px 0px 0px;
   padding-top: 0px;
 }
-.blacknav_item ul {
+.mobilenav_item ul {
   list-style-type: none;
   margin: 0px;
   padding-top: 10px;
 }
 
-.blacknav_ul {
+.mobilenav_ul {
   display: none;
 }
 
-.blacknav_ul li {
+.mobilenav_ul li {
   padding: 15px 10px 15px 10px;
   color:var(--color-white-gray);
 }
 
-.blacknav_active {
+.mobilenav_active {
   display: block;
   
 }
 
-.blacknav_social li{
+.mobilenav_social li{
   display: inline-block;
   padding: 10px;
 }
 
-.blacknav_caret .fa-caret-down {
+.mobilenav_caret .fa-caret-down {
   transform: rotate(-0.25turn);
   transition: 0.5s;
   color:var(--color-white);
@@ -354,8 +353,9 @@ height: 0;
 
 /* ============= Main Content ===================*/
 /* Main Page */
+
 @media (max-width:1200px) {
-.blacknav_sticky {
+.mobilenav_sticky {
   display: block;
   }
 }
@@ -509,34 +509,10 @@ height: 0;
   left: 100px;
 }
 
+
 .fake_scroller {
   padding: 1000px 0px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -645,7 +621,7 @@ height: 0;
 /* Media Changes */
 
 @media (max-width: 760px) {
-  .main_greynav_container {
+  .main_topnav_container {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
   .greynav_container {
@@ -738,7 +714,7 @@ height: 0;
 }
 
 @media (max-width:1100px) {
-  .blacknav_sticky {
+  .mobilenav_sticky {
     display: block;
     }
 }
@@ -747,33 +723,10 @@ height: 0;
   .main_nav_container {
     display: none;
   }
-  .main_greynav_container {
+  .main_topnav_container {
     display: none;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*# sourceMappingURL=UEFMain.css.map */
 

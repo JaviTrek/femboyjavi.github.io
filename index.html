@@ -1,9 +1,10 @@
-<!DOCTYPE html>
+<html>
 <head>
   <!-- Rowey is the best (Agreed :P)-->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!--StyleSheet stuff-->
   <link rel="stylesheet" href="../css/index.css">
   <link rel="stylesheet" href="https://use.typekit.net/lty2ukf.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,28 +12,43 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Electrolize&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Russo+One&amp;display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron&amp;display=swap">
+  <!-- FAF Website Icon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon-package/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon-package/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon-package/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon-package/site.webmanifest">
+  <link rel="mask-icon" href="/img/favicon-package/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  
+  
   <title>Javi Website Mock</title>
 </head>
-<!-- Inspiration places below-->
-<!-- https://planetaryannihilation.com/-->
-<!-- https://starcraft2.com/en-us/media-->
-<!-- https://www.ageofempires.com/games/age-of-empires-iv-->
-<!-- https://www.beyondallreason.info/armada-->
-<!-- Grey navbar, its the thinner and smaller navbar at the top of the page-->
-<div class="main_greynav_container">
-  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://forum.faforever.com/" target="_blank"> Forums</a></div>
-  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://www.patreon.com/faf" target="_blank"> Support FAF</a></div>
-  <div class="greynav_container"><a class="greynav_item greynav_hover" href="https://wiki.faforever.com/en/home" target="_blank"> Official Wiki</a></div>
-  <div class="greynav_container"><a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
+<!--
+Inspiration places below
+https://planetaryannihilation.com
+https://starcraft2.com/en-us/media
+https://www.ageofempires.com/games/age-of-empires-iv
+https://www.beyondallreason.info/armada
+-->
+
+<!-- Top Navbar -->
+
+<div class="main_topnav_container">
+  <div class="topnav_container"><a class="topnav_item topnav_hover" href="https://forum.faforever.com/" target="_blank"> Forums</a></div>
+  <div class="topnav_container"><a class="topnav_item topnav_hover" href="https://www.patreon.com/faf" target="_blank"> Support FAF</a></div>
+  <div class="topnav_container"><a class="topnav_item topnav_hover" href="https://wiki.faforever.com/en/home" target="_blank"> Official Wiki</a></div>
+  <div class="topnav_container"><a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
       <div class="fab fa-discord fa-lg"></div></a></div>
-  <div class="greynav_container"><a href="https://www.youtube.com/c/ForgedAllianceForever" target="_blank"> 
+  <div class="topnav_container"><a href="https://www.youtube.com/c/ForgedAllianceForever" target="_blank"> 
       <div class="fab fa-youtube fa-lg"></div></a></div>
-  <div class="greynav_container"><a href="https://www.twitch.tv/faflive" target="_blank"> 
+  <div class="topnav_container"><a href="https://www.twitch.tv/faflive" target="_blank"> 
       <div class="fab fa-twitch fa-lg"></div></a></div>
-  <div class="greynav_container"><a href="https://github.com/FAForever" target="_blank"> 
+  <div class="topnav_container"><a href="https://github.com/FAForever" target="_blank"> 
       <div class="fab fa-github fa-lg"></div></a></div>
 </div>
-<!-- The "second" nav bar, its more of a main nav bar-->
+
+<!-- Main Navbar-->
 <div class="main_nav_container">
   <div class="nav_container"> 
     <div class="nav_item"> 
@@ -75,65 +91,65 @@
       <div class="nav_link">DOWNLOAD </div></a></div>
 </div>
 <!--the blacknav is the mobile navbar, it has two stickies, one of them is the sticky for the mobile menu (so it stays with the user) and the second one is the black backgroud (so when the user opens the mobile menu, everything else darkens.)-->
-<div id="blacknav_bg_sticky">
-  <div id="blacknav_bg"> </div>
+<div id="mobilenav_bg_sticky">
+  <div id="mobilenav_bg"> </div>
 </div>
-<div class="blacknav_sticky"> 
-  <div class="main_blacknav_container">
-    <div id="blacknav_bars"> 
-      <div class="blacknav_bar1"></div>
-      <div class="blacknav_bar2"></div>
-      <div class="blacknav_bar3"></div>
+<div class="mobilenav_sticky"> 
+  <div class="main_mobilenav_container">
+    <div id="mobilenav_bars"> 
+      <div class="mobilenav_bar1"></div>
+      <div class="mobilenav_bar2"></div>
+      <div class="mobilenav_bar3"></div>
     </div>
-    <div class="blacknav_mobile">
-      <div class="blacknav_container">
+    <div class="mobilenav_mobile">
+      <div class="mobilenav_container">
         <!-- This login class is done just to takeout padding from Login-->
-        <div class="blacknav_login">LOGIN</div>
+        <div class="mobilenav_login">LOGIN</div>
       </div>
-      <div class="blacknav_container"> 
-        <div class="blacknav_item">GAME
+      <div class="mobilenav_container"> 
+        <div class="mobilenav_item">GAME
           <div class="fas fa-caret-down"></div>
-          <ul class="blacknav_ul">
-            <li class="blacknav_list"><a href=""> Tutorials/Guides</a></li>
-            <li class="blacknav_list"> <a href=""> SC:FA vs FAF </a></li>
-            <li class="blacknav_list"> <a href=""> Player Statistics</a></li>
-            <li class="blacknav_list"> <a href=""> Unit Database</a></li>
+          <ul class="mobilenav_ul">
+            <li class="mobilenav_list"><a href=""> Tutorials/Guides</a></li>
+            <li class="mobilenav_list"> <a href=""> SC:FA vs FAF </a></li>
+            <li class="mobilenav_list"> <a href=""> Player Statistics</a></li>
+            <li class="mobilenav_list"> <a href=""> Unit Database</a></li>
           </ul>
         </div>
       </div>
-      <div class="blacknav_container"> 
-        <div class="blacknav_item">COMMUNITY
+      <div class="mobilenav_container"> 
+        <div class="mobilenav_item">COMMUNITY
           <div class="fas fa-caret-down"></div>
-          <ul class="blacknav_ul">
-            <li class="blacknav_list"><a href=""> News</a></li>
-            <li class="blacknav_list"><a href="" target="_blank"> Forums</a></li>
-            <li class="blacknav_list"> <a href=""> Streamers and Casters</a></li>
-            <li class="blacknav_list"> <a href=""> Contributors and Developers</a></li>
+          <ul class="mobilenav_ul">
+            <li class="mobilenav_list"><a href=""> News</a></li>
+            <li class="mobilenav_list"><a href="" target="_blank"> Forums</a></li>
+            <li class="mobilenav_list"> <a href=""> Streamers and Casters</a></li>
+            <li class="mobilenav_list"> <a href=""> Contributors and Developers</a></li>
           </ul>
         </div>
       </div>
-      <div class="blacknav_container"> 
-        <div class="blacknav_item">COMPETITIVE
+      <div class="mobilenav_container"> 
+        <div class="mobilenav_item">COMPETITIVE
           <div class="fas fa-caret-down"></div>
-          <ul class="blacknav_ul">
-            <li class="blacknav_list"><a href=""> Tournaments</a></li>
-            <li class="blacknav_list"> <a href=""> Trainers</a></li>
-            <li class="blacknav_list"> <a href=""> League</a></li>
-            <li class="blacknav_list"> <a href=""> Leaderboards </a></li>
+          <ul class="mobilenav_ul">
+            <li class="mobilenav_list"><a href=""> Tournaments</a></li>
+            <li class="mobilenav_list"> <a href=""> Trainers</a></li>
+            <li class="mobilenav_list"> <a href=""> League</a></li>
+            <li class="mobilenav_list"> <a href=""> Leaderboards </a></li>
           </ul>
         </div>
       </div>
-      <div class="blacknav_container"> 
-        <div class="blacknav_item">CONTRIBUTE
+      <div class="mobilenav_container"> 
+        <div class="mobilenav_item">CONTRIBUTE
           <div class="fas fa-caret-down"></div>
-          <ul class="blacknav_ul"> 
-            <li class="blacknav_list"><a href="">Donations</a></li>
-            <li class="blacknav_list"><a href=""> Volunteer Positions</a></li>
+          <ul class="mobilenav_ul"> 
+            <li class="mobilenav_list"><a href="">Donations</a></li>
+            <li class="mobilenav_list"><a href=""> Volunteer Positions</a></li>
           </ul>
         </div>
       </div>
-      <div class="blacknav_container"> 
-        <div class="blacknav_social">
+      <div class="mobilenav_container"> 
+        <div class="mobilenav_social">
           <ul>
             <li> <a href="https://discord.gg/mXahVSKGVb" target="_blank"> 
                 <div class="fab fa-discord fa-lg"></div></a></li>

@@ -3,12 +3,14 @@
   /* Colors */
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-light-gray: #c2c2c2; 
-  --color-dark-gray: #292929;
-  --color-gray: #757575;
+  --color-white-gray: #c2c2c2; 
+  --color-gray: #5e5e5e;
+  --color-dark-gray: #111111;
 
   /* Fonts */
   --main-font-family: "Electrolize", "Orbitron", "Russo One";
+  --title-font-family: "Russo One", "Orbitron", "Electrolize";
+  
 }
 
 /*=============== Main HTML ===============*/
@@ -19,7 +21,7 @@ html {
 body {
   text-align: center;
   background-attachment: fixed;
-  background-color: var(--color-black);
+  background-color: var(--color-dark-gray);
   background-position: center center;
   margin: 0px 0px 10px 0px;
   padding: auto;
@@ -30,7 +32,7 @@ body {
 
 a:link {
   text-decoration: none;
-  color: var(--color-light-gray);
+  color: var(--color-white-gray);
   transition: 0.5s;
 }
 a:visited {
@@ -95,7 +97,7 @@ ul {
   width: 100%;
   height: 100%;
   position: relative;
-  transition: 1s;
+  transition: 0.5s;
   display: grid;
   place-items: center;
   cursor: pointer;
@@ -107,6 +109,7 @@ ul {
 }
 .topnav_item a {
   color: var(--color-white);
+
 }
 .fab {
 padding: 0px;
@@ -115,9 +118,16 @@ height: 10px;
 width: 100%;
 text-align: center;
 text-decoration: none;
-color: var(--color-white);
+color: var(--color-white-gray);
 justify-self: end;
+transition: 0.5s;
 }
+
+.fab:hover {
+  color: var(--color-white);
+}
+
+
 
 /*===== Regular navbar =====*/
 .main_nav_container {
@@ -126,7 +136,9 @@ justify-self: end;
   grid-template-rows: auto;
   color: var(--secondary-text);
   font-size: 26px;
-  background-color: var(--color-black);
+  background-color: var(--color-dark-gray);
+  color: var(--color-white-gray);
+  font-family: var(--main-font-family);
   justify-items: center;
   padding: 10px 10px 0px 10px;
 }
@@ -137,12 +149,11 @@ justify-self: end;
 .nav_item {
   width: 100%;
   height: 100%;
-  transition: 0.5s;
   position: relative;
   list-style-type: none;
   margin: 0px;
   padding: 0px;
-
+  transition: 0.25s;
 }
 .nav_item li {
   display: inline-block;
@@ -160,11 +171,13 @@ justify-self: end;
 .nav_download {
   background-color: var(--color-gray);
   border: 1px solid var(--color-white);
-  color: var(--color-white);
-  padding: 10px;
-  transition: 0.5s;
   letter-spacing: 0.4px;
   margin-left: 20px;
+  transition: 0.25s;
+}
+
+.nav_link {
+  padding: 10px;
 }
 .nav_download:hover {
   background-color: var(--color-dark-gray);
@@ -174,9 +187,10 @@ justify-self: end;
   font-weight: 900;
   letter-spacing: 1px;
 }
+
+/* This is the hover menu you see when you hover on game, community and so on */  
 .nav_absolute {
   position: absolute;
-  background-color: var(--color-black);
   z-index: 10;
   text-align: left;
   display: none;
@@ -186,15 +200,13 @@ justify-self: end;
 .nav_absolute li {
   padding: 20px;
   display: block;
-  background-color: var(--color-black);
+  background-color: var(--color-dark-gray);
   transition: 0.25s;
+}
 
-}
-.nav_absolute li:hover {
-  background-color: var(--color-gray);
-}
 .nav_absolute li:hover{
   color: var(--color-white);
+  background-color: var(--color-gray);
 
 }
 .nav_list:hover {
@@ -203,7 +215,7 @@ justify-self: end;
 
 }
 .nav_list li {
-  color: var(--color-light-gray);
+  color: var(--color-white-gray);
 }
 .fa-caret-down {
   transition: 0.35s;
@@ -320,7 +332,7 @@ height: 0;
 
 .mobilenav_ul li {
   padding: 15px 10px 15px 10px;
-  color:var(--color-light-gray);
+  color:var(--color-white-gray);
 }
 
 .mobilenav_active {
@@ -455,18 +467,19 @@ height: 0;
 .scroll_text {
   
   font-size: 20px;
-  padding: 20px 20px 20px 50vw;
+  padding: 20px 20px 20px 60vw;
 }
 
-.scroll_image {
-  width: 60%;
+.scroll_image img {
+  width: 50%;
+  height: 100%;
   place-self: left;
   justify-self: end;
 }
 
 .scroll_item .scroll_image img {
   width: 100%; 
-  height: 100%;
+  height: 50vh;
   object-fit: contain;
   overflow: hidden;
   border-radius: 20px;
@@ -495,6 +508,17 @@ height: 0;
   top: 170px;
   left: 100px;
 }
+
+
+.fake_scroller {
+  padding: 1000px 0px;
+}
+
+
+
+
+
+
 
 /* Stuff below the main page */
 

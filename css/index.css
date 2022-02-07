@@ -6,6 +6,7 @@
   --color-white-gray: #c2c2c2; 
   --color-gray: #5e5e5e;
   --color-dark-gray: #111111;
+  --color-gold:rgb(247, 148, 29);
 
   /* Fonts */
   --main-font-family: "Electrolize", "Orbitron", "Russo One";
@@ -73,6 +74,10 @@ ul {
   position: relative;
   width: 100%;
   grid-column: 1/-1; 
+}
+
+.splat_black_background {
+  background-color: var(--color-black)
 }
 
 /*=============== Nav Bar =============== */
@@ -433,27 +438,39 @@ height: 0;
 /* Scroll container */
 
 #scroll_scroller {
-
   position: relative;
-  background-color: #0a0a0a;
+  background-color: var(--color-black);
 }
 
+.scroll_sticky {
+  position: relative;
+  padding: 50px;
+  font-family: var(--title-font-family);
+  font-size: 70px;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.scroll_absolute {
+  position: absolute;
+  left: 100px;
+}
+
+
 .main_scroll_container {
-  position: sticky;
+
   top: 0;
   display: grid;
   grid-template-columns: repeat(1, auto-fit, minmax(100px, 1fr));
   grid-template-rows: auto;
   background-image: url("../img/blackbg.jpg");
   background-size: cover;
-  background-position: center center;
-  padding: 100px 100px 100px 10px;
-  justify-content: end;
+  padding: 10px 10px 700px 10px;
+
 }
 
 .scroll_container {
   justify-content: end;
-  place-self: end;
 
 }
 .scroll_item {
@@ -465,53 +482,43 @@ height: 0;
 }
 
 .scroll_text {
-  
-  font-size: 20px;
-  padding: 20px 20px 20px 60vw;
+  font-size: 24px;
+  padding: 20px 8vw 20px 45vw;
+  text-align: justify;
+  line-height: 1.7em;
 }
 
-.scroll_image img {
-  width: 50%;
-  height: 100%;
-  place-self: left;
-  justify-self: end;
+.gold_text {
+  color: rgb(247, 148, 29);
 }
+.scroll_image {
+  width: 60%;
+  justify-self: end;
+  position: absolute;
+  opacity: 0;
+
+}
+
+
+
+
+.scroll_image_opacity {
+  opacity: 1;
+  transition: 2.5s;
+}
+
+
 
 .scroll_item .scroll_image img {
-  width: 100%; 
-  height: 50vh;
-  object-fit: contain;
-  overflow: hidden;
+  width: 80%; 
+  height: 100%;
+
+
   border-radius: 20px;
 }
 
-
-
-.scroll_sticky {
-  position: relative;
-  padding: 100px;
-  font-family: "russo one";
-  font-size: 60px;
-  text-align: justify;
-  text-justify: inter-word;
-
-}
-
-.scroll_absolute {
-  position: absolute;
-  left: 100px;
-  
-}
-
-.scroll_absolute2 {
-  position: absolute;
-  top: 170px;
-  left: 100px;
-}
-
-
 .fake_scroller {
-  padding: 1000px 0px;
+  padding: 1500px 0px;
 }
 
 

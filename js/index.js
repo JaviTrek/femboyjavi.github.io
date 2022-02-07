@@ -51,8 +51,46 @@ let blackbg = document.getElementById("mobilenav_bg");
     blackmobile[0].classList.toggle("mobilenav_mobile_active");
     blackbars.classList.toggle("mobilenav_change");
     blackbg.classList.toggle("mobilenav_bg_active");
-    
     }) ;
+
+  
+    //onscroll!
+    // https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671
+const scrollElements = document.querySelectorAll(".scroll_image");
+
+
+const elementInView = (el = 1) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop <= (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const elementOutofView = (el) => {
+  const elementTop = el.getBoundingClientRect().top;
+  return (
+    elementTop > (window.innerHeight || document.documentElement.clientHeight)
+  );
+};
+
+const handleScrollAnimation = () => {
+  scrollElements.forEach((el) => {
+    if (elementInView(el, 1.25)) {
+      el.classList.add("scroll_image_opacity");;
+    } else {
+      el.classList.remove("scroll_image_opacity");
+    }
+  })
+}
+
+window.addEventListener('scroll', () => {
+  handleScrollAnimation();
+  console.log("You scroll_image_opacity!")
+})
+
+
+
+
 
 
 // This is the function used for the faction logos changing images, currently not active on the website

@@ -41,7 +41,7 @@ function listopen(x) {
   
   }
 }
-});
+
 
 //JS for the 3 white bars in the mobile nav bar that open said nav bar
 let blackmobile = document.getElementsByClassName("mobilenav_mobile");
@@ -56,7 +56,7 @@ let blackbg = document.getElementById("mobilenav_bg");
   
     //onscroll!
     // https://webdesign.tutsplus.com/tutorials/animate-on-scroll-with-javascript--cms-36671
-const scrollElements = document.querySelectorAll(".scroll_image");
+const scrollElements = document.querySelectorAll(".scrollFade");
 
 
 const elementInView = (el = 1) => {
@@ -76,56 +76,45 @@ const elementOutofView = (el) => {
 const handleScrollAnimation = () => {
   scrollElements.forEach((el) => {
     if (elementInView(el, 1.25)) {
-      el.classList.add("scroll_image_opacity");;
+      el.classList.add("scrolled");
     } else {
-      el.classList.remove("scroll_image_opacity");
+      el.classList.remove("scrolled");
     }
-  })
-}
+  });
+};
 
 window.addEventListener('scroll', () => {
   handleScrollAnimation();
-  console.log("You scroll_image_opacity!")
-})
+  console.log("You scrolled!");
+});
 
 
+// Function so SplitImages will become black when hovering over text
+
+let splitAbsoluteText = document.getElementsByClassName("splitAbsoluteText");
+let splitText = document.getElementsByClassName("splitText");
+let splitImage = document.getElementsByClassName("splitImage");
 
 
+for (let i = 0; i < splitAbsoluteText.length+1; i++) {
+  splitAbsoluteText[i].addEventListener("mouseover", () => {
+    splitImage[i].style.opacity = "0.5";
+    splitText[i].style.opacity = "1";
+    splitAbsoluteText[i].style.top = "50%";
+  });
+  splitImage[i].addEventListener("mouseover", () => {
+    splitText[i].style.opacity = "1";
+    splitImage[i].style.opacity = "0.5";
+    splitAbsoluteText[i].style.top = "50%";
+  });
+  splitAbsoluteText[i].addEventListener("mouseout", () => {
+    splitImage[i].style.opacity = "1";
+  });
+  splitImage[i].addEventListener("mouseout", () => {
+    splitText[i].style.opacity = "0";
+    splitImage[i].style.opacity = "1";
+    splitAbsoluteText[i].style.top = "62%";
+  });
+}
 
-
-// This is the function used for the faction logos changing images, currently not active on the website
-/*
-  let background = document.getElementById("main_faction_container");
-  let factionlogo = document.getElementsByClassName("faction_image");
-  let alllogo = document.querySelectorAll("faction_image");
-
-
-  for (let i = 0; i < factionlogo.length; i++) {
-    factionlogo[i].addEventListener("mouseover", function() {
-      for(i2 = 0; i2 < factionlogo.length; i2++) {
-        factionlogo[i2].classList.add("faction_opacity");
-      }
-      this.classList.remove("faction_opacity");
-      if(i == 0) {
-        background.style.backgroundImage = 'url("/img/uefbg.jpg")';
-      } else if(i == 1) {
-        background.style.backgroundImage = 'url("/img/cybranbg.jpg")';
-      } else if(i == 2) {
-        background.style.backgroundImage = 'url("/img/aeonbg.jpg")';
-      } else if(i == 3) {  
-        background.style.backgroundImage = 'url("/img/seraphimbg.jpg")';
-      }
-    });
-    factionlogo[i].addEventListener("mouseleave", function() {
-    revertbackground()
-    });
-  }
-
-
-  function revertbackground() {
-    background.style.backgroundImage = 'url("/img/faction.jpg")';
-    for (i = 0; i < factionlogo.length; i++) {
-      factionlogo[i].classList.remove("faction_opacity")
-    }
-    };
-    */
+});

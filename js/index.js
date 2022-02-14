@@ -96,7 +96,7 @@ let splitText = document.getElementsByClassName("splitText");
 let splitImage = document.getElementsByClassName("splitImage");
 
 
-for (let i = 0; i < splitAbsoluteText.length+1; i++) {
+for (let i = 0; i < splitAbsoluteText.length; i++) {
   splitAbsoluteText[i].addEventListener("mouseover", () => {
     splitImage[i].style.opacity = "0.5";
     splitText[i].style.opacity = "1";
@@ -108,7 +108,9 @@ for (let i = 0; i < splitAbsoluteText.length+1; i++) {
     splitAbsoluteText[i].style.top = "50%";
   });
   splitAbsoluteText[i].addEventListener("mouseout", () => {
+    splitText[i].style.opacity = "0";
     splitImage[i].style.opacity = "1";
+    splitAbsoluteText[i].style.top = "62%";
   });
   splitImage[i].addEventListener("mouseout", () => {
     splitText[i].style.opacity = "0";
@@ -117,4 +119,7 @@ for (let i = 0; i < splitAbsoluteText.length+1; i++) {
   });
 }
 
+
 });
+
+

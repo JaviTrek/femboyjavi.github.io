@@ -216,17 +216,17 @@ title Javi FAF Mock Website
 .mainScrollContainer
   .scroll_container.scroll_sticky
     .scroll_absolute
-      .gold_text JOIN THOUSANDS
+      .highlightText JOIN THOUSANDS
       | IN MONUMENTAL
       br
       | BATTLEFIELDS
   .scroll_container
     .scroll_item
-      .scroll_text.scrollFade.scrolledRight
+      .scroll_text.scrollFade.animationRigth
         | FAF is a community-driven project that continues the development of SupCom:FA. Completing it with matchmaking, visual and balance updates, advanced AIs, new gamemodes, mods, UI customization, 16 player matches and competitive queues plus tournaments. Join one of the biggest RTS communities and deliver absolute warfare in 1v1 duels, 2v2 duos, epic 4v4s and massive 8v8 teamgames!
   .scroll_container
     .scroll_item
-      .scroll_image.scrollFade.scrolledRight
+      .scroll_image.scrollFade.animationRigth
         img(src='../img/seraphim.jpg' alt='')
 
 
@@ -237,75 +237,97 @@ title Javi FAF Mock Website
 // The bold white bar that separates containers
 .mainThinContainer
   .thinContainer 
-    .thinItem FAF IMPROVEMENTS ON SUPREME COMMANDER
+    .thinItem FAF IMPROVEMENTS ON 
+    .highlightText SUPREME COMMANDER
 .splat_main_container.splat_black_background
   .splat_container
     .splat
       img(src='../img/blacksplat.png' alt='')
 
 .mainSplitContainer
-  .splitContainer.split6
+  .splitContainer.column6
     a(href='/views/SCFA-vs-FAF.html' target='_blank') 
       .splitItem 
-        .splitImage
+        .splitImage.splitDark
           img(src='../img/seraphim.jpg' alt='')
         .splitAbsoluteText Game Updates
           .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
             
-  .splitContainer.split6 
+  .splitContainer.column6 
     .splitItem
-      .splitImage
+      .splitImage.splitDark
         img(src='../img/aeon.jpg' alt='')
       .splitAbsoluteText Matchmaking
         .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
 
-  .splitContainer.split6 
+  .splitContainer.column6 
     .splitItem
-      .splitImage
+      .splitImage.splitDark
         img(src='../img/UEF.jpg' alt='')
       .splitAbsoluteText Mod and Map Vault
         .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
       
-  .splitContainer.split6 
+  .splitContainer.column6 
     .splitItem
-      .splitImage 
+      .splitImage.splitDark 
+        img(src='../img/cybran.jpg' alt='')
+      .splitAbsoluteText Competitive AI
+        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
+  
+
+  .splitContainer.column6 
+    .splitItem
+      .splitImage.splitDark
+        img(src='../img/cybran.jpg' alt='')
+      .splitAbsoluteText Player Statistics
+        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
+
+  .splitContainer.column6 
+    .splitItem
+      .splitImage.splitDark
         img(src='../img/cybran.jpg' alt='')
       .splitAbsoluteText Tournaments
         .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
   
+  //Factions Start here
 
-  .splitContainer.split6 
+.splat_main_container.splat_black_background
+  .splat_container
+    .splat_rotate
+      img(src='../img/blacksplat.png' alt='')
+// The bold white bar that separates containers
+.mainThinContainer
+  .thinContainer 
+    .thinItem 
+    .highlightText FOUR FACTIONS 
+    | OF ABSOLUTE DESTRUCTION
+.splat_main_container.splat_black_background
+  .splat_container
+    .splat
+      img(src='../img/blacksplat.png' alt='')
+
+.mainSplitContainer.factionPadding
+  .splitContainer.column3.factionCard
     .splitItem
-      .splitImage 
-        img(src='../img/cybran.jpg' alt='')
-      .splitAbsoluteText Tournaments
-        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
-
-  .splitContainer.split6 
+      .splitImage.scrollFade.animationLeft
+        img(src='../img/acuuef.jpg' alt='')
+  .splitContainer.column3.factionCard
     .splitItem
-      .splitImage 
-        img(src='../img/cybran.jpg' alt='')
-      .splitAbsoluteText Tournaments
-        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
-  
-  
-  
+      .splitImage.scrollFade.animationLeft
+        img(src='../img/acucybran.jpg' alt='')
+  .splitContainer.column3.factionCard
+    .splitItem
+      .splitImage.scrollFade.animationRigth 
+        img(src='../img/acuaeon.jpg' alt='')
+  .splitContainer.column3.factionCard
+    .splitItem
+      .splitImage.scrollFade.animationRigth
+        img(src='../img/acuseraphim.jpg' alt='')
 
-.mainScrollContainer
-  .scroll_sticky
-    .scroll_absolute
-      .gold_text FOUR FLAVORS
-      | OF ABSOLUTE
-      br
-      | DESTRUCTION
-  .scroll_container
-    .scroll_item
-      .scroll_text.scrollFade.scrolledLeft
-        | Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground.
-  .scroll_container
-    .scroll_item
-      .scroll_image.scrollFade.scrolledLeft
-        img(src='../img/cybran.jpg' alt='')
+
+
+.scrollFade.animationLeft
+ //| Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground.
 
 
 

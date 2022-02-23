@@ -227,7 +227,7 @@ title Javi FAF Mock Website
   .scroll_container
     .scroll_item
       .scroll_image.scrollFade.animationRigth
-        img(src='../img/seraphim.jpg' alt='')
+        img(src='../img/intro.jpg' alt='')
 
 
 .splat_main_container.splat_black_background
@@ -244,50 +244,67 @@ title Javi FAF Mock Website
     .splat
       img(src='../img/blacksplat.png' alt='')
 
-.mainSplitContainer
-  .splitContainer.column6
-    a(href='/views/SCFA-vs-FAF.html' target='_blank') 
-      .splitItem 
+
+//FAF IMPROVEMENTS ON SUPCOM
+.arrowContainer
+  #arrowAbsoluteLeft.arrowItem
+    .fas.fa-chevron-left
+  #arrowAbsoluteRight.arrowItem
+    .fas.fa-chevron-right
+  .mainSplitContainer.mainSlideContainer
+    
+    .splitContainer.column6
+      //a(href='/views/SCFA-vs-FAF.html' target='_blank') 
+      .splitItem.absoluteSlide
         .splitImage.splitDark
-          img(src='../img/seraphim.jpg' alt='')
+          img(src='../img/fafupdate.jpg' alt='')
         .splitAbsoluteText Game Updates
           .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
-            
-  .splitContainer.column6 
-    .splitItem
-      .splitImage.splitDark
-        img(src='../img/aeon.jpg' alt='')
-      .splitAbsoluteText Matchmaking
-        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
+    .splitContainer.column6
+      .splitItem.absoluteSlide
+        .splitImage.splitDark
+          img(src='../img/fafmatchmaking.jpg' alt='')
+        .splitAbsoluteText Matchmaking
+          .splitText Ranked matchmaking featuring queues for 1v1 duels, 2v2 duos and 4v4 teamgames! Plus custom game lobbies!
 
-  .splitContainer.column6 
-    .splitItem
-      .splitImage.splitDark
-        img(src='../img/UEF.jpg' alt='')
-      .splitAbsoluteText Mod and Map Vault
-        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
-      
-  .splitContainer.column6 
-    .splitItem
-      .splitImage.splitDark 
-        img(src='../img/cybran.jpg' alt='')
-      .splitAbsoluteText Competitive AI
-        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
-  
+    .splitContainer.column6
+      .splitItem.absoluteSlide
+        .splitImage.splitDark
+          img(src='../img/fafmapsmods.jpg' alt='')
+        .splitAbsoluteText Mod and Map Vault
+          .splitText Featuring hundreds of new maps and mods made by the community! From updates to Supcom classics to news ones with high quality textures!
+        
+    .splitContainer.column6
+      .splitItem.absoluteSlide
+        .splitImage.splitDark 
+          img(src='../img/fafcompetitive.jpg' alt='')
+        .splitAbsoluteText Competitive AIs
+          .splitText Community made AIs that can provide a real challenge! Each with a different specialization!
+    
 
-  .splitContainer.column6 
-    .splitItem
-      .splitImage.splitDark
-        img(src='../img/cybran.jpg' alt='')
-      .splitAbsoluteText Player Statistics
-        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
+    .splitContainer.column6
+      .splitItem.absoluteSlide
+        .splitImage.splitDark
+          img(src='../img/fafstatistics.jpg' alt='')
+        .splitAbsoluteText Player Statistics
+          .splitText Updated in-game statistics! See your rival or friend you play the most with, which map you have the highest win rate in or how much have you played a certain faction!
 
-  .splitContainer.column6 
-    .splitItem
-      .splitImage.splitDark
-        img(src='../img/cybran.jpg' alt='')
-      .splitAbsoluteText Tournaments
-        .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
+    .splitContainer.column6
+      .splitItem.absoluteSlide
+        .splitImage.splitDark
+          img(src='../img/faftournaments.jpg' alt='')
+        .splitAbsoluteText Tournaments
+          .splitText From the yearly LoTS and Rainbow Cup, the classic King of Setons and King of Dual Gap to other cross-community tournaments!
+    // This empty box is made as a fake "sizing" for the sliders.
+    .splitContainer.column6.noOpacity
+      .splitItem
+        .splitImage.splitDark
+          img(src='../img/cybran.jpg' alt='')
+    .splitContainer.column6.noOpacity
+      .splitItem
+        .splitImage.splitDark
+          img(src='../img/cybran.jpg' alt='')
+
   
   //Factions Start here
 
@@ -306,28 +323,156 @@ title Javi FAF Mock Website
     .splat
       img(src='../img/blacksplat.png' alt='')
 
-.mainSplitContainer.factionPadding
-  .splitContainer.column3.factionCard
-    .splitItem
-      .splitImage.scrollFade.animationLeft
-        img(src='../img/acuuef.jpg' alt='')
-  .splitContainer.column3.factionCard
+
+//ACU Cards
+.mainSplitContainer
+  .splitContainer.column12
+    .responsiveText.responsiveTextPadding
+      | Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground.
+ 
+.mainSplitContainer.acuPadding
+  //UEF
+  
+  .splitContainer.column3
+    .splitItem.scrollFade.animationLeft#acuUEF.acuCard
+  .splitContainer.column9.acuAbsolute
+    .splitItem.factionAbsolute
+      .splitImage.scrollFade
+        img(src='../img/uef.jpg' alt='')
+
+  //CYBRAN
+  .splitContainer.column3.acuCard
     .splitItem
       .splitImage.scrollFade.animationLeft
         img(src='../img/acucybran.jpg' alt='')
-  .splitContainer.column3.factionCard
-    .splitItem
-      .splitImage.scrollFade.animationRigth 
-        img(src='../img/acuaeon.jpg' alt='')
-  .splitContainer.column3.factionCard
+  .splitContainer.column9.acuAbsolute
+    .splitItem.factionAbsolute
+      .splitImage.scrollFade
+        img(src='../img/cybran.jpg' alt='')
+  //AEON
+  .splitContainer.column3.acuCard
     .splitItem
       .splitImage.scrollFade.animationRigth
-        img(src='../img/acuseraphim.jpg' alt='')
+        img(src='../img/acuaeon.jpg' alt='')
+  .splitContainer.column9.acuAbsolute.acuLeft
+    .splitItem.factionAbsolute
+      .splitImage.scrollFade
+        img(src='../img/aeon.jpg' alt='')
+
+
+  //SERAPHIM
+  .splitContainer.column3
+    .splitItem.scrollFade.animationRigth#acuSeraphim.acuCard
+  .splitContainer.column9.acuAbsolute.acuLeft
+    .splitItem.factionAbsolute
+      .splitImage.scrollFade
+        img(src='../img/seraphim.jpg' alt='')
+        
+  .splitContainer.column12#acuBlankScreen.displayNone
+    .splitItem
+      .splitImage.scrollFade
+
+//This is where eco and zoom will go
+//splat start
+.splat_main_container.splat_black_background
+  .splat_container
+    .splat_rotate
+      img(src='../img/blacksplat.png' alt='')
+.mainThinContainer
+  .thinContainer 
+    .thinItem 
+    |TOTAL CONTROL WITH THE  
+    .highlightText STRATEGIC ZOOM
+.splat_main_container.splat_black_background
+  .splat_container
+    .splat
+      img(src='../img/blacksplat.png' alt='')
+//splat end
+//zoom start
+
+.mainSplitContainer.mainThreeContainer
+  .splitContainer.column12
+    .responsiveText.responsiveTextPadding
+      |Lead and command your armies and bases at the same time from afar or witness your enemies final moments from up close in the front-lines!
+ 
+  .splitContainer.column6
+    .splitItem.threeItem 
+      .splitImage.threeImage
+        img(src='../img/zoomout.jpg' alt='')
+  .splitContainer.column6
+    .splitItem.threeItem 
+      .splitImage.threeImage
+        img(src='../img/zoomin.jpg' alt='')
+
+//splat start
+.splat_main_container.splat_black_background
+  .splat_container
+    .splat_rotate
+      img(src='../img/blacksplat.png' alt='')
+.mainThinContainer
+  .thinContainer 
+    .thinItem 
+    .highlightText PLAY SUPREME COMMANDER
+    |THE WAY IT WAS INTENDED
+.splat_main_container.splat_black_background
+  .splat_container
+    .splat
+      img(src='../img/blacksplat.png' alt='')
+//splat end
+//eco start
+
+.mainSplitContainer.mainThreeContainer
+  .splitContainer.column12
+    .responsiveText.responsiveTextPadding
+      |Download FAF
+ 
+.mainFooterContainer 
+  .footerContainer 
+    .footerItem 
+      ul NAV  
+        a(href='https://github.com/FAForever' target='_blank')
+          li HOME
+        a(href='https://github.com/FAForever' target='_blank')
+          li FAF NEWS 
+        a(href='https://github.com/FAForever' target='_blank')
+          li GAME   
+        a(href='https://github.com/FAForever' target='_blank')
+          li COMMUNITY
+        a(href='https://github.com/FAForever' target='_blank')
+          li COMPETITIVE
+  .footerContainer 
+    .footerItem 
+      ul CONTRIBUTE  
+        a(href='https://github.com/FAForever' target='_blank')
+          li DONATIONS
+        a(href='https://github.com/FAForever' target='_blank')
+          li VOLUNTEER POSITIONS
+ 
+  .footerContainer 
+    .footerItem 
+      ul LEGAL
+        a(href='https://github.com/FAForever' target='_blank')
+          li TERMS OF SERVICE
+        a(href='https://github.com/FAForever' target='_blank')
+          li PRIVACY STATEMENT          
+        a(href='https://github.com/FAForever' target='_blank')
+          li FAF ASSOCIATION
+
+  .footerContainer 
+    .footerItem 
+      ul CONTACT US
+        a(href='https://github.com/FAForever' target='_blank')
+          li DISCORD
+  
+        a(href='https://github.com/FAForever' target='_blank')
+          li ASSOCIATION  
+
+        
 
 
 
-.scrollFade.animationLeft
- //| Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground.
+
+//| Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground.
 
 
 

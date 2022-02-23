@@ -11,9 +11,9 @@
   /* Fonts */
   --main-font-family: "Electrolize", "Orbitron", "Russo One";
   --title-font-family: "Russo One", "Orbitron", "Electrolize";
+  --specific-font-family: "Orbitron", "Electrolize";
   
-  /* Font Size */
-  --size-title: 70px;
+
 }
 
 /*=============== Main HTML ===============*/
@@ -26,7 +26,7 @@ body {
   background-attachment: fixed;
   background-color: var(--color-dark-gray);
   background-position: center center;
-  margin: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
   padding: auto;
   padding-top: 0px;
   font-family: var(--main-font-family);
@@ -92,7 +92,7 @@ ul {
 /*===== Top Navbar =====*/
 .main_topnav_container {
   display: grid;
-  grid-template-columns: repeat(10,max-content);
+  grid-template-columns: repeat(12,max-content);
   grid-template-rows: minmax(10px, 35px);
   color:var(--color-gray);
   font-size: 14px;
@@ -138,6 +138,8 @@ transition: 0.5s;
 .fab:hover {
   color: var(--color-white);
 }
+
+
 
 
 
@@ -200,7 +202,7 @@ transition: 0.5s;
   letter-spacing: 1px;
 }
 
-/* This is the hover menu you see when you hover on game, community and so on */  
+/* This is the hover menu you see when you hover on GAME, COMMUNITY and so on */  
 .nav_absolute {
   position: absolute;
   z-index: 10;
@@ -234,14 +236,14 @@ transition: 0.5s;
 }
 .nav_list:hover .fa-caret-down {
   transform: rotate(-0.25turn);
-  transition: 0.5s;
-  color: var(--color-white);
 }
 
 
 @media (max-width: 1200px) {
   .main_nav_container {
-    display: none;
+    display: none;  transition: 0.5s;
+  color: var(--color-white);
+
   }
   .main_topnav_container {
     display: none;
@@ -253,7 +255,7 @@ transition: 0.5s;
   position: sticky;
   display: none;
   top: 0;
-  z-index: 10;
+  z-index: 100;
   background-color: var(--color-black);
   border: 1px solid var(--color-white);
  }
@@ -366,6 +368,59 @@ display: none;
   color:var(--color-white);
 }
 
+
+/* Footer Navbar */
+
+.mainFooterContainer {
+  display: grid;
+  grid-template-columns: repeat(4,max-content);
+  grid-template-rows: minmax(10px, 1fr);
+
+  gap: 5vw;
+  color:var(--color-gray);
+  font-size: 14px;
+  background-color: var(--color-dark-gray);
+  padding: 20px 10px 50px 10px;
+  justify-content: center;
+  text-align: left;
+
+}
+.footerContainer {
+  padding: 0px 10px;
+}
+.footerItem {
+  width: 100%;
+  height: 100%;
+  transition: 0.4s;
+  cursor: pointer;
+  line-height: 35PX;
+}
+.footerItem ul {
+  font-size: 20px;
+  font-family: var(--specific-font-family);
+  color: var(--color-white);
+}
+.footerItem li {
+  list-style-type: none;
+  padding: 0.1vw;
+  margin-left: 1em;
+  font-size: 0.8em;
+  font-family: var(--main-font-family);
+  border: 1px solid var(--color-dark-gray);
+  color: var(--color-white-gray);
+  
+}
+.footerItem li:hover {
+  color: var(--color-white);
+  transition: 0.4s;
+  background-color: var(--color-dark-gray);
+  border: 1px solid var(--color-white-gray);
+}
+.footerItem a {
+  color: var(--color-white);
+}
+
+
 /* ============= Main Content ===================*/
 /* Main Page */
 
@@ -455,7 +510,11 @@ display: none;
 
 .scroll_absolute {
   position: absolute;
-  left: 100px;
+  left: 5vw;
+}
+
+.scrollAbsoluteRight {
+  right: 5vw;
 }
 
 
@@ -488,12 +547,18 @@ display: none;
   transition: 1.5s;
 }
 
-
-
-
-.highlightText {
-  color: var(--color-gold); 
+.scrollTextRight {
+  padding: 20px 45vw 20px 8vw;;
+  text-align: justify;
+  line-height: 1.7em;
+  transition: 1.5s;
+  font-size: 22px;
 }
+
+
+
+
+
 .scroll_image {
   width: 60%;
   justify-self: end;
@@ -512,6 +577,7 @@ display: none;
 
 .scrollFade {
   opacity: 0;
+  transition: 0.5s;
 }
 
 
@@ -577,7 +643,7 @@ display: none;
 
 
 
-/* Separating WHITE banner */
+/* Separating  banner with highlight gold */
 
 .mainThinContainer {
   display: grid;
@@ -589,25 +655,72 @@ display: none;
   letter-spacing: 1.2PX;
   border: 15px solid var(--color-black);
   font-family: var(--title-font-family);
+}
 
-
+.highlightText {
+  color: var(--color-gold); 
 }
 
 /* MultiCategory Container */
 
 
 /* Container with multiple containers within it */
+.arrowContainer {
+  padding: 5vw 10vw;
+  background-image: url("../img/fafbgpattern.jpg");
+  position: relative;
+  font-size: 4em;
+  z-index: 10;
+}
+
+.arrowItem {
+  justify-self: center;
+  color: var(--color-white-gray);
+  position: absolute;
+  transition: 0.4s;
+}
+#arrowAbsoluteLeft {
+  position: absolute;
+  top: 50%;
+  left: 5vw;
+  transform: translate(-50%, -50%);
+  width: 5vw;
+  height: 5vw;
+}
+
+.arrowItem:hover {
+  color: var(--color-white);
+}
+
+
+#arrowAbsoluteRight {
+  position: absolute;
+  top: 50%;
+  left: 95vw;
+  transform: translate(-50%, -50%);
+  width: 5vw;
+  height: 5vw;
+
+}
+
+
 
 .mainSplitContainer {
   display: grid;
   grid-template-columns: repeat(12, minmax(0px, 1fr));
-  grid-template-rows: repeat(3, minmax(100px, 1fr));
+  grid-template-rows: repeat(1, minmax(0px, 1fr));
   background-color: var(--color-black);
-  padding: 10px 300px;
   justify-items: center;
-  gap: 15px;
+  gap: 0px;
   font-size: 2vw;
+  overflow: hidden;
+  position: relative;
+
 }
+.mainSlideContainer {
+  grid-template-rows: repeat(1, minmax(0px, 50px));
+}
+
 
 
 .splitContainer {
@@ -627,8 +740,8 @@ display: none;
 .column6 {
   grid-column: span 6;
 }
-.column8 {
-  grid-column: span 8;
+.column9 {
+  grid-column: span 9;
 }
 .column10 {
   grid-column: span 10;
@@ -674,30 +787,138 @@ display: none;
   object-fit: fill;
   overflow: hidden;
   transition: 0.4s ;
-  border-radius: 20px;
 }
 
-.splitDark {
+.splitDark img{
   filter: brightness(0.5);
+  border-radius: 20px; 
+}
+/* Here is the "three" variant of splitImage */
+
+.mainThreeContainer {
+  padding: 0px 15vw;
+  background-image: url("../img/fafbgmasspattern.jpg");
+  gap: 10px;
+
 }
 
-.factionPadding {
+.threeItem {
+  border-radius: 20px;
+
+  transition: 0.4s;
+}
+
+
+.threeImage img:hover {
+  transform: scale(1.2);
+}
+
+.responsiveText {
+  opacity: 1;
+  font-size:  30px;
+  padding:1.2em 0vw;
+  line-height: 1.5em;
+
+}
+
+.responsiveTextPadding {
+  padding: 1.2em 10vw;
+  
+}
+
+
+
+/* Here you can find stuff related to splitImage containers but in regards to the factions */
+.acuPadding {
   padding: 0px;
   gap: 0px;
   margin: 0px;
+  grid-template-rows: 1fr;
+  position: relative;
+}
+#acuUEF {
+  width: 25vw;
+  height: 100%;
+  background-image: url("../img/acuUEF.jpg");
+  background-size: cover;
 }
 
-.factionCard{
-  width: 20vw;
+#acuSeraphim {
+  width: 25vw;
+  height: 100%;
+  background-image: url("../img/acuseraphim.jpg");
+  background-size: cover;
+}
+.acuCard{
+  width: auto;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s;
 }
 
-.splitFaction {
+.acuCard:hover {
+  filter: brightness(1.4);
+}
 
+
+.acuAbsolute {
+  position: absolute;
+  height: 100%;
+  width: 75%;
+  right: 0; 
+}
+
+.acuLeft {
+  left: 0;
+}
+
+#acuBlankScreen{
+  position: absolute;
+  height: 100%;
+  width: 100%; 
+  right: 0; 
+  z-index: 10;
+  opacity: 0;
+  cursor: pointer;
+}
+
+
+
+.factionAbsolute {
+  position: absolute;
+  object-fit: contain;
+  padding: 0px 0px;
+  opacity: 0;
+  transition: 0.4s;
   top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.acuAbsoluteActive {
+  z-index: 10;
+  opacity: 1;
+}
+
+.displayNone {
+  display: none;
+}
+
+
+.absoluteSlide {
+  position: absolute;
+  top: 0;
+  left:0%;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 10;
+  transition: 0.6s;
+}
+
+.noOpacity {
   opacity: 0;
 }
-
-
 
 
 
@@ -724,12 +945,11 @@ display: none;
   }
 
   .mainThinContainer { 
-    padding: 30px;
+    padding: 100px;
+    font-size: 40px;
   }
 
-  .mainSplitContainer {
-    padding: 10px 100px;
-  }
+
 }
 
 @media (max-width: 800px) {
@@ -742,7 +962,13 @@ display: none;
     .fab {
       padding: 10px 0px;
     }
-  
+.mainFooterContainer {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .responsiveText {
+    font-size: 15px;
+  }
     #main_banner_container {
       padding: 150px 10px;
       gap: 0px;
@@ -758,7 +984,6 @@ display: none;
     }
   
   .mainScrollContainer {
-    padding: 10px;
     justify-content: center;
     align-content: center;
   }
@@ -767,7 +992,7 @@ display: none;
   .scroll_text {
     padding: 20px 10px;
     text-align: center;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .scroll_sticky {
@@ -786,16 +1011,19 @@ display: none;
   
   }
   .mainThinContainer {
-    padding: 30px;
-    font-size: 24px;
+    padding: 50px;
+    font-size: 5vw;
   }
 
   .mainSplitContainer {
     margin: 0px;
-    font-size: 15px;
+    font-size: 0.7em;
     padding: 0px;
-    gap: 5px;
 
+
+  }
+  .arrowContainer {
+    font-size: 40px;
   }
 }
 
@@ -812,6 +1040,14 @@ display: none;
   }
   .banner_subtitle {
     font-size: 12px;
+  }
+  .mainSplitContainer {
+    font-size: 0.55em;
+
+
+  }
+  .arrowContainer {
+    font-size: 25px;
   }
 }
 

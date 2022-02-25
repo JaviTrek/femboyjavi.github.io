@@ -90,7 +90,7 @@ title Javi FAF Mock Website
 
             a(href='/views/contributors-and-developers.html' target='_blank')
               li  Contributors and Developers
-    
+
             a(href='/views/volunteer-positions.html' target='_blank') 
               li Volunteer Positions
 
@@ -100,16 +100,16 @@ title Javi FAF Mock Website
         ul.nav_absolute
           a(href='/views/tournaments.html' target='_blank')
             li Tournaments
-          
+
           a(href='/views/trainers.html' target='_blank') 
             li Trainers
-          
+
           a(href='/views/league.html' target='_blank') 
             li League
-          
+
           a(href='/views/leaderboards.html' target='_blank') 
             li Leaderboards
-            
+
   .nav_container.nav_end
     a(href='' target='_blank')
       .nav_item LOGIN
@@ -199,7 +199,7 @@ title Javi FAF Mock Website
     .splat_rotate
       img(src='../img/splat.png' alt='')
 // Initial UEF ACU background banner
-#main_banner_container
+#main_banner_container.landingBanner
   .banner_container.banner_title
     .banner_item CONTINUE THE SUPCOM LEGACY IN
   .banner_container.banner_title
@@ -207,6 +207,9 @@ title Javi FAF Mock Website
   .banner_container
     .banner_item
       .banner_subtitle 837 ACUS ON THE BATTLEFIELD RIGHT NOW
+  .banner_container
+    .banner_item 
+      .bannerButton Play Now
 .splat_main_container.splat_black_background
   .splat_container
     .splat
@@ -252,7 +255,7 @@ title Javi FAF Mock Website
   #arrowAbsoluteRight.arrowItem
     .fas.fa-chevron-right
   .mainSplitContainer.mainSlideContainer
-    
+
     .splitContainer.column6
       //a(href='/views/SCFA-vs-FAF.html' target='_blank') 
       .splitItem.absoluteSlide
@@ -271,16 +274,16 @@ title Javi FAF Mock Website
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/fafmapsmods.jpg' alt='')
-        .splitAbsoluteText Mod and Map Vault
+        .splitAbsoluteText The Vault
           .splitText Featuring hundreds of new maps and mods made by the community! From updates to Supcom classics to news ones with high quality textures!
-        
+
     .splitContainer.column6
       .splitItem.absoluteSlide
         .splitImage.splitDark 
           img(src='../img/fafcompetitive.jpg' alt='')
         .splitAbsoluteText Competitive AIs
           .splitText Community made AIs that can provide a real challenge! Each with a different specialization!
-    
+
 
     .splitContainer.column6
       .splitItem.absoluteSlide
@@ -295,6 +298,13 @@ title Javi FAF Mock Website
           img(src='../img/faftournaments.jpg' alt='')
         .splitAbsoluteText Tournaments
           .splitText From the yearly LoTS and Rainbow Cup, the classic King of Setons and King of Dual Gap to other cross-community tournaments!
+    .splitContainer.column6
+      .splitItem.absoluteSlide
+        .splitImage.splitDark
+          img(src='../img/fafclient.jpg' alt='')
+        .splitAbsoluteText Client
+          .splitText The FAF client takes all of these improvements and easily puts them together!
+    
     // This empty box is made as a fake "sizing" for the sliders.
     .splitContainer.column6.noOpacity
       .splitItem
@@ -305,7 +315,7 @@ title Javi FAF Mock Website
         .splitImage.splitDark
           img(src='../img/cybran.jpg' alt='')
 
-  
+
   //Factions Start here
 
 .splat_main_container.splat_black_background
@@ -329,10 +339,10 @@ title Javi FAF Mock Website
   .splitContainer.column12
     .responsiveText.responsiveTextPadding
       | Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground.
- 
+
 .mainSplitContainer.acuPadding
   //UEF
-  
+
   .splitContainer.column3
     .splitItem.scrollFade.animationLeft#acuUEF.acuCard
   .splitContainer.column9.acuAbsolute
@@ -367,7 +377,7 @@ title Javi FAF Mock Website
     .splitItem.factionAbsolute
       .splitImage.scrollFade
         img(src='../img/seraphim.jpg' alt='')
-        
+
   .splitContainer.column12#acuBlankScreen.displayNone
     .splitItem
       .splitImage.scrollFade
@@ -381,51 +391,60 @@ title Javi FAF Mock Website
 .mainThinContainer
   .thinContainer 
     .thinItem 
-    |TOTAL CONTROL WITH THE  
-    .highlightText STRATEGIC ZOOM
+    |TOTAL CONTROL
+    .highlightText SUPREME COMMANDING
 .splat_main_container.splat_black_background
   .splat_container
     .splat
       img(src='../img/blacksplat.png' alt='')
 //splat end
 //zoom start
+.rectangleSpace
+  .mainSplitContainer.mainRectangleContainer
+    .splitContainer.column8
+        .responsiveTextTitle.highlightText.rectangleContainer
+          | STRATEGIC ZOOM
+          .responsiveText.responsiveText
+            |Lead your armies and bases at the same time from afar with the strategic zoom. Have a clear look of what's happening everywhere in a matter of seconds
+    .splitContainer.column4
+      .splitItem.rectangleItem 
+        .splitImage.rectangleImage
+          img(src='../img/zoomout.jpg' alt='')
+  .mainSplitContainer.mainRectangleContainerReverse
+    .splitContainer.column8
+      .responsiveTextTitle.highlightText.rectangleContainer
+          | RESPONSIVE ECONOMY
+          .responsiveText.responsiveText
+            |With its flux econonomy system, get an economy that responds to your actions instantly and requires to adapt to the changes in the battlefield!
+    .splitContainer.column4
+      .splitItem.rectangleItem 
+        .splitImage.rectangleImage
+          img(src='../img/resources.jpg' alt='')
 
-.mainSplitContainer.mainThreeContainer
-  .splitContainer.column12
-    .responsiveText.responsiveTextPadding
-      |Lead and command your armies and bases at the same time from afar or witness your enemies final moments from up close in the front-lines!
- 
-  .splitContainer.column6
-    .splitItem.threeItem 
-      .splitImage.threeImage
-        img(src='../img/zoomout.jpg' alt='')
-  .splitContainer.column6
-    .splitItem.threeItem 
-      .splitImage.threeImage
-        img(src='../img/zoomin.jpg' alt='')
 
-//splat start
+//ZOOM end
+//eco start
+
+//end banner start
+
 .splat_main_container.splat_black_background
   .splat_container
     .splat_rotate
       img(src='../img/blacksplat.png' alt='')
-.mainThinContainer
-  .thinContainer 
-    .thinItem 
-    .highlightText PLAY SUPREME COMMANDER
-    |THE WAY IT WAS INTENDED
+
+#main_banner_container.endBanner
+  .banner_container.banner_title
+    .banner_item.highlightText PLAY SUPREME COMMANDER
+  .banner_container.banner_title
+    .banner_item THE WAY IT WAS INTENDED
+  .banner_container
+    .banner_item 
+      .bannerButton Play Now
 .splat_main_container.splat_black_background
   .splat_container
     .splat
       img(src='../img/blacksplat.png' alt='')
-//splat end
-//eco start
-
-.mainSplitContainer.mainThreeContainer
-  .splitContainer.column12
-    .responsiveText.responsiveTextPadding
-      |Download FAF
- 
+//footer start
 .mainFooterContainer 
   .footerContainer 
     .footerItem 
@@ -447,7 +466,7 @@ title Javi FAF Mock Website
           li DONATIONS
         a(href='https://github.com/FAForever' target='_blank')
           li VOLUNTEER POSITIONS
- 
+
   .footerContainer 
     .footerItem 
       ul LEGAL
@@ -463,66 +482,11 @@ title Javi FAF Mock Website
       ul CONTACT US
         a(href='https://github.com/FAForever' target='_blank')
           li DISCORD
-  
+
         a(href='https://github.com/FAForever' target='_blank')
           li ASSOCIATION  
 
-        
 
-
-
-
-//| Whether you are into the chunky UEF mechs and tanks, the Cybran stealthy spiderbots and walking ships, Aeon shielded hover units and donuts or Seraphim abstract alien mix of chickens. FAF has a faction for you to raze your opponents base to the ground.
-
-
-
-
-
-//
-  | CHOOSE YOUR OWN BATTLEFIELD
-  .text_subtitle
-  | Play RTS like you want to play it. Competitive duels where every decision matters, teamgames that don't need hundred of clicks a minutes, chaotic FFA battles where anarchy is king or survival against waves and waves of enemies. FAF has a fit for every RTS player.
-
-  To do
-  - Splats (kinda like border thingies between the elements so its not a flat transition between navbar to main image for example)
-  - ul dropdown
-  - Text
-  - Footer
-  - Newshub
-  - Community page
-  - Competitive page
-  - Gameplay page
-//
-  .splat_main_container
-  .splat_container
-  .splat_item REVIVE THE NOSTALGIA
-//
-  #main_faction_container
-  .faction_container
-  .faction_item
-  .faction_image
-  img(src='../img/factionuef.svg' alt='')
-  .faction_container
-  .faction_item
-  .faction_image
-  img(src='../img/factioncybran.svg' alt='')
-  .faction_container
-  .faction_item
-  .faction_image
-  img(src='../img/factionaeon.svg' alt='')
-  .faction_container
-  .faction_item
-  .faction_image
-  img(src='../img/factionseraphim.svg' alt='')
-//
-  .splat_main_container
-  .splat_container
-  .splat
-  img(src="../img/splat.png", alt="")
-//
-  Poll Time
-  People like FAF because of its
-  Uniqueness in scale of warfare and capabilities
 //
   Good lines
   Economy economy that responds to your actions instantly

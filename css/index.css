@@ -3,16 +3,18 @@
   /* Colors */
   --color-black: #000000;
   --color-white: #FFFFFF;
-  --color-white-gray: #c2c2c2; 
+  --color-white-gray: #c2c2c2;
   --color-gray: #5e5e5e;
   --color-dark-gray: #111111;
-  --color-gold:#f7941d;
+  --color-gold: #f7941d;
+  --color-dark-gold: #c56e03;
+  --color-light-gold:#ffc077;
 
   /* Fonts */
   --main-font-family: "Electrolize", "Orbitron", "Russo One";
   --title-font-family: "Russo One", "Orbitron", "Electrolize";
   --specific-font-family: "Orbitron", "Electrolize";
-  
+
 
 }
 
@@ -21,6 +23,7 @@
 html {
   font-family: var(--main-font-family);
 }
+
 body {
   text-align: center;
   background-attachment: fixed;
@@ -38,13 +41,16 @@ a:link {
   color: var(--color-white-gray);
   transition: 0.5s;
 }
+
 a:visited {
   text-decoration: none;
   color: inherit;
 }
+
 a:hover {
   color: var(--color-white);
 }
+
 ul {
   padding: 0px;
   margin: 0px;
@@ -55,9 +61,10 @@ ul {
   display: grid;
   grid-template-columns: auto;
   position: relative;
-  padding: 5px 0px 5px 0px;
-  justify-items: center; 
+  padding: 10px 0px 10px 0px;
+  justify-items: center;
 }
+
 .splat_rotate {
   position: absolute;
   transform: rotate(0.5turn);
@@ -65,6 +72,7 @@ ul {
   z-index: 0;
   object-fit: cover;
 }
+
 .splat {
   position: absolute;
   width: 100%;
@@ -72,10 +80,11 @@ ul {
   bottom: 0px;
   overflow: hidden;
 }
+
 .splat_container {
   position: relative;
   width: 100%;
-  grid-column: 1/-1; 
+  grid-column: 1/-1;
 }
 
 .splat_black_background {
@@ -84,7 +93,7 @@ ul {
 
 .separationBar {
   padding: 20px;
-  background-color:var(--color-dark-gray);
+  background-color: var(--color-dark-gray);
 }
 
 /*=============== Nav Bar =============== */
@@ -92,9 +101,9 @@ ul {
 /*===== Top Navbar =====*/
 .main_topnav_container {
   display: grid;
-  grid-template-columns: repeat(12,max-content);
+  grid-template-columns: repeat(12, max-content);
   grid-template-rows: minmax(10px, 35px);
-  color:var(--color-gray);
+  color: var(--color-gray);
   font-size: 14px;
   background-color: var(--color-black);
   padding: 0px 10px 0px 10px;
@@ -102,9 +111,11 @@ ul {
   justify-content: end;
   place-items: center;
 }
+
 .topnav_container {
   padding: 0px 10px;
 }
+
 .topnav_item {
   width: 100%;
   height: 100%;
@@ -116,23 +127,26 @@ ul {
   justify-self: end;
 
 }
+
 .topnav_hover:hover {
   color: var(--color-white);
 }
+
 .topnav_item a {
   color: var(--color-white);
 
 }
+
 .fab {
-padding: 0px;
-font-size: 30px;
-height: 10px;
-width: 100%;
-text-align: center;
-text-decoration: none;
-color: var(--color-white-gray);
-justify-self: end;
-transition: 0.5s;
+  padding: 0px;
+  font-size: 30px;
+  height: 10px;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--color-white-gray);
+  justify-self: end;
+  transition: 0.5s;
 }
 
 .fab:hover {
@@ -156,10 +170,12 @@ transition: 0.5s;
   justify-items: center;
   padding: 10px 10px 0px 10px;
 }
+
 .nav_container {
   align-self: center;
   align-content: center;
 }
+
 .nav_item {
   width: 100%;
   height: 100%;
@@ -169,11 +185,13 @@ transition: 0.5s;
   padding: 0px;
   transition: 0.25s;
 }
+
 .nav_item li {
   display: inline-block;
   padding: 0px 20px
 }
-.nav_image img{
+
+.nav_image img {
   width: 80px;
   height: 100%;
   object-fit: contain;
@@ -182,35 +200,41 @@ transition: 0.5s;
   justify-self: center;
   place-self: center;
 }
+
 .nav_download {
   background-color: var(--color-gray);
-  border: 1px solid var(--color-white);
+  border: 0.1em solid var(--color-black);
   letter-spacing: 0.4px;
   margin-left: 20px;
   transition: 0.25s;
 }
 
+.nav_download:hover {
+  color: var(--color-white);
+  background-color: var(--color-gold);
+  border: 0.1em solid var(--color-dark-gold);
+}
+
 .nav_link {
   padding: 10px;
 }
-.nav_download:hover {
-  background-color: var(--color-dark-gray);
-}
+
 .nav_end {
   justify-self: end;
   font-weight: 900;
   letter-spacing: 1px;
 }
 
-/* This is the hover menu you see when you hover on GAME, COMMUNITY and so on */  
+/* This is the hover menu you see when you hover on GAME, COMMUNITY and so on */
 .nav_absolute {
   position: absolute;
   z-index: 10;
   text-align: left;
   display: none;
   top: 30px;
-  
+
 }
+
 .nav_absolute li {
   padding: 20px;
   display: block;
@@ -218,22 +242,26 @@ transition: 0.5s;
   transition: 0.25s;
 }
 
-.nav_absolute li:hover{
+.nav_absolute li:hover {
   color: var(--color-white);
   background-color: var(--color-gray);
 
 }
+
 .nav_list:hover {
   color: var(--color-white);
   transition: 0.25s;
 
 }
+
 .nav_list li {
   color: var(--color-white-gray);
 }
+
 .fa-caret-down {
   transition: 0.35s;
 }
+
 .nav_list:hover .fa-caret-down {
   transform: rotate(-0.25turn);
 }
@@ -241,10 +269,12 @@ transition: 0.5s;
 
 @media (max-width: 1200px) {
   .main_nav_container {
-    display: none;  transition: 0.5s;
-  color: var(--color-white);
+    display: none;
+    transition: 0.5s;
+    color: var(--color-white);
 
   }
+
   .main_topnav_container {
     display: none;
   }
@@ -258,11 +288,11 @@ transition: 0.5s;
   z-index: 100;
   background-color: var(--color-black);
   border: 1px solid var(--color-white);
- }
+}
 
 .main_mobilenav_container {
   display: grid;
-  grid-template-columns:1fr;
+  grid-template-columns: 1fr;
   grid-template-rows: auto;
   justify-items: left;
   font-family: "Orbitron";
@@ -278,28 +308,32 @@ transition: 0.5s;
 
 }
 
-.mobilenav_bar1, .mobilenav_bar2, .mobilenav_bar3 {
+.mobilenav_bar1,
+.mobilenav_bar2,
+.mobilenav_bar3 {
   width: 35px;
   height: 5px;
-  background-color:var(--color-white);
+  background-color: var(--color-white);
   margin: 6px 0;
   transition: 0.4s;
 }
 
 .mobilenav_change .mobilenav_bar1 {
-  transform: rotate(-45deg) translate(-9px, 6px) ;
+  transform: rotate(-45deg) translate(-9px, 6px);
 }
+
 .mobilenav_change .mobilenav_bar2 {
   opacity: 0;
 }
+
 .mobilenav_change .mobilenav_bar3 {
-  transform: rotate(45deg) translate(-8px, -8px) ;
+  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .mobilenav_mobile {
-opacity: 0;
-height: 0;
-display: none;
+  opacity: 0;
+  height: 0;
+  display: none;
 }
 
 
@@ -315,12 +349,13 @@ display: none;
   top: 0;
   z-index: 9;
 }
+
 #mobilenav_bg {
   position: absolute;
 }
 
 .mobilenav_bg_active {
-  background-color:var(--color-black);
+  background-color: var(--color-black);
   width: 100vw;
   height: 100vh;
   opacity: 90%;
@@ -337,6 +372,7 @@ display: none;
   padding: 25px 10px 0px 0px;
   padding-top: 0px;
 }
+
 .mobilenav_item ul {
   list-style-type: none;
   margin: 0px;
@@ -349,15 +385,15 @@ display: none;
 
 .mobilenav_ul li {
   padding: 15px 10px 15px 10px;
-  color:var(--color-white-gray);
+  color: var(--color-white-gray);
 }
 
 .mobilenav_active {
   display: block;
-  
+
 }
 
-.mobilenav_social li{
+.mobilenav_social li {
   display: inline-block;
   padding: 10px;
 }
@@ -365,7 +401,7 @@ display: none;
 .mobilenav_caret .fa-caret-down {
   transform: rotate(-0.25turn);
   transition: 0.5s;
-  color:var(--color-white);
+  color: var(--color-white);
 }
 
 
@@ -373,21 +409,23 @@ display: none;
 
 .mainFooterContainer {
   display: grid;
-  grid-template-columns: repeat(4,max-content);
+  grid-template-columns: repeat(4, max-content);
   grid-template-rows: minmax(10px, 1fr);
 
   gap: 5vw;
-  color:var(--color-gray);
+  color: var(--color-gray);
   font-size: 14px;
-  background-color: var(--color-dark-gray);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(34, 34, 34, 1) 100%);
   padding: 20px 10px 50px 10px;
   justify-content: center;
   text-align: left;
 
 }
+
 .footerContainer {
   padding: 0px 10px;
 }
+
 .footerItem {
   width: 100%;
   height: 100%;
@@ -395,11 +433,13 @@ display: none;
   cursor: pointer;
   line-height: 35PX;
 }
+
 .footerItem ul {
   font-size: 20px;
   font-family: var(--specific-font-family);
   color: var(--color-white);
 }
+
 .footerItem li {
   list-style-type: none;
   padding: 0.1vw;
@@ -408,14 +448,16 @@ display: none;
   font-family: var(--main-font-family);
   border: 1px solid var(--color-dark-gray);
   color: var(--color-white-gray);
-  
+
 }
+
 .footerItem li:hover {
   color: var(--color-white);
   transition: 0.4s;
   background-color: var(--color-dark-gray);
   border: 1px solid var(--color-white-gray);
 }
+
 .footerItem a {
   color: var(--color-white);
 }
@@ -428,8 +470,7 @@ display: none;
 
 #main_banner_container {
   display: grid;
-  grid-template-columns: auto;
-  background-image: url("../img/home1.jpg"); 
+  grid-template-columns: repeat(1, autofit minmax(0px, 1fr));
   background-position: center;
   background-size: cover;
   padding: 300px 0px;
@@ -455,12 +496,40 @@ display: none;
 }
 
 .banner_subtitle {
-  font-size: 25px;
+  font-size: 30px;
   font-family: "electrolize";
   font-weight: 600;
   padding: 20PX 0px;
 }
 
+.bannerButton {
+  background-color: var(--color-gray);
+  border: 0.15em solid var(--color-black);
+  color: var(--color-white-gray);
+  font-size: 0.7em;
+  width: 8em;
+  padding: 10px;
+  justify-self: center;
+  transition: 0.4s;
+  font-weight: bold;
+
+}
+
+.bannerButton:hover {
+  color: var(--color-white);
+  background-color: var(--color-gold);
+  border: 0.15em solid var(--color-dark-gold);
+}
+
+/* end banner variant of regular banner */
+.landingBanner {
+  background-image: url("../img/home1.jpg");
+}
+
+.endBanner {
+  background-image: url("../img/footerbanner.jpg");
+
+}
 
 /* Below Main page */
 
@@ -470,10 +539,12 @@ display: none;
     gap: 0px;
     font-size: 10px;
   }
+
   .banner_subtitle {
     font-size: 12px;
     padding: 5px;
   }
+
   .banner_title {
     font-size: 20px;
     padding: 5px;
@@ -487,15 +558,17 @@ display: none;
     padding: 130px 0px;
     gap: 0px;
   }
+
   .banner_title {
     font-size: 18px;
   }
+
   .banner_subtitle {
     font-size: 12px;
   }
 }
 
-/* Scroll container */
+/* Scroll container Container with the monkeylord below banner */
 
 
 .scroll_sticky {
@@ -513,10 +586,6 @@ display: none;
   left: 5vw;
 }
 
-.scrollAbsoluteRight {
-  right: 5vw;
-}
-
 
 
 .mainScrollContainer {
@@ -531,6 +600,7 @@ display: none;
 .scroll_container {
   justify-content: end;
 }
+
 .scroll_item {
   overflow: hidden;
   object-fit: contain;
@@ -540,36 +610,21 @@ display: none;
 
 
 .scroll_text {
-  font-size: 22px;
+  font-size: 1.5em;
   padding: 20px 8vw 20px 45vw;
   text-align: justify;
   line-height: 1.7em;
   transition: 1.5s;
 }
 
-.scrollTextRight {
-  padding: 20px 45vw 20px 8vw;;
-  text-align: justify;
-  line-height: 1.7em;
-  transition: 1.5s;
-  font-size: 22px;
-}
-
-
-
-
-
 .scroll_image {
   width: 60%;
   justify-self: end;
 }
 
-.scrollImageRotate {
-  justify-self: start;
-}
 
 .scroll_item .scroll_image img {
-  width: 80%; 
+  width: 80%;
   height: 100%;
   border-radius: 20px;
 }
@@ -593,20 +648,23 @@ display: none;
  * w: http://animista.net, t: @cssanimista
  * ---------------------------------------------- */
 
- .scrolled {
-   opacity: 1;
-   transition: 2s;
- }
- .scrolled.animationRigth {
-	animation: animationRigth 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-
-  
+.scrolled {
+  opacity: 1;
+  transition: 2s;
 }
- @keyframes animationRigth {
+
+.scrolled.animationRigth {
+  animation: animationRigth 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
+
+}
+
+@keyframes animationRigth {
   0% {
     transform: scale(0.5);
     transform-origin: 100% 50%;
   }
+
   100% {
     transform: scale(1);
     transform-origin: 100% 50%;
@@ -614,14 +672,16 @@ display: none;
 }
 
 .scrolled.animationLeft {
-	animation: animationLeft 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
-  
+  animation: animationLeft 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+
 }
+
 @keyframes animationLeft {
   0% {
     transform: scale(0.5);
     transform-origin: 0% 50%;
   }
+
   100% {
     transform: scale(1);
     transform-origin: 0% 50%;
@@ -629,12 +689,14 @@ display: none;
 }
 
 .animationFlip {
-	animation: animationFlip 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
+  animation: animationFlip 0.4s cubic-bezier(0.455, 0.030, 0.515, 0.955) reverse both;
 }
+
 @keyframes animationFlip {
   0% {
     transform: rotateX(0);
   }
+
   100% {
     transform: rotateX(-180deg);
   }
@@ -658,7 +720,8 @@ display: none;
 }
 
 .highlightText {
-  color: var(--color-gold); 
+  color: var(--color-gold);
+
 }
 
 /* MultiCategory Container */
@@ -679,6 +742,7 @@ display: none;
   position: absolute;
   transition: 0.4s;
 }
+
 #arrowAbsoluteLeft {
   position: absolute;
   top: 50%;
@@ -712,14 +776,14 @@ display: none;
   background-color: var(--color-black);
   justify-items: center;
   gap: 0px;
-  font-size: 2vw;
+  font-size: 2.5vw;
   overflow: hidden;
   position: relative;
 
 }
-.mainSlideContainer {
-  grid-template-rows: repeat(1, minmax(0px, 50px));
-}
+
+
+
 
 
 
@@ -729,20 +793,30 @@ display: none;
 
 .column3 {
   grid-column: span 3;
-  
+
 }
 
 .column4 {
   grid-column: span 4;
-  
-}
 
+}
+.column5 {
+  grid-column: span 5;
+}
 .column6 {
   grid-column: span 6;
 }
+.column7 {
+  grid-column: span 7;
+}
+.column8 {
+  grid-column: span 8;
+}
+
 .column9 {
   grid-column: span 9;
 }
+
 .column10 {
   grid-column: span 10;
 }
@@ -761,20 +835,12 @@ display: none;
 
 }
 
-.splitAbsoluteText {
-  position: absolute;
-  left: 50%;
-  top: 62%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  text-shadow: 10px 2px 4px rgb(0 0 0 / 100%), 0 8px 16px rgb(0 0 0 / 100%);
-  transition: 1s;
-}
+
 
 .splitText {
-  font-size: 0.5em;
+  font-size: 0.6em;
   opacity: 0;
-  transition: 0.5s;
+  transition: 0.4s;
 }
 
 .splitImage {
@@ -782,48 +848,97 @@ display: none;
 }
 
 .splitImage img {
-  width: 100%; 
+  width: 100%;
   height: 100%;
   object-fit: fill;
   overflow: hidden;
-  transition: 0.4s ;
-}
-
-.splitDark img{
-  filter: brightness(0.5);
-  border-radius: 20px; 
-}
-/* Here is the "three" variant of splitImage */
-
-.mainThreeContainer {
-  padding: 0px 15vw;
-  background-image: url("../img/fafbgmasspattern.jpg");
-  gap: 10px;
-
-}
-
-.threeItem {
-  border-radius: 20px;
-
   transition: 0.4s;
 }
 
-
-.threeImage img:hover {
-  transform: scale(1.2);
+.splitDark img {
+  filter: brightness(0.5);
+  border-radius: 20px;
 }
 
+
+/* here you can find the slide variant and its thingies */
+.mainSlideContainer {
+  grid-template-columns: repeat(24, minmax(0px, 1fr));
+ 
+
+}
+
+.absoluteSlide {
+  position: absolute;
+  top: 0;
+  left: 0%;
+  width: 50%;
+  height: 100%;
+  border-radius: 20px;
+  z-index: 10;
+  transition: 0.4s;
+}
+
+.splitAbsoluteText {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  text-shadow: 10px 2px 4px rgb(0 0 0 / 100%), 0 8px 16px rgb(0 0 0 / 100%);
+  transition: 1s;
+}
+/* Here is the "three" variant of splitImage */
+.rectangleSpace {
+  padding: 2vw 0vw 2vw 0vw;
+  background-image: url("../img/fafbgmasspattern.jpg");
+  direction: rtl;
+}
+.mainRectangleContainer {
+  margin: 2vw 0vw 2vw 25vw;
+  background-color: var(--color-dark-gray);
+  gap: 10px;
+  align-items: center;
+}
+.mainRectangleContainerReverse {
+  margin: 2vw 25vw 2vw 0vw;
+  background-color: var(--color-dark-gray);
+  gap: 10px;
+  align-items: center;
+  direction: ltr;
+}
+
+.rectangleContainer {
+  text-align: left;
+  padding: 1em;
+}
+
+
+
+.rectangleItem {
+  transition: 0.4s;
+}
+.rectangleImage {
+  width: 100%;
+}
+
+/* Used as white text between stuff */
+.responsiveTextTitle {
+  font-family: var(--specific-font-family);
+}
 .responsiveText {
   opacity: 1;
-  font-size:  30px;
-  padding:1.2em 0vw;
+  font-size: 30px;
+  padding: 1.2em 0vw;
   line-height: 1.5em;
+  color: var(--color-white);
+  font-family: var(--main-font-family);
 
 }
 
 .responsiveTextPadding {
   padding: 1.2em 10vw;
-  
+
 }
 
 
@@ -836,6 +951,7 @@ display: none;
   grid-template-rows: 1fr;
   position: relative;
 }
+
 #acuUEF {
   width: 25vw;
   height: 100%;
@@ -849,7 +965,8 @@ display: none;
   background-image: url("../img/acuseraphim.jpg");
   background-size: cover;
 }
-.acuCard{
+
+.acuCard {
   width: auto;
   position: relative;
   z-index: 1;
@@ -865,18 +982,18 @@ display: none;
   position: absolute;
   height: 100%;
   width: 75%;
-  right: 0; 
+  right: 0;
 }
 
 .acuLeft {
   left: 0;
 }
 
-#acuBlankScreen{
+#acuBlankScreen {
   position: absolute;
   height: 100%;
-  width: 100%; 
-  right: 0; 
+  width: 100%;
+  right: 0;
   z-index: 10;
   opacity: 0;
   cursor: pointer;
@@ -905,16 +1022,6 @@ display: none;
 }
 
 
-.absoluteSlide {
-  position: absolute;
-  top: 0;
-  left:0%;
-  width: 50%;
-  height: 100%;
-  border-radius: 20px;
-  z-index: 10;
-  transition: 0.6s;
-}
 
 .noOpacity {
   opacity: 0;
@@ -944,7 +1051,7 @@ display: none;
     width: 600px;
   }
 
-  .mainThinContainer { 
+  .mainThinContainer {
     padding: 100px;
     font-size: 40px;
   }
@@ -953,36 +1060,44 @@ display: none;
 }
 
 @media (max-width: 800px) {
+
+  
   .main_topnav_container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    }
-    .greynav_container {
+  }
+
+  .greynav_container {
     justify-self: center;
-    }
-    .fab {
-      padding: 10px 0px;
-    }
-.mainFooterContainer {
+  }
+
+  .fab {
+    padding: 10px 0px;
+  }
+
+  .mainFooterContainer {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
   .responsiveText {
     font-size: 15px;
   }
-    #main_banner_container {
-      padding: 150px 10px;
-      gap: 0px;
-      font-size: 10px;
-    }
-    .banner_subtitle {
-      font-size: 12px;
-      padding: 5px;
-    }
-    .banner_title {
-      font-size: 20px;
-      padding: 5px;
-    }
-  
+
+  #main_banner_container {
+    padding: 150px 10px;
+    gap: 0px;
+    font-size: 10px;
+  }
+
+  .banner_subtitle {
+    font-size: 12px;
+    padding: 5px;
+  }
+
+  .banner_title {
+    font-size: 20px;
+    padding: 5px;
+  }
+
   .mainScrollContainer {
     justify-content: center;
     align-content: center;
@@ -1005,13 +1120,15 @@ display: none;
     justify-self: center;
     width: 90vw;
   }
+
   .scroll_absolute {
     font-size: 30px;
     left: 0;
-  
+
   }
+
   .mainThinContainer {
-    padding: 50px;
+    padding: 15vw;
     font-size: 5vw;
   }
 
@@ -1019,11 +1136,20 @@ display: none;
     margin: 0px;
     font-size: 0.7em;
     padding: 0px;
-
-
   }
+
   .arrowContainer {
     font-size: 40px;
+  }
+
+  .mainSlideContainer {
+    grid-template-columns: repeat(6, minmax(0px, 1fr));
+   
+  }
+
+  .absoluteSlide {
+    width: 100%;
+    font-size: 1em;
   }
 }
 
@@ -1035,17 +1161,25 @@ display: none;
     padding: 130px 0px;
     gap: 0px;
   }
+
   .banner_title {
     font-size: 18px;
   }
+
   .banner_subtitle {
     font-size: 12px;
   }
+
   .mainSplitContainer {
-    font-size: 0.55em;
+    font-size: 1em;
 
 
   }
+
+  .splitAbsoluteText {
+    padding: 0px
+  }
+
   .arrowContainer {
     font-size: 25px;
   }
@@ -1054,19 +1188,20 @@ display: none;
 @media (max-width:1200px) {
   .mobilenav_sticky {
     display: block;
-    }
   }
-  
+}
+
 @media (max-width:1100px) {
   .mobilenav_sticky {
     display: block;
-    }
+  }
 }
 
 @media (max-width: 1100px) {
   .main_nav_container {
     display: none;
   }
+
   .main_topnav_container {
     display: none;
   }

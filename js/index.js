@@ -98,38 +98,71 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let absolute = document.getElementsByClassName("absoluteSlide");
   let chevronRight = document.getElementById("arrowAbsoluteRight");
   let chevronLeft = document.getElementById("arrowAbsoluteLeft");
+  let mql = window.matchMedia('(max-width: 800px)');
   let a = 0;
+  var ab = 50;
 
-  for (let i = 0; i < absolute.length; i++) {
-    absolute[i].style.left = 50*i + "%";
-}
-chevronRight.addEventListener("click", () => {
-  if (a < 4) {
-    a++; 
-  } else {
-    a = 0;
-  }
- 
-  for (let i = 0; i < absolute.length; i++) {
-    absolute[i].style.left = 50*i - 50*a + "%";  
-    console.log(i)
-  }
-  
-  console.log(a);
-});
 
-chevronLeft.addEventListener("click", () => {
-  if (a > 0) {
-    a--; 
-  } else {
-    a = 4;
+  //function to make highligthed text change colors/pulsate
+  let highlightText = document.getElementsByClassName("highlightText");
+  let x = 0;
+  setInterval(highlightPulse, 2000);
+
+  function highlightPulse() {
+
+    if (x < 1) {
+      x++;
+      for (let i = 0; i < highlightText.length; i++) {
+      
+        highlightText[i].style.transition = "1s";
+        highlightText[i].style.color = "var(--color-white";
+      }
+    } else {
+      x--;
+      for (let i = 0; i < highlightText.length; i++) {
+        highlightText[i].style.color = "var(--color-gold)";
+      }
+      
+    }
   }
-  for (let i = 0; i < absolute.length; i++) {
-    absolute[i].style.left = 50*i - 50*a + "%";  
+  //Checks if in phone or computer so slide absolute fits adequately
+  setInterval(checkMediaQuery, 1000);
+  function checkMediaQuery() {
+    if (mql.matches) {
+      ab = 100;
+    } else {
+      ab = 50;
+    }
+    for (let i = 0; i < absolute.length; i++) {
+      absolute[i].style.left = ab * i - ab * a + "%";
+    }
   }
-   
-  console.log(a);
-});
+
+  chevronRight.addEventListener("click", () => {
+
+    if (a < 5) {
+      a++;
+    } else {
+      a = 0;
+    }
+
+    for (let i = 0; i < absolute.length; i++) {
+      absolute[i].style.left = ab * i - ab * a + "%";
+    }
+  });
+
+  chevronLeft.addEventListener("click", () => {
+    if (a > 0) {
+      a--;
+    } else {
+      a = 5;
+    }
+    for (let i = 0; i < absolute.length; i++) {
+      absolute[i].style.left = ab * i - ab * a + "%";
+    }
+  });
+
+
   //absolute[i].style.left = 800*i - 800 + "px";    
 
 
@@ -139,22 +172,22 @@ chevronLeft.addEventListener("click", () => {
     splitAbsoluteText[i].addEventListener("mouseover", () => {
       splitImage[i].style.opacity = "0.5";
       splitText[i].style.opacity = "1";
-      splitAbsoluteText[i].style.top = "50%";
+      splitAbsoluteText[i].style.top = "20%";
     });
     splitImage[i].addEventListener("mouseover", () => {
       splitText[i].style.opacity = "1";
       splitImage[i].style.opacity = "0.5";
-      splitAbsoluteText[i].style.top = "50%";
+      splitAbsoluteText[i].style.top = "20%";
     });
     splitAbsoluteText[i].addEventListener("mouseout", () => {
       splitText[i].style.opacity = "0";
       splitImage[i].style.opacity = "1";
-      splitAbsoluteText[i].style.top = "62%";
+      splitAbsoluteText[i].style.top = "50%";
     });
     splitImage[i].addEventListener("mouseout", () => {
       splitText[i].style.opacity = "0";
       splitImage[i].style.opacity = "1";
-      splitAbsoluteText[i].style.top = "62%";
+      splitAbsoluteText[i].style.top = "50%";
     });
   }
 
@@ -163,6 +196,7 @@ chevronLeft.addEventListener("click", () => {
   let acuCard = document.getElementsByClassName("acuCard");
   let factionAbsolute = document.getElementsByClassName("factionAbsolute");
   let acuUEF = document.getElementById("acuUEF");
+  acuUEF.style.backgroundImage = "url(../img/acuuef.jpg)";
   let acuSeraphim = document.getElementById("acuSeraphim");
   let acuBlankScreen = document.getElementById("acuBlankScreen");
 
@@ -188,8 +222,7 @@ chevronLeft.addEventListener("click", () => {
         factionAbsolute[i].classList.remove("acuAbsoluteActive");
       }, 400);
 
-;
-      
+
       if (i == 1) {
         acuUEF.style.backgroundImage = "url(../img/acuuef.jpg)";
       } else if (i == 2) {

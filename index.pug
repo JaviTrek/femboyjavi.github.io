@@ -210,6 +210,7 @@ title Javi FAF Mock Website
   .banner_container
     .banner_item 
       .bannerButton Play Now
+        a(href='https://www.faforever.com/client')
 .splat_main_container.splat_black_background
   .splat_container
     .splat
@@ -217,7 +218,7 @@ title Javi FAF Mock Website
 
 // work in progress
 .mainScrollContainer
-  .scroll_container.scroll_sticky
+  .scroll_container.scrollRelative
     .scroll_absolute
       .highlightText JOIN THOUSANDS
       | IN MONUMENTAL
@@ -225,8 +226,8 @@ title Javi FAF Mock Website
       | BATTLEFIELDS
   .scroll_container
     .scroll_item
-      .scroll_text.scrollFade.animationRigth
-        | FAF is a community-driven project that continues the development of SupCom:FA. Completing it with matchmaking, visual and balance updates, advanced AIs, new gamemodes, mods, UI customization, 16 player matches and competitive queues plus tournaments. Join one of the biggest RTS communities and deliver absolute warfare in 1v1 duels, 2v2 duos, epic 4v4s and massive 8v8 teamgames!
+      .scrollText.scrollFade.animationRigth
+        | FAF is a community-driven project that continues the development of SupCom:FA. Completing it with a Co-Op campaign, matchmaking, visual and balance updates, advanced AIs, new gamemodes, mods, UI customization, 16 player matches plus tournaments. Join one of the biggest RTS communities and deliver absolute warfare with friends against other players or exciting co-op missions or survival!
   .scroll_container
     .scroll_item
       .scroll_image.scrollFade.animationRigth
@@ -261,8 +262,8 @@ title Javi FAF Mock Website
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/fafupdate.jpg' alt='')
-        .splitAbsoluteText Game Updates
-          .splitText Co-op Campaign, new gamemodes, updated textures, competitive balance, bugfixes, better UI and much more!
+        .splitAbsoluteText Co-Op Campaign
+          .splitText Enjoy the complete campaign with friends and extra missions plus a new Seraphim Campaign!
     .splitContainer.column6
       .splitItem.absoluteSlide
         .splitImage.splitDark
@@ -409,16 +410,16 @@ title Javi FAF Mock Website
     .splitContainer.column4
       .splitItem.rectangleItem 
         .splitImage.rectangleImage
-          img(src='../img/zoomout.jpg' alt='')
+          img#rectangleImage(src='../img/zoomout0.jpg' alt='')
   .mainSplitContainer.mainRectangleContainerReverse
     .splitContainer.column8
-      .responsiveTextTitle.highlightText.rectangleContainer
+      .responsiveTextTitle.highlightText.rectangleContainer      
           | RESPONSIVE ECONOMY
           .responsiveText.responsiveText
-            |With its flux econonomy system, get an economy that responds to your actions instantly and requires to adapt to the changes in the battlefield!
+            |With its flux econonomy system, get an economy that responds to your actions instantly and requires you to adapt to the changes in the battlefield!
     .splitContainer.column4
       .splitItem.rectangleItem 
-        .splitImage.rectangleImage
+        .splitImage#rectangleImage
           img(src='../img/resources.jpg' alt='')
 
 
@@ -446,6 +447,9 @@ title Javi FAF Mock Website
       img(src='../img/blacksplat.png' alt='')
 //footer start
 .mainFooterContainer 
+  .footerContainer 
+    .footerItem 
+      img(src='../img/faflogo.svg' alt='')
   .footerContainer 
     .footerItem 
       ul NAV  

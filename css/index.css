@@ -8,7 +8,7 @@
   --color-dark-gray: #111111;
   --color-gold: #f7941d;
   --color-dark-gold: #c56e03;
-  --color-light-gold:#ffc077;
+  --color-light-gold: #ffc077;
 
   /* Fonts */
   --main-font-family: "Electrolize", "Orbitron", "Russo One";
@@ -16,7 +16,53 @@
   --specific-font-family: "Orbitron", "Electrolize";
 
 
+  /* Font sizes */
+  --paragraph-font-size: 1.4vw;
+  --subtitle-font-size: 2.5vw;
+  --title-font-size: 3vw
 }
+
+/* Used as white text between stuff */
+.responsiveTextTitle {
+  font-family: var(--specific-font-family);
+  font-size: var(--subtitle-font-size);
+}
+
+.responsiveText {
+  font-size: var(--paragraph-font-size);
+  padding: 1.2em 0vw;
+  line-height: 1.5em;
+  color: var(--color-white);
+  font-family: var(--main-font-family);
+}
+
+.responsiveTextPadding {
+  padding: 1.2em 10vw;
+}
+
+@media (max-width: 1600px) {
+  :root {
+    --paragraph-font-size: 2vw;
+    --subtitle-font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  :root {
+    --paragraph-font-size: 2.5vw;
+    --subtitle-font-size: 3.5vw;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    --paragraph-font-size: 5vw;
+    --subtitle-font-size: 5.5vw;
+    --title-font-size: 7vw
+  }
+
+}
+
 
 /*=============== Main HTML ===============*/
 
@@ -59,6 +105,7 @@ ul {
 /*===== Splat Starts =====*/
 .splat_main_container {
   display: grid;
+  
   grid-template-columns: auto;
   position: relative;
   padding: 10px 0px 10px 0px;
@@ -68,9 +115,9 @@ ul {
 .splat_rotate {
   position: absolute;
   transform: rotate(0.5turn);
-  width: 100%;
+  width: 100vw;
   z-index: 0;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .splat {
@@ -102,18 +149,19 @@ ul {
 .main_topnav_container {
   display: grid;
   grid-template-columns: repeat(12, max-content);
-  grid-template-rows: minmax(10px, 35px);
+  grid-template-rows: minmax(10px, 1fr);
   color: var(--color-gray);
-  font-size: 14px;
+  font-size: 0.8vw;
+
   background-color: var(--color-black);
-  padding: 0px 10px 0px 10px;
+  padding: 0.3em;
   position: relative;
   justify-content: end;
   place-items: center;
 }
 
 .topnav_container {
-  padding: 0px 10px;
+  padding: 0px 0.5em;
 }
 
 .topnav_item {
@@ -138,7 +186,7 @@ ul {
 }
 
 .fab {
-  padding: 0px;
+  padding: 5%;
   font-size: 30px;
   height: 10px;
   width: 100%;
@@ -162,8 +210,7 @@ ul {
   display: grid;
   grid-template-columns: max-content minmax(50px, auto) max-content max-content;
   grid-template-rows: auto;
-  color: var(--secondary-text);
-  font-size: 26px;
+  font-size: var(--paragraph-font-size);
   background-color: var(--color-dark-gray);
   color: var(--color-white-gray);
   font-family: var(--main-font-family);
@@ -202,21 +249,23 @@ ul {
 }
 
 .nav_download {
-  background-color: var(--color-gray);
-  border: 0.1em solid var(--color-black);
-  letter-spacing: 0.4px;
-  margin-left: 20px;
-  transition: 0.25s;
-}
-
-.nav_download:hover {
   color: var(--color-white);
   background-color: var(--color-gold);
   border: 0.1em solid var(--color-dark-gold);
+  letter-spacing: 0.4px;
+  margin-left: 20px;
+  transition: 0.25s;
+  color: var(--color-white);
+}
+
+.nav_download:hover {
+  background-color: var(--color-dark-gold);
+
 }
 
 .nav_link {
   padding: 10px;
+  color: white;
 }
 
 .nav_end {
@@ -231,7 +280,7 @@ ul {
   z-index: 10;
   text-align: left;
   display: none;
-  top: 30px;
+  top: 1.2em;
 
 }
 
@@ -270,9 +319,6 @@ ul {
 @media (max-width: 1200px) {
   .main_nav_container {
     display: none;
-    transition: 0.5s;
-    color: var(--color-white);
-
   }
 
   .main_topnav_container {
@@ -409,12 +455,10 @@ ul {
 
 .mainFooterContainer {
   display: grid;
-  grid-template-columns: repeat(4, max-content);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   grid-template-rows: minmax(10px, 1fr);
-
   gap: 5vw;
   color: var(--color-gray);
-  font-size: 14px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(34, 34, 34, 1) 100%);
   padding: 20px 10px 50px 10px;
   justify-content: center;
@@ -431,18 +475,23 @@ ul {
   height: 100%;
   transition: 0.4s;
   cursor: pointer;
-  line-height: 35PX;
+  line-height: 3em;
+}
+
+.footerItem img {
+  width: 70%;
+  margin-top: 10%;
+  margin-left: 10%;
 }
 
 .footerItem ul {
-  font-size: 20px;
+  font-size: var(--paragraph-font-size);
   font-family: var(--specific-font-family);
   color: var(--color-white);
 }
 
 .footerItem li {
   list-style-type: none;
-  padding: 0.1vw;
   margin-left: 1em;
   font-size: 0.8em;
   font-family: var(--main-font-family);
@@ -488,7 +537,7 @@ ul {
 }
 
 .banner_title {
-  font-size: 50px;
+  font-size: var(--subtitle-font-size);
   font-family: "orbitron";
   font-weight: bolder;
   letter-spacing: 6px;
@@ -496,16 +545,16 @@ ul {
 }
 
 .banner_subtitle {
-  font-size: 30px;
+  font-size: var(--paragraph-font-size);
   font-family: "electrolize";
   font-weight: 600;
   padding: 20PX 0px;
 }
 
 .bannerButton {
-  background-color: var(--color-gray);
-  border: 0.15em solid var(--color-black);
-  color: var(--color-white-gray);
+  color: var(--color-white);
+  background-color: var(--color-gold);
+  border: 0.15em solid var(--color-dark-gold);
   font-size: 0.7em;
   width: 8em;
   padding: 10px;
@@ -517,7 +566,7 @@ ul {
 
 .bannerButton:hover {
   color: var(--color-white);
-  background-color: var(--color-gold);
+  background-color: var(--color-dark-gold);
   border: 0.15em solid var(--color-dark-gold);
 }
 
@@ -571,11 +620,11 @@ ul {
 /* Scroll container Container with the monkeylord below banner */
 
 
-.scroll_sticky {
+.scrollRelative {
   position: relative;
   padding: 50px;
   font-family: var(--title-font-family);
-  font-size: 70px;
+  font-size: var(--title-font-size);
   text-align: justify;
   text-justify: inter-word;
 
@@ -594,7 +643,7 @@ ul {
   grid-template-rows: auto;
   background-image: url("../img/blackbg.jpg");
   background-size: cover;
-  padding: 100px 50px;
+  padding: 5%;
 }
 
 .scroll_container {
@@ -609,8 +658,8 @@ ul {
 }
 
 
-.scroll_text {
-  font-size: 1.5em;
+.scrollText {
+  font-size: var(--paragraph-font-size);
   padding: 20px 8vw 20px 45vw;
   text-align: justify;
   line-height: 1.7em;
@@ -713,7 +762,7 @@ ul {
   background-color: var(--color-dark-gray);
   color: var(--color-white);
   padding: 80px 0px;
-  font-size: 50px;
+  font-size: var(--title-font-size);
   letter-spacing: 1.2PX;
   border: 15px solid var(--color-black);
   font-family: var(--title-font-family);
@@ -800,15 +849,19 @@ ul {
   grid-column: span 4;
 
 }
+
 .column5 {
   grid-column: span 5;
 }
+
 .column6 {
   grid-column: span 6;
 }
+
 .column7 {
   grid-column: span 7;
 }
+
 .column8 {
   grid-column: span 8;
 }
@@ -864,7 +917,7 @@ ul {
 /* here you can find the slide variant and its thingies */
 .mainSlideContainer {
   grid-template-columns: repeat(24, minmax(0px, 1fr));
- 
+
 
 }
 
@@ -888,18 +941,21 @@ ul {
   text-shadow: 10px 2px 4px rgb(0 0 0 / 100%), 0 8px 16px rgb(0 0 0 / 100%);
   transition: 1s;
 }
+
 /* Here is the "three" variant of splitImage */
 .rectangleSpace {
   padding: 2vw 0vw 2vw 0vw;
   background-image: url("../img/fafbgmasspattern.jpg");
   direction: rtl;
 }
+
 .mainRectangleContainer {
   margin: 2vw 0vw 2vw 25vw;
   background-color: var(--color-dark-gray);
   gap: 10px;
   align-items: center;
 }
+
 .mainRectangleContainerReverse {
   margin: 2vw 25vw 2vw 0vw;
   background-color: var(--color-dark-gray);
@@ -918,28 +974,16 @@ ul {
 .rectangleItem {
   transition: 0.4s;
 }
+
 .rectangleImage {
   width: 100%;
 }
 
-/* Used as white text between stuff */
-.responsiveTextTitle {
-  font-family: var(--specific-font-family);
-}
-.responsiveText {
-  opacity: 1;
-  font-size: 30px;
-  padding: 1.2em 0vw;
-  line-height: 1.5em;
-  color: var(--color-white);
-  font-family: var(--main-font-family);
-
+#rectangleImage {
+  transition: 1s;
 }
 
-.responsiveTextPadding {
-  padding: 1.2em 10vw;
 
-}
 
 
 
@@ -1041,46 +1085,26 @@ ul {
     justify-content: center;
   }
 
-  .scroll_text {
-    padding: 20px 100px;
+  .scrollText {
+    padding: 4%;
   }
 
-  .scroll_sticky {
+  .scrollRelative {
     padding: 10px;
-    font-size: 50px;
     width: 600px;
   }
-
-  .mainThinContainer {
-    padding: 100px;
-    font-size: 40px;
-  }
-
-
 }
 
 @media (max-width: 800px) {
 
-  
+
   .main_topnav_container {
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   }
 
-  .greynav_container {
-    justify-self: center;
-  }
 
-  .fab {
-    padding: 10px 0px;
-  }
 
-  .mainFooterContainer {
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  }
 
-  .responsiveText {
-    font-size: 15px;
-  }
 
   #main_banner_container {
     padding: 150px 10px;
@@ -1104,13 +1128,13 @@ ul {
   }
 
 
-  .scroll_text {
+  .scrollText {
     padding: 20px 10px;
     text-align: center;
     font-size: 18px;
   }
 
-  .scroll_sticky {
+  .scrollRelative {
     padding: 0px;
     width: 100%;
     text-align: center;
@@ -1122,14 +1146,13 @@ ul {
   }
 
   .scroll_absolute {
-    font-size: 30px;
+    font-size: var(--title-font-size);
     left: 0;
 
   }
 
   .mainThinContainer {
     padding: 15vw;
-    font-size: 5vw;
   }
 
   .mainSplitContainer {
@@ -1138,13 +1161,10 @@ ul {
     padding: 0px;
   }
 
-  .arrowContainer {
-    font-size: 40px;
-  }
 
   .mainSlideContainer {
     grid-template-columns: repeat(6, minmax(0px, 1fr));
-   
+
   }
 
   .absoluteSlide {
@@ -1153,7 +1173,15 @@ ul {
   }
 }
 
+@media (max-width: 600px) {
+  .mainRectangleContainer {
+    grid-template-columns: 1FR;
+  }
 
+  .mainRectangleContainerReverse {
+    grid-template-columns: 1FR;
+  }
+}
 
 @media (max-width: 400px) {
   #main_banner_container {

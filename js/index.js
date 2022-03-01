@@ -113,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     if (x < 1) {
       x++;
       for (let i = 0; i < highlightText.length; i++) {
-      
+
         highlightText[i].style.transition = "1s";
         highlightText[i].style.color = "var(--color-white";
       }
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       for (let i = 0; i < highlightText.length; i++) {
         highlightText[i].style.color = "var(--color-gold)";
       }
-      
+
     }
   }
   //Checks if in phone or computer so slide absolute fits adequately
@@ -205,17 +205,17 @@ document.addEventListener("DOMContentLoaded", function (event) {
       factionAbsolute[i].classList.add("acuAbsoluteActive");
       factionAbsolute[i].style.opacity = "1";
       acuBlankScreen.style.display = "block";
-      console.log("clicked card" + [i]);
+  
 
       if (i == 1) {
         acuUEF.style.backgroundImage = "url(../img/acucybran.jpg)";
       } else if (i == 2) {
         acuSeraphim.style.backgroundImage = "url(../img/acuaeon.jpg)";
       }
-      console.log("2");
+
     });
     acuBlankScreen.addEventListener("click", () => {
-      console.log("clicked blank");
+
       acuBlankScreen.style.display = "none";
       factionAbsolute[i].style.opacity = "0";
       setTimeout(() => {
@@ -232,8 +232,33 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   }
 
+  //change zoomout and eco images
+
+
+  let setons = document.getElementById("rectangleImage");
+  let setonsPicture = '../img/zoomout';
+  let counterA = 0;
+  setInterval(changeImage, 1200);
+  function changeImage() {
+    if (counterA < 8) {
+      counterA++;
+      setons.src = setonsPicture + counterA +'.jpg';
+
+    } else {
+      counterA = 0;;
+    }
+  }
+
+
+
+
+
+
 
 });
+
+
+
 
 
 

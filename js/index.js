@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let a = 0;
   var ab = 100;
   //Checks if in phone or computer so slide absolute fits adequately
-  //setInterval(checkMediaQuery, 1000);
+  /*setInterval(checkMediaQuery, 1000);
   function checkMediaQuery() {
     if (mql.matches) {
       ab = 100;
@@ -166,6 +166,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       absolute[i].style.left = ab * i - ab * a + "%";
     }
   }
+  */
   for (let i = 0; i < absolute.length; i++) {
     absolute[i].style.left = ab * i - ab * a + "%";
   }

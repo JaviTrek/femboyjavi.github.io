@@ -782,7 +782,7 @@ ul {
 
 .multipleBackground {
   background-image: url("../img/fafbgpattern.jpg");
-  padding: 2.5vw 10vw;
+  padding: 2.5vw 8vw;
 }
 
 .mainMultipleContainer {
@@ -1293,6 +1293,9 @@ ul {
   .mainRectangleContainerReverse {
     grid-template-columns: 1FR;
   }
+  .mainSlideContainer {
+    min-height: 100vw;
+  }
 }
 
 @media (max-width: 400px) {
@@ -1319,9 +1322,7 @@ ul {
   .splitAbsoluteText {
     padding: 0px
   }
-  .mainSlideContainer {
-    min-height: 100vw;
-  }
+
 
 }
 

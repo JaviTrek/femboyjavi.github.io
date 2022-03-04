@@ -207,9 +207,8 @@ title Javi FAF Mock Website
   .banner_container
     .banner_item
       .banner_subtitle 837 ACUS ON THE BATTLEFIELD RIGHT NOW
-  .banner_container
-    .banner_item 
-      .bannerButton Play Now
+      a(href='')
+        button.landingButton PLAY NOW
 .splat_main_container.splat_black_background
   .splat_container
     .splat
@@ -246,8 +245,69 @@ title Javi FAF Mock Website
   .splat_container
     .splat
       img(src='../img/blacksplat.png' alt='')
-
-
+//Multiple choice container
+.multipleBackground
+  .mainSplitContainer.mainMultipleContainer
+    .splitContainer.column3.multipleContainer
+      .splitItem.multipleItem.multipleItemActive Co-Op Campaign
+      .splitItem.multipleItem Quality of Life
+      .splitItem.multipleItem Matchmaking
+      .splitItem.multipleItem Map and Mod Vault
+      .splitItem.multipleItem Advanced AI
+      .splitItem.multipleItem Tournaments
+      .splitItem.multipleItem Player Statistics
+    .splitContainer.column9.multipleContainer
+      .mainSplitContainer 
+        .splitContainer.column12.multipleRelative
+          .splitImage.multipleImage.multipleImageActive
+            img(src='../img/fafupdate.jpg' alt='')
+          .multipleAbsolute.multipleImageActive
+            |CO-OP CAMPAIGN
+            .multipleText Enjoy the complete campaign with friends and extra missions plus a new Seraphim Campaign!
+              br
+              button.landingButton Learn More
+          .splitImage.multipleImage     
+            img(src='../img/fafquality.jpg' alt='')
+          .multipleAbsolute 
+            |QUALITY OF LIFE
+            .multipleText Bugfixes, texture updates, gameplay improvements, better UI and client!
+              br
+              button.landingButton Learn More
+          .splitImage.multipleImage     
+            img(src='../img/fafmatchmaking.jpg' alt='')
+          .multipleAbsolute 
+            |MATCHMAKING
+            .multipleText Ranked matchmaking featuring queues for 1v1 duels, 2v2 duos and 4v4 teamgames! Plus custom game lobbies!
+              br
+              button.landingButton Learn More
+          .splitImage.multipleImage     
+            img(src='../img/fafmapsmods.jpg' alt='')
+          .multipleAbsolute 
+            |MAP AND MOD VAULT
+            .multipleText Featuring hundreds of new maps and mods made by the community! From updates to Supcom classics to news ones with high quality textures!
+              br
+              button.landingButton Learn More
+          .splitImage.multipleImage     
+            img(src='../img/fafcompetitive.jpg' alt='')
+          .multipleAbsolute 
+            |ADVANCED AI
+            .multipleText Community made AIs that can provide a real challenge! Each with a different specialization!
+              br
+              button.landingButton Learn More
+          .splitImage.multipleImage     
+            img(src='../img/faftournaments.jpg' alt='')
+          .multipleAbsolute 
+            |TOURNAMENTS
+            .multipleText From the yearly LoTS and Rainbow Cup, the classic King of Setons and King of Dual Gap to other cross-community tournaments!
+              br
+              button.landingButton Learn More
+          .splitImage.multipleImage     
+            img(src='../img/fafstatistics.jpg' alt='')
+          .multipleAbsolute 
+            |PLAYER STATISTICS
+            .multipleText Updated in-game statistics! See your rival or friend you play the most with, which map you have the highest win rate in or how much have you played a certain faction!
+              br
+              button.landingButton Learn More
 //FAF IMPROVEMENTS ON SUPCOM
 .arrowContainer
   #arrowAbsoluteLeft.arrowItem
@@ -256,54 +316,68 @@ title Javi FAF Mock Website
     .fas.fa-chevron-right
   .mainSplitContainer.mainSlideContainer
 
-    .splitContainer.column6
+    .splitContainer.column12
       //a(href='/views/SCFA-vs-FAF.html' target='_blank') 
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/fafupdate.jpg' alt='')
         .splitAbsoluteText Co-Op Campaign
           .splitText Enjoy the complete campaign with friends and extra missions plus a new Seraphim Campaign!
-    .splitContainer.column6
+            br
+            button.landingButton Learn More
+    .splitContainer.column12
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/fafmatchmaking.jpg' alt='')
         .splitAbsoluteText Matchmaking
           .splitText Ranked matchmaking featuring queues for 1v1 duels, 2v2 duos and 4v4 teamgames! Plus custom game lobbies!
+            br
+            button.landingButton Learn More
 
-    .splitContainer.column6
+    .splitContainer.column12
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/fafmapsmods.jpg' alt='')
         .splitAbsoluteText The Vault
           .splitText Featuring hundreds of new maps and mods made by the community! From updates to Supcom classics to news ones with high quality textures!
+            br
+            button.landingButton Learn More
 
-    .splitContainer.column6
+    .splitContainer.column12
       .splitItem.absoluteSlide
         .splitImage.splitDark 
           img(src='../img/fafcompetitive.jpg' alt='')
         .splitAbsoluteText Competitive AIs
           .splitText Community made AIs that can provide a real challenge! Each with a different specialization!
+            br
+            button.landingButton Learn More
 
 
-    .splitContainer.column6
+    .splitContainer.column12
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/fafstatistics.jpg' alt='')
         .splitAbsoluteText Player Statistics
-          .splitText Updated in-game statistics! See your rival or friend you play the most with, which map you have the highest win rate in or how much have you played a certain faction!
+          .splitText See your rival or friend you play the most with, which map or faction you have the highest win rate with!
+            br
+            button.landingButton Learn More
 
-    .splitContainer.column6
+    .splitContainer.column12
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/faftournaments.jpg' alt='')
         .splitAbsoluteText Tournaments
           .splitText From the yearly LoTS and Rainbow Cup, the classic King of Setons and King of Dual Gap to other cross-community tournaments!
-    .splitContainer.column6
+            br
+            button.landingButton Learn More
+    .splitContainer.column12
       .splitItem.absoluteSlide
         .splitImage.splitDark
           img(src='../img/fafclient.jpg' alt='')
         .splitAbsoluteText Client
           .splitText The FAF client takes all of these improvements and easily puts them together!
+            br
+            button.landingButton Learn More
     
     // This empty box is made as a fake "sizing" for the sliders.
     .splitContainer.column6.noOpacity
@@ -415,11 +489,21 @@ title Javi FAF Mock Website
       .responsiveTextTitle.highlightText.rectangleContainer      
           | RESPONSIVE ECONOMY
           .responsiveText.responsiveText
-            |With its flux econonomy system, get an economy that responds to your actions instantly and requires you to adapt to the changes in the battlefield!
+            |With its flux econonomy system, get an economy that responds to your actions instantly and requires you to adapt to the changes in the battlefield
     .splitContainer.column4
       .splitItem.rectangleItem 
         .splitImage#rectangleImage
           img(src='../img/resources.jpg' alt='')
+  .mainSplitContainer.mainRectangleContainer
+    .splitContainer.column8
+        .responsiveTextTitle.highlightText.rectangleContainer
+          | LAND, AIR AND SEA
+          .responsiveText.responsiveText
+            |Flatten enemy armies with your bombers, raze their base with battleships and raid their every expansion with your army
+    .splitContainer.column4
+      .splitItem.rectangleItem 
+        .splitImage.rectangleImage
+          img(src='../img/techlevels.jpg' alt='')
 
 
 //ZOOM end
@@ -439,7 +523,8 @@ title Javi FAF Mock Website
     .banner_item THE WAY IT WAS INTENDED
   .banner_container
     .banner_item 
-      .bannerButton Play Now
+      a(href="")
+        button.landingButton PLAY NOW 
 .splat_main_container.splat_black_background
   .splat_container
     .splat

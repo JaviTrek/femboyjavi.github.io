@@ -90,17 +90,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   });
 
 
-  // Function so SplitImages will become black when hovering over text
 
-  let splitAbsoluteText = document.getElementsByClassName("splitAbsoluteText");
-  let splitText = document.getElementsByClassName("splitText");
-  let splitImage = document.getElementsByClassName("splitImage");
-  let absolute = document.getElementsByClassName("absoluteSlide");
-  let chevronRight = document.getElementById("arrowAbsoluteRight");
-  let chevronLeft = document.getElementById("arrowAbsoluteLeft");
-  let mql = window.matchMedia('(max-width: 800px)');
-  let a = 0;
-  var ab = 50;
 
 
   //function to make highligthed text change colors/pulsate
@@ -125,8 +115,47 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     }
   }
+
+
+  //Function so multipleContainers work well and change tabs
+  let multipleItem = document.getElementsByClassName("multipleItem");
+  let multipleImage = document.getElementsByClassName("multipleImage");
+  let multipleAbsolute = document.getElementsByClassName("multipleAbsolute");
+  let multipleImageActive = document.getElementsByClassName("multipleImageActive");
+
+
+  for (let i = 0; i < multipleItem.length; i++) {
+    multipleItem[i].addEventListener("click", function () {
+      for (let o = 0; o < multipleImage.length; o++) {
+        multipleImage[o].classList.remove("multipleImageActive");
+        multipleAbsolute[o].classList.remove("multipleImageActive");
+        multipleItem[o].classList.remove("multipleItemActive");
+      }
+      multipleImage[i].classList.add("multipleImageActive");
+      multipleAbsolute[i].classList.add("multipleImageActive");
+      multipleItem[i].classList.add("multipleItemActive");
+      setTimeout(fadeout, 100);
+      function fadeout() {
+
+      }
+
+    });
+  }
+
+
+  // Function so splitDarks will become black when hovering over text
+
+  let splitAbsoluteText = document.getElementsByClassName("splitAbsoluteText");
+  let splitText = document.getElementsByClassName("splitText");
+  let splitDark = document.getElementsByClassName("splitDark");
+  let absolute = document.getElementsByClassName("absoluteSlide");
+  let chevronRight = document.getElementById("arrowAbsoluteRight");
+  let chevronLeft = document.getElementById("arrowAbsoluteLeft");
+  let mql = window.matchMedia('(max-width: 800px)');
+  let a = 0;
+  var ab = 100;
   //Checks if in phone or computer so slide absolute fits adequately
-  setInterval(checkMediaQuery, 1000);
+  //setInterval(checkMediaQuery, 1000);
   function checkMediaQuery() {
     if (mql.matches) {
       ab = 100;
@@ -137,9 +166,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
       absolute[i].style.left = ab * i - ab * a + "%";
     }
   }
-
+  for (let i = 0; i < absolute.length; i++) {
+    absolute[i].style.left = ab * i - ab * a + "%";
+  }
   chevronRight.addEventListener("click", () => {
-
+    
     if (a < 5) {
       a++;
     } else {
@@ -170,23 +201,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //Animation for cards
   for (let i = 0; i < splitAbsoluteText.length; i++) {
     splitAbsoluteText[i].addEventListener("mouseover", () => {
-      splitImage[i].style.opacity = "0.5";
+      splitDark[i].style.opacity = "0.5";
       splitText[i].style.opacity = "1";
       splitAbsoluteText[i].style.top = "20%";
     });
-    splitImage[i].addEventListener("mouseover", () => {
+    splitDark[i].addEventListener("mouseover", () => {
       splitText[i].style.opacity = "1";
-      splitImage[i].style.opacity = "0.5";
+      splitDark[i].style.opacity = "0.5";
       splitAbsoluteText[i].style.top = "20%";
     });
     splitAbsoluteText[i].addEventListener("mouseout", () => {
       splitText[i].style.opacity = "0";
-      splitImage[i].style.opacity = "1";
+      splitDark[i].style.opacity = "1";
       splitAbsoluteText[i].style.top = "50%";
     });
-    splitImage[i].addEventListener("mouseout", () => {
+    splitDark[i].addEventListener("mouseout", () => {
       splitText[i].style.opacity = "0";
-      splitImage[i].style.opacity = "1";
+      splitDark[i].style.opacity = "1";
       splitAbsoluteText[i].style.top = "50%";
     });
   }
@@ -205,7 +236,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       factionAbsolute[i].classList.add("acuAbsoluteActive");
       factionAbsolute[i].style.opacity = "1";
       acuBlankScreen.style.display = "block";
-  
+
 
       if (i == 1) {
         acuUEF.style.backgroundImage = "url(../img/acucybran.jpg)";
@@ -240,12 +271,12 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let counterA = 0;
   setInterval(changeImage, 1200);
   function changeImage() {
-    if (counterA < 8) {
+    if (counterA < 9) {
       counterA++;
-      setons.src = setonsPicture + counterA +'.jpg';
+      setons.src = setonsPicture + counterA + '.jpg';
 
     } else {
-      counterA = 0;;
+      counterA = 0;
     }
   }
 

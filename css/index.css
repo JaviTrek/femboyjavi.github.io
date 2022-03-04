@@ -44,6 +44,7 @@
   :root {
     --paragraph-font-size: 2vw;
     --subtitle-font-size: 3.5vw;
+    --title-font-size: 4vw
   }
 }
 
@@ -551,20 +552,23 @@ ul {
   padding: 20PX 0px;
 }
 
-.bannerButton {
+.landingButton {
   color: var(--color-white);
   background-color: var(--color-gold);
+  font-family: var(--specific-font-family);
   border: 0.15em solid var(--color-dark-gold);
   font-size: 0.7em;
-  width: 8em;
-  padding: 10px;
+  margin: 0.5em;
+  padding: 0.5em;
   justify-self: center;
   transition: 0.4s;
   font-weight: bold;
+  letter-spacing: 0.1em;
+  cursor: pointer;
 
 }
 
-.bannerButton:hover {
+.landingButton:hover {
   color: var(--color-white);
   background-color: var(--color-dark-gold);
   border: 0.15em solid var(--color-dark-gold);
@@ -761,7 +765,7 @@ ul {
   grid-template-columns: auto;
   background-color: var(--color-dark-gray);
   color: var(--color-white);
-  padding: 80px 0px;
+  padding: 1em 0px;
   font-size: var(--title-font-size);
   letter-spacing: 1.2PX;
   border: 15px solid var(--color-black);
@@ -773,7 +777,90 @@ ul {
 
 }
 
+
 /* MultiCategory Container */
+
+.multipleBackground {
+  background-image: url("../img/fafbgpattern.jpg");
+  padding: 2.5vw 10vw;
+}
+
+.mainMultipleContainer {
+  align-items: center;
+  width: 100%;
+  border:0.25vw solid var(--color-white-gray);
+  border-radius: 1vw;
+  
+}
+
+.multipleContainer {
+  background-color: var(--color-dark-gray);
+  width: 100%;
+  align-items: center;
+  height: 100%;
+  grid-column: span 12;
+  
+
+}
+.multipleItem {
+  padding: 0.5vw;
+  margin: 1vw;
+  font-size: var(--paragraph-font-size);
+  border: 0.1em solid var(--color-white-gray);
+  background-color: var(--color-dark-gray);
+  transition: 0.4s;
+}
+
+.multipleImage {
+  display: none;
+  opacity: 0;
+  height: 100%;
+  filter: brightness(0.4);
+}
+
+.multipleItem:hover {
+  border: 0.1em solid var(--color-dark-gold);
+  background-color: var(--color-gold);
+}
+
+.multipleItemActive {
+  border: 0.1em solid var(--color-gold);
+  background-color: var(--color-dark-gold);
+}
+.multipleItemActive:hover {
+  border: 0.1em solid var(--color-gold);
+  background-color: var(--color-dark-gold);
+}
+
+
+
+.multipleRelative {
+  position: relative;
+
+}
+
+.multipleAbsolute {
+  position: absolute;
+  font-size: var(--subtitle-font-size);
+  font-family: var(--specific-font-family);
+  text-shadow: 10px 2px 4px rgb(0 0 0 / 100%), 0 8px 16px rgb(0 0 0 / 100%);
+  top: 10%;
+  display: none;
+
+}
+
+.multipleText {
+  font-size: var(--paragraph-font-size);
+  padding: 1vw 10vw;
+  line-height: 1.5em;
+  color: var(--color-white);
+  font-family: var(--main-font-family);
+}
+.multipleImageActive {
+  display: block;
+  opacity: 1;
+}
+
 
 
 /* Container with multiple containers within it */
@@ -781,11 +868,13 @@ ul {
   padding: 5vw 10vw;
   background-image: url("../img/fafbgpattern.jpg");
   position: relative;
-  font-size: 4em;
+  font-size: var(--subtitle-font-size);
   z-index: 10;
+  display: none;
 }
 
 .arrowItem {
+  font-size: 2em;
   justify-self: center;
   color: var(--color-white-gray);
   position: absolute;
@@ -825,7 +914,6 @@ ul {
   background-color: var(--color-black);
   justify-items: center;
   gap: 0px;
-  font-size: 2.5vw;
   overflow: hidden;
   position: relative;
 
@@ -840,6 +928,12 @@ ul {
   justify-items: center;
 }
 
+.columnfr {
+  grid-column: 1fr;
+}
+.column2 {
+  grid-column: span 2;
+}
 .column3 {
   grid-column: span 3;
 
@@ -891,7 +985,7 @@ ul {
 
 
 .splitText {
-  font-size: 0.6em;
+  font-size: var(--paragraph-font-size);
   opacity: 0;
   transition: 0.4s;
 }
@@ -916,9 +1010,8 @@ ul {
 
 /* here you can find the slide variant and its thingies */
 .mainSlideContainer {
-  grid-template-columns: repeat(24, minmax(0px, 1fr));
-
-
+  grid-template-columns: repeat(12, minmax(0px, 1fr));
+  font-size: var(--subtitle-font-size);
 }
 
 .absoluteSlide {
@@ -933,6 +1026,7 @@ ul {
 }
 
 .splitAbsoluteText {
+  font-size: var(--title-font-size);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -942,7 +1036,7 @@ ul {
   transition: 1s;
 }
 
-/* Here is the "three" variant of splitImage */
+/* Here is the "rectangle" variant of splitImage */
 .rectangleSpace {
   padding: 2vw 0vw 2vw 0vw;
   background-image: url("../img/fafbgmasspattern.jpg");
@@ -951,17 +1045,27 @@ ul {
 
 .mainRectangleContainer {
   margin: 2vw 0vw 2vw 25vw;
-  background-color: var(--color-dark-gray);
+  background: linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(26,26,26,1) 100%);
   gap: 10px;
   align-items: center;
+  transition: 0.4s;
 }
 
 .mainRectangleContainerReverse {
   margin: 2vw 25vw 2vw 0vw;
-  background-color: var(--color-dark-gray);
+  background: linear-gradient(180deg, rgba(17,17,17,1) 0%, rgba(26,26,26,1) 100%);
   gap: 10px;
   align-items: center;
   direction: ltr;
+  transition: 0.4s;
+}
+
+.mainRectangleContainer:hover {
+  filter: brightness(1.3);
+}
+
+.mainRectangleContainerReverse:hover {
+  filter: brightness(1.3);
 }
 
 .rectangleContainer {
@@ -1015,6 +1119,7 @@ ul {
   position: relative;
   z-index: 1;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .acuCard:hover {
@@ -1152,7 +1257,7 @@ ul {
   }
 
   .mainThinContainer {
-    padding: 15vw;
+    padding: 1.5em;
   }
 
   .mainSplitContainer {
@@ -1171,6 +1276,13 @@ ul {
     width: 100%;
     font-size: 1em;
   }
+
+.mainMultipleContainer {
+  display: none;
+}
+.arrowContainer {
+  display: block;
+}
 }
 
 @media (max-width: 600px) {
@@ -1207,10 +1319,10 @@ ul {
   .splitAbsoluteText {
     padding: 0px
   }
-
-  .arrowContainer {
-    font-size: 25px;
+  .mainSlideContainer {
+    min-height: 100vw;
   }
+
 }
 
 @media (max-width:1200px) {

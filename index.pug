@@ -1,42 +1,5 @@
-doctype html
-head
-  // Rowey is the best (Agreed :P)
-  meta(charset='UTF-8')
-  meta(http-equiv='X-UA-Compatible' content='IE=edge')
-  meta(name='viewport' content='width=device-width, initial-scale=1.0')
-  // Stylesheet Stuff
-  link(rel='stylesheet' href='../css/index.css')
-  link(rel='stylesheet' href='https://use.typekit.net/lty2ukf.css')
-  link(rel='preconnect' href='https://fonts.googleapis.com')
-  link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
-  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Electrolize&display=swap')
-  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Russo+One&display=swap')
-  link(rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Orbitron&display=swap')
-  // FAF Website Icon
-  link(rel='apple-touch-icon' sizes='180x180' href='/img/favicon-package/apple-touch-icon.png')
-  link(rel='icon' type='image/png' sizes='32x32' href='/img/favicon-package/favicon-32x32.png')
-  link(rel='icon' type='image/png' sizes='16x16' href='/img/favicon-package/favicon-16x16.png')
-  link(rel='manifest' href='/img/favicon-package/site.webmanifest')
-  link(rel='mask-icon' href='/img/favicon-package/safari-pinned-tab.svg' color='#5bbad5')
-  meta(name='msapplication-TileColor' content='#da532c')
-  meta(name='theme-color' content='#ffffff')
-  title Javi Website Mock
-link(rel='apple-touch-icon' sizes='180x180' href='/img/favicon-package/apple-touch-icon.png')
-link(rel='icon' type='image/png' sizes='32x32' href='/img/favicon-package/favicon-32x32.png')
-link(rel='icon' type='image/png' sizes='16x16' href='/img/favicon-package/favicon-16x16.png')
-link(rel='manifest' href='/img/favicon-package/site.webmanifest')
-link(rel='mask-icon' href='/img/favicon-package/safari-pinned-tab.svg' color='#5bbad5')
-meta(name='msapplication-TileColor' content='#da532c')
-meta(name='theme-color' content='#ffffff')
-title Javi FAF Mock Website
-// Inspiration places below
-// https://planetaryannihilation.com/
-// https://starcraft2.com/en-us/media
-// https://www.ageofempires.com/games/age-of-empires-iv
-// https://www.beyondallreason.info/armada
-// Top Navbar
-body
-  include templates/views/nav
+extends templates/layouts/layout
+block main        
   // Initial UEF ACU background banner
   #main_banner_container.landingBanner
     .banner_container.banner_title
@@ -368,55 +331,10 @@ body
     .splat_container
       .splat
         img(src='../img/blacksplat.png' alt='')
-  //footer start
-  .mainFooterContainer 
-    .footerContainer 
-      .footerItem 
-        img(src='../img/faflogo.svg' alt='')
-    .footerContainer 
-      .footerItem 
-        ul NAV  
-          a(href='https://github.com/FAForever' target='_blank')
-            li HOME
-          a(href='https://github.com/FAForever' target='_blank')
-            li FAF NEWS 
-          a(href='https://github.com/FAForever' target='_blank')
-            li GAME   
-          a(href='https://github.com/FAForever' target='_blank')
-            li COMMUNITY
-          a(href='https://github.com/FAForever' target='_blank')
-            li COMPETITIVE
-    .footerContainer 
-      .footerItem 
-        ul CONTRIBUTE  
-          a(href='https://github.com/FAForever' target='_blank')
-            li DONATIONS
-          a(href='https://github.com/FAForever' target='_blank')
-            li VOLUNTEER POSITIONS
-
-    .footerContainer 
-      .footerItem 
-        ul LEGAL
-          a(href='https://github.com/FAForever' target='_blank')
-            li TERMS OF SERVICE
-          a(href='https://github.com/FAForever' target='_blank')
-            li PRIVACY STATEMENT          
-          a(href='https://github.com/FAForever' target='_blank')
-            li FAF ASSOCIATION
-
-    .footerContainer 
-      .footerItem 
-        ul CONTACT US
-          a(href='https://github.com/FAForever' target='_blank')
-            li DISCORD
-
-          a(href='https://github.com/FAForever' target='_blank')
-            li ASSOCIATION  
 
 
-  //a
+  //a 
     Good lines
-    Economy economy that responds to your actions instantly
-  // Javascript document has to be placed below HTML or it gets bugged (can't get certain classes or buttons if they arent loaded yet cant we lol?)
-script(src='../js/index.js')
-script(src='https://kit.fontawesome.com/33e7e258d3.js' crossorigin='anonymous')
+    Economy economy that responds to your actions instantly Javascript document has to be placed below HTML or it gets bugged (can't get certain classes or buttons if they arent loaded yet cant we lol?)
+  script(src='../js/index.js')
+  script(src='https://kit.fontawesome.com/33e7e258d3.js' crossorigin='anonymous')

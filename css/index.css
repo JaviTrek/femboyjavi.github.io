@@ -588,11 +588,14 @@ ul {
   border: 0.15em solid var(--color-dark-gold);
 }
 
-/* end banner variant of regular banner */
+/* banner variants of regular banner */
 .landingBanner {
   background-image: url("../img/home1.jpg");
 }
 
+.aiBanner {
+  background-image: url("../img/ai.jpg");
+}
 .endBanner {
   background-image: url("../img/footerbanner.jpg");
 

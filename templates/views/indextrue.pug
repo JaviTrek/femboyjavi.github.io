@@ -1,4 +1,5 @@
-extends templates/layouts/default
+extends ../layouts/default
+
 block main        
   // Initial UEF ACU background banner
   #main_banner_container.landingBanner
@@ -14,7 +15,7 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
 
   // work in progress
   .mainScrollContainer
@@ -31,13 +32,13 @@ block main
     .scroll_container
       .scroll_item
         .scroll_image.scrollFade.animationRigth
-          img(src='../img/intro.jpg' alt='')
+          img(src='../../img/intro.jpg' alt='')
 
 
   .splat_main_container.splat_black_background
     .splat_container
       .splat_rotate
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
   // The bold white bar that separates containers
   .mainThinContainer
     .thinContainer 
@@ -46,7 +47,7 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
   //Multiple choice container
   .multipleBackground
     .mainSplitContainer.mainMultipleContainer
@@ -62,49 +63,49 @@ block main
         .mainSplitContainer 
           .splitContainer.column12.multipleRelative
             .splitImage.multipleImage.multipleImageActive
-              img(src='../img/fafupdate.jpg' alt='')
+              img(src='../../img/fafupdate.jpg' alt='')
             .multipleAbsolute.multipleImageActive
               |CO-OP CAMPAIGN
               .multipleText Enjoy the complete campaign with friends and extra missions plus a new Seraphim Campaign!
                 br
                 button.landingButton Learn More
             .splitImage.multipleImage     
-              img(src='../img/fafquality.jpg' alt='')
+              img(src='../../img/fafquality.jpg' alt='')
             .multipleAbsolute 
               |QUALITY OF LIFE
               .multipleText Bugfixes, texture updates, gameplay improvements, better UI and client!
                 br
                 button.landingButton Learn More
             .splitImage.multipleImage     
-              img(src='../img/fafmatchmaking.jpg' alt='')
+              img(src='../../img/fafmatchmaking.jpg' alt='')
             .multipleAbsolute 
               |MATCHMAKING
               .multipleText Ranked matchmaking featuring queues for 1v1 duels, 2v2 duos and 4v4 teamgames! Plus custom game lobbies!
                 br
                 button.landingButton Learn More
             .splitImage.multipleImage     
-              img(src='../img/fafmapsmods.jpg' alt='')
+              img(src='../../img/fafmapsmods.jpg' alt='')
             .multipleAbsolute 
               |MAP AND MOD VAULT
               .multipleText Featuring hundreds of new maps and mods made by the community! From updates to Supcom classics to news ones with high quality textures!
                 br
                 button.landingButton Learn More
             .splitImage.multipleImage     
-              img(src='../img/fafcompetitive.jpg' alt='')
+              img(src='../../img/fafcompetitive.jpg' alt='')
             .multipleAbsolute 
               |ADVANCED AI
               .multipleText Community made AIs that can provide a real challenge! Each with a different specialization!
                 br
                 button.landingButton Learn More
             .splitImage.multipleImage     
-              img(src='../img/faftournaments.jpg' alt='')
+              img(src='../../img/faftournaments.jpg' alt='')
             .multipleAbsolute 
               |TOURNAMENTS
               .multipleText From the yearly LoTS and Rainbow Cup, the classic King of Setons and King of Dual Gap to other cross-community tournaments!
                 br
                 button.landingButton Learn More
             .splitImage.multipleImage     
-              img(src='../img/fafstatistics.jpg' alt='')
+              img(src='../../img/fafstatistics.jpg' alt='')
             .multipleAbsolute 
               |PLAYER STATISTICS
               .multipleText Updated in-game statistics! See your rival or friend you play the most with, which map you have the highest win rate in or how much have you played a certain faction!
@@ -122,7 +123,7 @@ block main
         //a(href='/views/SCFA-vs-FAF.html' target='_blank') 
         .splitItem.absoluteSlide
           .splitImage.splitDark
-            img(src='../img/fafupdate.jpg' alt='')
+            img(src='../../img/fafupdate.jpg' alt='')
           .splitAbsoluteText Co-Op Campaign
             .splitText Enjoy the complete campaign with friends and extra missions plus a new Seraphim Campaign!
               br
@@ -130,7 +131,7 @@ block main
       .splitContainer.column12
         .splitItem.absoluteSlide
           .splitImage.splitDark
-            img(src='../img/fafmatchmaking.jpg' alt='')
+            img(src='../../img/fafmatchmaking.jpg' alt='')
           .splitAbsoluteText Matchmaking
             .splitText Ranked matchmaking featuring queues for 1v1 duels, 2v2 duos and 4v4 teamgames! Plus custom game lobbies!
               br
@@ -139,7 +140,7 @@ block main
       .splitContainer.column12
         .splitItem.absoluteSlide
           .splitImage.splitDark
-            img(src='../img/fafmapsmods.jpg' alt='')
+            img(src='../../img/fafmapsmods.jpg' alt='')
           .splitAbsoluteText The Vault
             .splitText Featuring hundreds of new maps and mods made by the community! From updates to Supcom classics to news ones with high quality textures!
               br
@@ -148,7 +149,7 @@ block main
       .splitContainer.column12
         .splitItem.absoluteSlide
           .splitImage.splitDark 
-            img(src='../img/fafcompetitive.jpg' alt='')
+            img(src='../../img/fafcompetitive.jpg' alt='')
           .splitAbsoluteText Competitive AIs
             .splitText Community made AIs that can provide a real challenge! Each with a different specialization!
               br
@@ -158,7 +159,7 @@ block main
       .splitContainer.column12
         .splitItem.absoluteSlide
           .splitImage.splitDark
-            img(src='../img/fafstatistics.jpg' alt='')
+            img(src='../../img/fafstatistics.jpg' alt='')
           .splitAbsoluteText Player Statistics
             .splitText See your rival or friend you play the most with, which map or faction you have the highest win rate with!
               br
@@ -167,7 +168,7 @@ block main
       .splitContainer.column12
         .splitItem.absoluteSlide
           .splitImage.splitDark
-            img(src='../img/faftournaments.jpg' alt='')
+            img(src='../../img/faftournaments.jpg' alt='')
           .splitAbsoluteText Tournaments
             .splitText From the yearly LoTS and Rainbow Cup, the classic King of Setons and King of Dual Gap to other cross-community tournaments!
               br
@@ -175,7 +176,7 @@ block main
       .splitContainer.column12
         .splitItem.absoluteSlide
           .splitImage.splitDark
-            img(src='../img/fafclient.jpg' alt='')
+            img(src='../../img/fafclient.jpg' alt='')
           .splitAbsoluteText Client
             .splitText The FAF client takes all of these improvements and easily puts them together!
               br
@@ -185,11 +186,11 @@ block main
       .splitContainer.column6.noOpacity
         .splitItem
           .splitImage.splitDark
-            img(src='../img/cybran.jpg' alt='')
+            img(src='../../img/cybran.jpg' alt='')
       .splitContainer.column6.noOpacity
         .splitItem
           .splitImage.splitDark
-            img(src='../img/cybran.jpg' alt='')
+            img(src='../../img/cybran.jpg' alt='')
 
 
     //Factions Start here
@@ -197,7 +198,7 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat_rotate
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
   // The bold white bar that separates containers
   .mainThinContainer
     .thinContainer 
@@ -207,7 +208,7 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
 
 
   //ACU Cards
@@ -224,26 +225,26 @@ block main
     .splitContainer.column9.acuAbsolute
       .splitItem.factionAbsolute
         .splitImage.scrollFade
-          img(src='../img/uefbg.jpg' alt='')
+          img(src='../../img/uefbg.jpg' alt='')
 
     //CYBRAN
     .splitContainer.column3.acuCard
       .splitItem
         .splitImage.scrollFade.animationLeft
-          img(src='../img/acucybran.jpg' alt='')
+          img(src='../../img/acucybran.jpg' alt='')
     .splitContainer.column9.acuAbsolute
       .splitItem.factionAbsolute
         .splitImage.scrollFade
-          img(src='../img/cybran.jpg' alt='')
+          img(src='../../img/cybran.jpg' alt='')
     //AEON
     .splitContainer.column3.acuCard
       .splitItem
         .splitImage.scrollFade.animationRigth
-          img(src='../img/acuaeon.jpg' alt='')
+          img(src='../../img/acuaeon.jpg' alt='')
     .splitContainer.column9.acuAbsolute.acuLeft
       .splitItem.factionAbsolute
         .splitImage.scrollFade
-          img(src='../img/aeon.jpg' alt='')
+          img(src='../../img/aeon.jpg' alt='')
 
 
     //SERAPHIM
@@ -252,7 +253,7 @@ block main
     .splitContainer.column9.acuAbsolute.acuLeft
       .splitItem.factionAbsolute
         .splitImage.scrollFade
-          img(src='../img/seraphim.jpg' alt='')
+          img(src='../../img/seraphim.jpg' alt='')
 
     .splitContainer.column12#acuBlankScreen.displayNone
       .splitItem
@@ -263,7 +264,7 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat_rotate
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
   .mainThinContainer
     .thinContainer 
       .thinItem 
@@ -272,7 +273,7 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
   //splat end
   //zoom start
   .rectangleSpace
@@ -285,7 +286,7 @@ block main
       .splitContainer.column4
         .splitItem.rectangleItem 
           .splitImage.rectangleImage
-            img#rectangleImage(src='../img/zoomout0.jpg' alt='')
+            img#rectangleImage(src='../../img/zoomout0.jpg' alt='')
     .mainSplitContainer.mainRectangleContainerReverse
       .splitContainer.column8
         .responsiveTextTitle.highlightText.rectangleContainer      
@@ -295,7 +296,7 @@ block main
       .splitContainer.column4
         .splitItem.rectangleItem 
           .splitImage#rectangleImage
-            img(src='../img/resources.jpg' alt='')
+            img(src='../../img/resources.jpg' alt='')
     .mainSplitContainer.mainRectangleContainer
       .splitContainer.column8
           .responsiveTextTitle.highlightText.rectangleContainer
@@ -305,7 +306,7 @@ block main
       .splitContainer.column4
         .splitItem.rectangleItem 
           .splitImage.rectangleImage
-            img(src='../img/techlevels.jpg' alt='')
+            img(src='../../img/techlevels.jpg' alt='')
 
 
   //ZOOM end
@@ -316,7 +317,7 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat_rotate
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
 
   #main_banner_container.endBanner
     .banner_container.banner_title
@@ -330,4 +331,5 @@ block main
   .splat_main_container.splat_black_background
     .splat_container
       .splat
-        img(src='../img/blacksplat.png' alt='')
+        img(src='../../img/blacksplat.png' alt='')
+

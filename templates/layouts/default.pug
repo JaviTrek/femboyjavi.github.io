@@ -5,7 +5,6 @@ head
   meta(http-equiv='X-UA-Compatible' content='IE=edge')
   meta(name='viewport' content='width=device-width, initial-scale=1.0')
   // Stylesheet Stuff
-  link(rel='stylesheet' href='../../css/index.css')
   link(rel='stylesheet' href='https://use.typekit.net/lty2ukf.css')
   link(rel='preconnect' href='https://fonts.googleapis.com')
   link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
@@ -35,6 +34,9 @@ title Javi FAF Mock Website
 // https://www.ageofempires.com/games/age-of-empires-iv
 // https://www.beyondallreason.info/armada
 // Top Navbar
+block stylesheet
+  link(rel='stylesheet' href='../../css/index.css')
+block nav
 body
   .main_topnav_container
     .topnav_container
@@ -60,8 +62,8 @@ body
     .nav_container
       .nav_item
         .nav_image
-          a(href='index.html')
-            img(src='../img/faflogo.svg' alt='')
+          a(href='indextrue.html')
+            img(src='../../img/faflogo.svg' alt='')
     .nav_container
       ul.nav_item
         a(href='' target='_blank')
@@ -79,6 +81,8 @@ body
                 a(href='/views/tutorials-guides.html' target='_blank') Tutorials/Guides
               li
                 a(href='/views/player-statistics.html' target='_blank') Player Statistics
+              li
+                a(href='ai.html' target='_blank') Advanced AI
               li
                 a(href='/views/unit-database.html' target='_blank') Unit Database
         li.nav_list
@@ -198,7 +202,7 @@ body
   .splat_main_container.emptyBlackGreyPadding
     .splat_container
       .splat_rotate
-        img(src='../img/splat.png' alt='')
+        img(src='../../img/splat.png' alt='')
 
     
   block main 
@@ -207,7 +211,7 @@ body
   .mainFooterContainer 
     .footerContainer 
       .footerItem 
-        img(src='../img/faflogo.svg' alt='')
+        img(src='../../img/faflogo.svg' alt='')
     .footerContainer 
       .footerItem 
         ul NAV  
@@ -249,5 +253,5 @@ body
             li ASSOCIATION  
 
   block js 
-    script(src='../js/index.js')
+    script(src='../../js/index.js')
     script(src='https://kit.fontawesome.com/33e7e258d3.js' crossorigin='anonymous') 

@@ -34,10 +34,11 @@
   line-height: 1.5em;
   color: var(--color-white);
   font-family: var(--main-font-family);
+  direction: ltr;
 }
 
 .responsiveTextPadding {
-  padding: 1.2em 10vw;
+  padding: 1.5em 10vw;
 }
 
 @media (max-width: 1600px) {
@@ -1077,13 +1078,6 @@ ul {
   transition: 0.4s;
 }
 
-.mainRectangleContainer:hover {
-  filter: brightness(1.3);
-}
-
-.mainRectangleContainerReverse:hover {
-  filter: brightness(1.3);
-}
 
 .rectangleContainer {
   text-align: left;

@@ -1,4 +1,78 @@
 extends ../layouts/default
 
+block stylesheet
+  link(rel='stylesheet' href='../../css/index.css')
+
 block main 
-  .responsiveText Go click te FAF Icon to go back, this is still a work in progress
+  #main_banner_container.contentBanner
+    .banner_container.banner_title
+      .banner_item STREAMERS, YOUTUBERS, CASTERS
+    .banner_container.banner_title
+      .banner_item AND OTHER CONTENT CREATORS
+    .banner_container
+      .banner_item
+        .banner_subtitle Showcasing the best of FAF content
+  .splat_main_container.splat_black_background
+    .splat_container
+      .splat
+        img(src='../../img/blacksplat.png' alt='')
+
+  .mainSplitContainer.mainContentContainer
+    .splitContainer.column3.contentContainer
+      .splitImage.contentImage
+        .contentAbsolute 
+          a(href='https://www.twitch.tv/faflive' target='_blank')
+              .fab.fa-twitch.fa-lg.contentSocial
+          a(href='https://www.youtube.com/c/ForgedAllianceForever' target='_blank')
+            .fab.fa-youtube.fa-lg.contentSocial
+        img(src='../../img/content-creator/willow.jpg' alt='')
+      .responsiveTextTitle Willows Duality 
+        .responsiveTextNoPadding FAF caster that has changed his logo about 4 times and plays really bad but is funny.
+    .splitContainer.column3.contentContainer
+      .splitImage.contentImage
+        .contentAbsolute 
+          a(href='https://www.twitch.tv/faflive' target='_blank')
+              .fab.fa-twitch.fa-lg.contentSocial
+          a(href='https://www.youtube.com/c/ForgedAllianceForever' target='_blank')
+            .fab.fa-youtube.fa-lg.contentSocial
+        img(src='../../img/content-creator/derp.jpg' alt='')
+      .responsiveTextTitle Derp
+        .responsiveTextNoPadding King of supcom memes, casts a little bit of everything and his videos always have their meme edits.
+    .splitContainer.column3.contentContainer
+      .splitImage.contentImage
+        .contentAbsolute 
+          a(href='https://www.twitch.tv/faflive' target='_blank')
+              .fab.fa-twitch.fa-lg.contentSocial
+          a(href='https://www.youtube.com/c/ForgedAllianceForever' target='_blank')
+            .fab.fa-youtube.fa-lg.contentSocial
+        img(src='../../img/content-creator/duelist.jpg' alt='')
+      .responsiveTextTitle The Duelist
+        .responsiveTextNoPadding TheDuelist creates casts, plays mid level ladder matches, and breaks down units and strategies mathematically.
+    .splitContainer.column3.contentContainer
+      .splitImage.contentImage
+        .contentAbsolute 
+          a(href='https://www.twitch.tv/faflive' target='_blank')
+              .fab.fa-twitch.fa-lg.contentSocial
+          a(href='https://www.youtube.com/c/ForgedAllianceForever' target='_blank')
+            .fab.fa-youtube.fa-lg.contentSocial
+        img(src='../../img/content-creator/endranii.jpg' alt='')
+      .responsiveTextTitle Endranii
+        .responsiveTextNoPadding Angry european badger that casts games with his seductive bear voice
+    .splitContainer.column3.contentContainer
+      .splitImage.contentImage
+        .contentAbsolute 
+          a(href='https://www.twitch.tv/faflive' target='_blank')
+              .fab.fa-twitch.fa-lg.contentSocial
+          a(href='https://www.youtube.com/c/ForgedAllianceForever' target='_blank')
+            .fab.fa-youtube.fa-lg.contentSocial
+        img(src='../../img/content-creator/tcop.jpg' alt='')
+      .responsiveTextTitle TCOP
+        .responsiveTextNoPadding Runs a primarily FAF YouTube (with a small variety of other games) where he uploads 3 to 4 times a week. 
+   
+
+    
+
+block js 
+  script(src='../../js/ai.js')
+  script(src='https://kit.fontawesome.com/33e7e258d3.js' crossorigin='anonymous') 
+    
